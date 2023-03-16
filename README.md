@@ -10,9 +10,8 @@
 
 ### Tela Login (Funcionalidades) 
 1° Usuário acessa sua conta 
-![Imagem Login](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20LOGIN.png?raw=true)
 2° Encaminhamento para a tela de cadastro
-![Imagem cadastro](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20CADASTRO.png)
+
 
 ### Tela de detalhes do perfil 
 1° Tela de perfil do usuário (Funcionalidades) 
@@ -38,3 +37,8 @@
 ### Tela de Perfil
 1º O usuário pode colocar e alterar suas informações (incluindo foto).
 2º O usuário consegue excluir a sua conta.
+
+### Imagens
+![Imagem Login](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20LOGIN.png?raw=true)
+![Imagem cadastro](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20CADASTRO.png)
+![Tela conexões](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/arquivo%20pi.PNG?raw=true)
