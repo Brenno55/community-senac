@@ -10,7 +10,7 @@
 
 ### Tela Login (Funcionalidades) 
 1° Usuário acessa sua conta 
-(https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20CADASTRO.png)
+![Imagem cadastro](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20CADASTRO.png)
 2° Encaminhamento para a tela de cadastro
 
 
