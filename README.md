@@ -39,9 +39,13 @@
 2º O usuário consegue excluir a sua conta.
 
 ### Imagens
-![Imagem Login](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20LOGIN.png?raw=true)
-![Imagem cadastro](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20CADASTRO.png)
+![Tela Login](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20LOGIN.png?raw=true)
+![Tela cadastro](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DE%20CADASTRO.png)
 ![Tela conexões](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/arquivo%20pi.PNG?raw=true)
+![Tela sobre](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20SOBRE.png?raw=true)
+![Tela home](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20HOME.png?raw=true)
+![Tela detalhes](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/TELA%20DETALHES.png?raw=true)
+
 
 ## MER
 ![MER](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/MER.png?raw=true)
