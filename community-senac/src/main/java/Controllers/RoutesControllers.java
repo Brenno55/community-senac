@@ -19,8 +19,10 @@ import java.util.ArrayList;
                 RequestDispatcher rd = req.getRequestDispatcher("/view/pages/cadastro/cadastro.html");
                 rd.forward(req, resp);
             } else if (action.equals("/login")) {
-                RequestDispatcher rd = req.getRequestDispatcher("/view/pages/login/login.html");
-                rd.forward(req, resp);
+
+
+
+
             } else if (action.equals("/sobre")) {
                 RequestDispatcher rd = req.getRequestDispatcher("/view/pages/sobre/sobre.html");
                 rd.forward(req, resp);
@@ -32,6 +34,14 @@ import java.util.ArrayList;
                 rd.forward(req, resp);
             }
 
+        }
+
+        protected void handleLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
+
+            RequestDispatcher rd = req.getRequestDispatcher("/view/pages/index/index.html");
+            rd.forward(req, resp);
         }
 
     }
