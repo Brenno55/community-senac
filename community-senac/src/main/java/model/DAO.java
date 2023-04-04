@@ -10,24 +10,22 @@ public class DAO {
     private final String USER = "root";
     private final String PASSWORD = "1234";
 
-    //método de conexão:
-    private Connection conectar(){
+    public Connection conectar(){
         Connection con; // =  null
 
         try {
             Class.forName(DRIVER);
             con = DriverManager.getConnection(URL,USER,PASSWORD);
+            System.out.println("Teste de conexão  dentro da dao ok");
             return con;
         } catch (Exception e){
             System.out.println(e);
             return null;
         }
     }
-
-    // teste de conexão
     public void  testeConexao(){
         try {
-            Connection con = conectar();
+            Connection con = this.conectar();
             System.out.println(con);
             con.close();
 
@@ -35,5 +33,21 @@ public class DAO {
         } catch (Exception e){
             System.out.println(e);
         }
+    }
+
+    public String getDRIVER() {
+        return DRIVER;
+    }
+
+    public String getURL() {
+        return URL;
+    }
+
+    public String getUSER() {
+        return USER;
+    }
+
+    public String getPASSWORD() {
+        return PASSWORD;
     }
 }

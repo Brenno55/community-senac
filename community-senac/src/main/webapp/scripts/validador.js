@@ -20,6 +20,7 @@ function validarCadastro() {
             frmContato.fone.focus()
             return false;
     }
+
     document.forms["frmContato"].submit()
 }
 
