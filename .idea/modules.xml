@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/community.iml" filepath="$PROJECT_DIR$/.idea/community.iml" />
-      <module fileurl="file://$PROJECT_DIR$/community-senac/community-senac.iml" filepath="$PROJECT_DIR$/community-senac/community-senac.iml" />
     </modules>
   </component>
 </project>

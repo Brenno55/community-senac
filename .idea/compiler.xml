@@ -9,8 +9,5 @@
         <module name="community-senac" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="community-senac" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>
