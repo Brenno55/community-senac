@@ -30,8 +30,8 @@ import java.util.ArrayList;
                 System.out.println("2 - Redirecionei para a o metodo que faz o cadastro");
                 handleCadastro(req,resp);
             } else if (action.equals("/login")) {
-                RequestDispatcher rd = req.getRequestDispatcher("/view/pages/sobre/sobre.html");
-                rd.forward(req, resp);
+                System.out.println("2 - Redirecionei para a o metodo que faz o login");
+                handleLogin(req, resp);
             } else if (action.equals("/sobre")) {
                 RequestDispatcher rd = req.getRequestDispatcher("/view/pages/sobre/sobre.html");
                 rd.forward(req, resp);
@@ -47,13 +47,13 @@ import java.util.ArrayList;
 
         protected void handleCadastro(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             System.out.println("3- Entrei na funcão handleCadastro");
-            dao.testeConexao();
 
             // setar as variaveis do usuario
             user.setNome(req.getParameter("nome"));
             user.setEmail(req.getParameter("email"));
             user.setSenha(req.getParameter("senha"));
             System.out.println("4- Setei as variaveis");
+
             // Invocar o método createUser passando o objt user:
             UserCreate create = new UserCreate();
 
@@ -66,9 +66,33 @@ import java.util.ArrayList;
                 create.createUser(user); // insert no banco.
                 resp.sendRedirect("/view/pages/login/login.html");
             }
+        }
+
+        protected void handleLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            System.out.println("3- Entrei na funcão handleLogin");
+            dao.testeConexao();
+
+            // setar as variaveis do usuario
+            user.setEmail(req.getParameter("email"));
+            user.setSenha(req.getParameter("senha"));
+            System.out.println("4- Setei as variaveis");
+
+            UserCreate create = new UserCreate();
+
+            // VALIDAÇÕES:
+            if (create.procureEmail(user)){
+                System.out .println("Usuario não encontrado!");
+                resp.sendRedirect("/login.html");
+
+            } else if (!create.procureSenha(user)) {
+                System.out.println("As senhas não conferem");
+                resp.sendRedirect("/login.html");
+            } else {
+                resp.sendRedirect("/view/pages/index/index.html");
+            }
+
 
 
 
         }
-
     }
