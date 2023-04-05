@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 
 public class DAO {
 
-    private final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private final String URL = "jdbc:mysql://127.0.0.1:3306/dbcommunity?useTimezone=true&serverTimezone=UTC";
-    private final String USER = "root";
-    private final String PASSWORD = "1234";
+    private final String DRIVER = "org.h2.Driver";
+    private final String URL = "jdbc:h2:~/test";
+    private final String USER = "sa";
+    private final String PASSWORD = "sa";
 
     public Connection conectar(){
         Connection con; // =  null
