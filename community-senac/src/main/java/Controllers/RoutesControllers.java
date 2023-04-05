@@ -57,10 +57,18 @@ import java.util.ArrayList;
             // Invocar o método createUser passando o objt user:
             UserCreate create = new UserCreate();
 
-            create.createUser(user); // insert no banco.
-            System.out.println("5-  Rota controller: INSERT OK!");
+            // VALIDAÇÕES:
 
-            resp.sendRedirect("/view/pages/login/login.html");
+            if (create.procureEmail(user)){
+                System.out.println("Email ja existente");
+                resp.sendRedirect("/cadastro.html");
+            } else {
+                create.createUser(user); // insert no banco.
+                resp.sendRedirect("/view/pages/login/login.html");
+            }
+
+
+
         }
 
     }
