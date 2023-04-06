@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
         DAO dao = new DAO();
         User user = new User();
+        UserCreate create = new UserCreate();
         public RoutesControllers(){
             super();
         }
@@ -36,8 +37,9 @@ import java.util.ArrayList;
                 RequestDispatcher rd = req.getRequestDispatcher("/view/pages/sobre/sobre.html");
                 rd.forward(req, resp);
             } else if (action.equals("/index")) {
-                RequestDispatcher rd = req.getRequestDispatcher("/view/pages/index/index.jsp");
-                rd.forward(req, resp);
+                System.out.println("2 - Redirecionei para a o metodo que faz a listagem de usuarios");
+                listUsers(req,resp);
+
             } else {
                 RequestDispatcher rd = req.getRequestDispatcher("index.html");
                 rd.forward(req, resp);
@@ -59,12 +61,12 @@ import java.util.ArrayList;
 
             // VALIDAÇÕES:
 
-            if (create.procureEmail(user)){
+            if (!create.procureEmail(user)){
                 System.out.println("Email ja existente");
                 resp.sendRedirect("/cadastro.html");
             } else {
                 create.createUser(user); // insert no banco.
-                resp.sendRedirect("/view/pages/login/login.html");
+                resp.sendRedirect("login.html");
             }
         }
 
@@ -77,10 +79,10 @@ import java.util.ArrayList;
             user.setSenha(req.getParameter("senha"));
             System.out.println("4- Setei as variaveis");
 
-            UserCreate create = new UserCreate();
+
 
             // VALIDAÇÕES:
-            if (create.procureEmail(user)){
+            if (!create.procureEmail(user)){
                 System.out .println("Usuario não encontrado!");
                 resp.sendRedirect("/login.html");
 
@@ -88,11 +90,24 @@ import java.util.ArrayList;
                 System.out.println("As senhas não conferem");
                 resp.sendRedirect("/login.html");
             } else {
-                resp.sendRedirect("/view/pages/index/index.html");
+                resp.sendRedirect("index");
             }
 
 
 
 
+        }
+
+        protected void listUsers(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            // Criando um obj que ira receber os dados da classe de auxUser:
+            // por enquanto como ela não se encontra pronta eu vou usar apenas a classe de user;
+
+            ArrayList<User> lista = create.listarContatos();
+
+            //Encaminhar a lista ao documento home.jsp;
+
+            req.setAttribute("users", lista);
+            RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
+            rd.forward(req, resp);
         }
     }
