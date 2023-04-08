@@ -10,6 +10,7 @@ public class DAO {
     private final String USER = "sa";
     private final String PASSWORD = "sa";
 
+
     public Connection conectar(){
         Connection con; // =  null
 
@@ -23,6 +24,7 @@ public class DAO {
             return null;
         }
     }
+
     public void  testeConexao(){
         try {
             Connection con = this.conectar();

@@ -12,6 +12,10 @@ import java.util.ArrayList;
 public  class UserCreate  {
     DAO dao = new DAO();
 
+    public UserCreate(){
+
+    }
+
     public void createUser(User user){
         String create = "INSERT INTO usuario (nome, email, senha) values (?, ?, ?)";
 
@@ -105,6 +109,33 @@ public  class UserCreate  {
             System.out.println(e);
             return  null;
         }
+    }
+
+    public User autenticacao(User user){
+        User usuRetorno = null;
+        String sql = "SELECT * FROM usuario WHERE email = (?) and senha = (?) ";
+
+        try {
+            Connection conectar = dao.conectar();
+            PreparedStatement pst = conectar.prepareStatement(sql);
+
+            pst.setString(1, user.getEmail());
+            pst.setString(2, user.getSenha());
+
+            ResultSet rs = pst.executeQuery();
+            // caso o usuario for existente:
+            if (rs.next()) {
+                //instância o obj User;
+                usuRetorno = new User();
+                usuRetorno.setNome(rs.getString("nome"));
+                usuRetorno.setEmail(rs.getString("email"));
+                usuRetorno.setSenha(rs.getString("senha"));
+            }
+
+        } catch (Exception e){
+            System.out.println(e);
+        }
+        return usuRetorno;
     }
 }
 
