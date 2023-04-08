@@ -2,7 +2,11 @@
 <%@ page import="model.User"%>
 <%@ page import="java.util.ArrayList"%>
 
-<% ArrayList<User> lista = (ArrayList<User>)request.getAttribute("users");
+<%
+   User usuAuthenticado = (User)session.getAttribute("usuAuthenticado");
+   ArrayList<User> lista = (ArrayList<User>)request.getAttribute("users");
+
+   String nomeUsuario= usuAuthenticado.getNome();
    String avatar;
    String altText = "Imagem da pessoa";
 %>
@@ -31,7 +35,8 @@
     </form>
 
     <section>
-         <p>Nome Fulano</p>
+         <p> <%= nomeUsuario %> </p>
+         <a href="authenticador">Sair</a>
 
         <img src= "/view/assents/avatar_placeholder.svg" alt="">
     </section>
