@@ -18,6 +18,29 @@
 
 <body>
 
+<header>
+
+    <h1>Community Senac</h1>
+
+    <form action="">
+        <input type="text"  placeholder="Pesquisar pelo nome da pessoa">
+
+        <button>
+             Pesquisar
+        </button>
+    </form>
+
+    <section>
+         <p>Nome Fulano</p>
+
+        <img src= "/view/assents/avatar_placeholder.svg" alt="">
+    </section>
+
+
+
+</header>
+
+
  <div class="container">
 
     <div class="block">
@@ -38,7 +61,7 @@
 
                  <li> <%= lista.get(i).getNome() %> </li>
                     <li>instagram</li>
-                    <li><a href="/details">Ver main</a></li>
+                    <li><a href="/details">Ver mais</a></li>
                  </ul>
             </div>
 
