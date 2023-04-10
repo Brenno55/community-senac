@@ -10,9 +10,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
-    @WebServlet( urlPatterns = {"/Controller", "/insert", "/login", "/sobre", "/index"})
+    @WebServlet( urlPatterns = {"/Controller", "/insert", "/login", "/sobre", "/index", "/autenticador", "/erroLogin"})
     public class RoutesControllers extends HttpServlet {
 
         DAO dao = new DAO();
@@ -30,6 +31,14 @@ import java.util.ArrayList;
             if(action.equals("/insert")){
                 System.out.println("2 - Redirecionei para a o metodo que faz o cadastro");
                 handleCadastro(req,resp);
+            }
+            else if (action.equals("/autenticador")) {
+                HttpSession sessao = req.getSession(false);
+                if(sessao!=null){
+                    sessao.invalidate();
+                }
+                System.out.println("sessão falsa");
+                resp.sendRedirect("login.html");
             } else if (action.equals("/login")) {
                 System.out.println("2 - Redirecionei para a o metodo que faz o login");
                 handleLogin(req, resp);
@@ -40,11 +49,38 @@ import java.util.ArrayList;
                 System.out.println("2 - Redirecionei para a o metodo que faz a listagem de usuarios");
                 listUsers(req,resp);
 
+            } else if (action.equals("/erroLogin")) {
+                System.out.println("2 - Redirecionei para pagina de erro");
+                resp.sendRedirect("erroLogin.html");
             } else {
                 RequestDispatcher rd = req.getRequestDispatcher("index.html");
                 rd.forward(req, resp);
             }
 
+        }
+
+        @Override
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            String semail = request.getParameter("email");
+            String ssenha = request.getParameter("senha");
+
+            User usu = new User();
+            usu.setEmail(semail);
+            usu.setSenha(ssenha);
+
+            UserCreate usuDAO = new UserCreate();
+            User usuAutenticado = usuDAO.autenticacao(usu);
+
+            if(usuAutenticado != null){
+                HttpSession sessao = request.getSession();
+                sessao.setAttribute("usuAutenticado", usuAutenticado);
+                //sessao.setMaxInactiveInterval(3000);
+                //request.getRequestDispatcher("index").forward(request, response);
+                System.out.println("usuario authenticado");
+                response.sendRedirect("/index");
+            }else {
+                response.sendRedirect("erroLogin.html");
+            }
         }
 
         protected void handleCadastro(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

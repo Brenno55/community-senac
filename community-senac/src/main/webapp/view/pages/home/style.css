@@ -32,6 +32,8 @@ header form input {
 
     background: #262529;
     border-radius: 10px;
+
+    color: white;
 }
 
 header form button{

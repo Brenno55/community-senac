@@ -3,10 +3,10 @@
 <%@ page import="java.util.ArrayList"%>
 
 <%
-   User usuAuthenticado = (User)session.getAttribute("usuAuthenticado");
+   User usuAutenticado = (User)session.getAttribute("usuAutenticado");
    ArrayList<User> lista = (ArrayList<User>)request.getAttribute("users");
 
-   String nomeUsuario= usuAuthenticado.getNome();
+   String nomeUsuario= usuAutenticado.getNome();
    String avatar;
    String altText = "Imagem da pessoa";
 %>
@@ -36,7 +36,7 @@
 
     <section>
          <p> <%= nomeUsuario %> </p>
-         <a href="authenticador">Sair</a>
+         <a href="autenticador">Sair</a>
 
         <img src= "/view/assents/avatar_placeholder.svg" alt="">
     </section>
