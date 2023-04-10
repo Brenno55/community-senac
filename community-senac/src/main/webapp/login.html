@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Community Senac</title>
-  <link rel="stylesheet"  href="./index.css" media="screen" />
-  <link rel="stylesheet" href="./login.css" media="screen"/>
+    <meta charset="UTF-8">
+    <title>Community Senac</title>
+
+    <link rel="stylesheet"  href="./view/pages/index.css" media="screen" />
+    <link rel="stylesheet" href="./view/pages/login/login.css" media="screen"/>
+
 </head>
 <body>
+<container class="container" >
 
-  <h1>login</h1>
+    <h1>Community Senac</h1>
+    <h1>login</h1>
 
-  <form action="autenticador" name="frmContato" method="post">
+    <form action="autenticador" name="frmContato" method="post">
 
       <input type="text"  name="email" placeholder="Email">
       <input type="text"  name="senha" placeholder="Senha">
@@ -18,7 +22,11 @@
       <button onclick="validarLogin()">Cadastrar</button>
   </form>
 
-  <script src="./scripts/validador.js"></script>
+    <a href="/cadastro.html">Ir para o cadastro</a>
+    <script src="./scripts/validador.js"></script>
 
+
+
+</container>
 </body>
 </html>
