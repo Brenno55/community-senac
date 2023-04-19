@@ -16,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Community Senac</title>
-    <link  type="text/css" rel="stylesheet" href="/view/pages/home/style.css">
+    <link  type="text/css" rel="stylesheet" href="/view/css/home.css">
     <link type="text/css" rel="stylesheet" href="/view/pages/index.css">
 </head>
 
