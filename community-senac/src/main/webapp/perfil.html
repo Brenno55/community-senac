@@ -1,39 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Community Senac</title>
     <link rel="stylesheet"  href="./view/pages/index.css" media="screen" />
+    <link rel="stylesheet" href="./view/pages/perfil/perfil.css" media="screen"/>
 </head>
 <body>
 
-<a href="">Voltar</a>
-<a href="">Community Senac</a>
-
-
 <container class="container" >
 
-    <h1>Edite suas informaçoes</h1>
+    <h1>Edite seu perfil</h1>
 
     <form action="autenticador" name="frmContato" method="post">
 
-        <input type="text"  value="email" name="email" placeholder="Email">
-        <input type="text"  value="nome" name="nome" placeholder="Nome">
-        <input type="date"  value="data_nascimento" name="data_nascimento" placeholder="">
-        <input type="int" value="celular" name="celular" placeholder="Celular">
+
+        <input type="date" name="data_nascimento" placeholder="">
+        <input type="int"  name="celular" placeholder="Celular">
         <select name="Curso">
             <option value="null">Curso</option>
-            <option value="analise">Analise</option>
+            <option value="analise">ADS</option>
+            <option value="analise">Administração</option>
+            <option value="analise">Redes de computadores</option>
+            <option value="analise">Nutrição</option>
         </select>
         <select name="sexo">
             <option value="null">sexo</option>
             <option value="masculino">Masculino</option>
             <option value="feminino">Feminino</option>
         </select>
-        <input type="text" value="biografia" name="nome" placeholder="Biografia">
+        <input type="text" name="bio" placeholder="Biografia">
 
+        <button onclick="validarPerfil()">Finalizar</button>
+        <script src="./scripts/validador.js"></script>
     </form>
 
 
+
+</container>
 </body>
 </html>

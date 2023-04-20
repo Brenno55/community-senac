@@ -102,7 +102,35 @@ import java.util.ArrayList;
                 resp.sendRedirect("/cadastro.html");
             } else {
                 create.createUser(user); // insert no banco.
-                resp.sendRedirect("login.html");
+                resp.sendRedirect("perfil.html");
+            }
+
+
+
+
+        }
+        protected void handlePerfil(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            System.out.println("3- Entrei na funcão handlePerfil");
+
+            // setar as variaveis do Perfil
+            user.setData_nascimento(req.getParameter("data_nascimento"));
+            user.setCelular(req.getParameter("celular"));
+            user.setcFacul(req.getParameter("cFacul"));
+            user.setSexo(req.getParameter("sexo"));
+            user.setBio(req.getParameter("bio"));
+            System.out.println("4- Setei as variaveis");
+
+            // Invocar o método createUser passando o objt user:
+            UserCreate create = new UserCreate();
+
+            // VALIDAÇÕES:
+
+            if (!create.procureCelular(user)){
+                System.out.println("Celular ja existente");
+                resp.sendRedirect("/perfil.html");
+            } else {
+                create.createUserAux(user); // insert no banco.
+                resp.sendRedirect("/home.jsp");
             }
 
 

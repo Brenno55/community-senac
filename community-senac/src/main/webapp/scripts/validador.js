@@ -41,3 +41,32 @@ function validarLogin() {
     }
     document.forms["frmContato"].submit()
 }
+function validarPerfil() {
+    let data_nascimento = frmContato.data_nascimento.value;
+    let celular = frmContato.celular.value;
+    let cFacul = frmContato.cFacul.value;
+    let sexo = frmContato.sexo.value;
+
+    if (data_nascimento === "") {
+        alert("Preencha o campo data");
+        frmContato.fone.focus()
+        return false;
+    }
+    if (celular === "") {
+            alert("Preencha o campo celular");
+            frmContato.fone.focus()
+            return false;
+    }
+    if (cFacul === "") {
+            alert("Preencha o campo curso");
+            frmContato.fone.focus()
+            return false;
+    }
+    if (sexo === "") {
+            alert("Preencha o campo sexo");
+            frmContato.fone.focus()
+            return false;
+    }
+
+    document.forms["frmContato"].submit()
+}

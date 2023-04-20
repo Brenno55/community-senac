@@ -39,6 +39,31 @@ public  class UserCreate  {
             System.out.println(e);
         }
     }
+    public void createUserAux(User user){
+        String create = "insert into auxUser (data_nascimento, celular, cFacul, sexo, bio) values (?, ?, ?, ?, ?)";
+
+        try {
+            // abrir conexão com o banco:
+            Connection conectar = dao.conectar();
+
+            // preparar a query para execução.
+            PreparedStatement pst = conectar.prepareStatement(create);
+            // Substituir os parâmetros (?) pelas variaveis
+
+            pst.setString(1, user.getData_nascimento());
+            pst.setString(2, user.getCelular());
+            pst.setString(3, user.getcFacul());
+            pst.setString(4, user.getSexo());
+            pst.setString(5, user.getBio());
+
+            // executar a query:
+            pst.executeUpdate();
+            conectar.close();
+        } catch (Exception e) {
+            System.out.println("parei no insert -> createUser");
+            System.out.println(e);
+        }
+    }
 
     public boolean procureEmail(User user){
         String emailExistente = "SELECT email FROM usuario WHERE email = (?) ";
@@ -47,6 +72,24 @@ public  class UserCreate  {
             PreparedStatement pst = conectar.prepareStatement(emailExistente);
 
             pst.setString(1, user.getEmail());
+
+            ResultSet rs = pst.executeQuery();
+
+            conectar.close();
+            return true;
+        } catch (Exception e) {
+            System.out.println("parei no select -> procureEmail");
+            System.out.println(e);
+            return false;
+        }
+    }
+    public boolean procureCelular(User user){
+        String emailExistente = "SELECT celular FROM auxUser WHERE celular = (?) ";
+        try {
+            Connection conectar = dao.conectar();
+            PreparedStatement pst = conectar.prepareStatement(emailExistente);
+
+            pst.setString(1, user.getCelular());
 
             ResultSet rs = pst.executeQuery();
 
