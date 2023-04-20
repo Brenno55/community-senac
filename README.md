@@ -4,7 +4,7 @@
 
 # Projeto Integrador do 3º semestre
 
-## - Instalações e configurações para rodar o Community Senac:
+## Instalações e configurações para rodar o Community Senac:
 - Instalar: Intellij + JDK 
 - Clonar o projeto <a href="https://github.com/Brenno55/community-senac" target="_blank">Community Senac</a>
 - Executar o tomcat:run e depois <a href="http://localhost:8080/console" target="_blank">acessar aqui</a>
