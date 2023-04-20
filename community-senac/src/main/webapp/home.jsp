@@ -6,9 +6,13 @@
    User usuAutenticado = (User)session.getAttribute("usuAutenticado");
    ArrayList<User> lista = (ArrayList<User>)request.getAttribute("users");
 
-   String nomeUsuario= usuAutenticado.getNome();
    String avatar;
    String altText = "Imagem da pessoa";
+
+    //tratamento nome do usuario
+    String nomeUsuario= usuAutenticado.getNome();
+    String[] vet = nomeUsuario.split(" ");
+    String firstName = vet[0];
 %>
 
 <!DOCTYPE html>
@@ -35,7 +39,7 @@
     </form>
 
     <section>
-         <p> <%= nomeUsuario %> </p>
+         <p> <%= firstName %> </p>
          <a href="autenticador">Sair</a>
 
         <img src= "/view/assents/avatar_placeholder.svg" alt="">
@@ -56,19 +60,23 @@
 
     <main>
         <% for (int i = 0; i < lista.size() ; i++) {  %>
+                <%
+                   String nomeUsuario1 = lista.get(i).getNome();
+                   String[] vet1 = nomeUsuario.split(" ");
+                   String firstName1 = vet[0];
+                %>
+                <div class="card">
+                    <img
+                        src= "/view/assents/avatar_placeholder.svg"
+                         alt="foto do usuario"
+                    >
+                    <ul>
 
-            <div class="card">
-                <img
-                    src= "/view/assents/avatar_placeholder.svg"
-                     alt="foto do usuario"
-                >
-                <ul>
-
-                 <li> <%= lista.get(i).getNome() %> </li>
-                    <li>instagram</li>
-                    <li><a href="/details">Ver mais</a></li>
-                 </ul>
-            </div>
+                     <li> <%= firstName1 %> </li>
+                        <li>instagram</li>
+                        <li><a href="/details">Ver mais</a></li>
+                     </ul>
+                </div>
 
         <% } %>
     </main>

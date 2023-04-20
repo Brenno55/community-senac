@@ -104,6 +104,10 @@ import java.util.ArrayList;
                 create.createUser(user); // insert no banco.
                 resp.sendRedirect("login.html");
             }
+
+
+
+
         }
 
         protected void handleLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
