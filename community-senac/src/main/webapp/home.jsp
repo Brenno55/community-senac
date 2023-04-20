@@ -59,8 +59,8 @@
     </div>
 
     <main>
-        <% for (int i = 0; i < lista.size() ; i++) {  %>
-                <%
+        <% for (int i = 0; i < lista.size() ; i++) {
+
                    String nomeUsuario1 = lista.get(i).getNome();
                    String[] vet1 = nomeUsuario.split(" ");
                    String firstName1 = vet[0];
