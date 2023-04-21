@@ -2,7 +2,7 @@ package Controllers;
 
 import model.DAO;
 import model.User;
-import services.UserCreate;
+import services.UserService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
         DAO dao = new DAO();
         User user = new User();
-        UserCreate create = new UserCreate();
+        UserService create = new UserService();
         public RoutesControllers(){
             super();
         }
@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
             if(action.equals("/insert")){
                 System.out.println("2 - Redirecionei para a o metodo que faz o cadastro");
-                handleCadastro(req,resp);
+                //handleCadastro(req,resp);
             }
             else if (action.equals("/autenticador")) {
                 HttpSession sessao = req.getSession(false);
@@ -68,7 +68,7 @@ import java.util.ArrayList;
             usu.setEmail(semail);
             usu.setSenha(ssenha);
 
-            UserCreate usuDAO = new UserCreate();
+            UserService usuDAO = new UserService();
             User usuAutenticado = usuDAO.autenticacao(usu);
 
             if(usuAutenticado != null){
@@ -82,33 +82,6 @@ import java.util.ArrayList;
                 response.sendRedirect("erroLogin.html");
             }
         }
-
-        protected void handleCadastro(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            System.out.println("3- Entrei na funcão handleCadastro");
-
-            // setar as variaveis do usuario
-            user.setNome(req.getParameter("nome"));
-            user.setEmail(req.getParameter("email"));
-            user.setSenha(req.getParameter("senha"));
-            System.out.println("4- Setei as variaveis");
-
-            // Invocar o método createUser passando o objt user:
-            UserCreate create = new UserCreate();
-
-            // VALIDAÇÕES:
-
-            if (!create.procureEmail(user)){
-                System.out.println("Email ja existente");
-                resp.sendRedirect("/cadastro.html");
-            } else {
-                create.createUser(user); // insert no banco.
-                resp.sendRedirect("perfil.html");
-            }
-
-
-
-
-        }
         protected void handlePerfil(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             System.out.println("3- Entrei na funcão handlePerfil");
 
@@ -121,7 +94,7 @@ import java.util.ArrayList;
             System.out.println("4- Setei as variaveis");
 
             // Invocar o método createUser passando o objt user:
-            UserCreate create = new UserCreate();
+            UserService create = new UserService();
 
             // VALIDAÇÕES:
 

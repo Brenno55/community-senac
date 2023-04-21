@@ -3,16 +3,14 @@
 <%@ page import="java.util.ArrayList"%>
 
 <%
-   User usuAutenticado = (User)session.getAttribute("usuAutenticado");
+   //User usuAutenticado = (User)session.getAttribute("usuAutenticado");
    ArrayList<User> lista = (ArrayList<User>)request.getAttribute("users");
 
-   String avatar;
-   String altText = "Imagem da pessoa";
+   //String avatar;
+   //String altText = "Imagem da pessoa";
 
     //tratamento nome do usuario
-    String nomeUsuario= usuAutenticado.getNome();
-    String[] vet = nomeUsuario.split(" ");
-    String firstName = vet[0];
+    //String nomeUsuario= usuAutenticado.getNome();
 %>
 
 <!DOCTYPE html>
@@ -39,7 +37,7 @@
     </form>
 
     <section>
-         <p> <%= firstName %> </p>
+         <p> Nome de algum user </p>
          <a href="autenticador">Sair</a>
 
         <img src= "/view/assents/avatar_placeholder.svg" alt="">
@@ -59,12 +57,8 @@
     </div>
 
     <main>
-        <% for (int i = 0; i < lista.size() ; i++) {
+        <% for (int i = 0; i < lista.size() ; i++) { %>
 
-                   String nomeUsuario1 = lista.get(i).getNome();
-                   String[] vet1 = nomeUsuario.split(" ");
-                   String firstName1 = vet[0];
-                %>
                 <div class="card">
                     <img
                         src= "/view/assents/avatar_placeholder.svg"
@@ -72,12 +66,11 @@
                     >
                     <ul>
 
-                     <li> <%= firstName1 %> </li>
+                     <li> <%= lista.get(i).getNome() %> </li>
                         <li>instagram</li>
                         <li><a href="/details">Ver mais</a></li>
                      </ul>
                 </div>
-
         <% } %>
     </main>
  </div>

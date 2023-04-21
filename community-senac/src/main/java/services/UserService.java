@@ -9,37 +9,44 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 // Classe criada com o intuito de separar as funcionalidades da aplicação por serviços.
-public  class UserCreate  {
-    DAO dao = new DAO();
+public  class UserService {
+    DAO dao = new DAO(); //injeção da dependência da DAO.
 
-    public UserCreate(){
+    public UserService() {
 
     }
 
-    public void createUser(User user){
+    public User createUser(User user) {
+        System.out.println("Entrei no user create");
+        boolean eUsuarioExiste = procureEmail(user);
+        System.out.println("passei pelo boolean");
+        if (eUsuarioExiste) {
+            System.out.println("Entrei no if do email");
+            return null;
+        }
+        System.out.println("passei pelo if");
         String create = "INSERT INTO usuario (nome, email, senha) values (?, ?, ?)";
 
         try {
-            // abrir conexão com o banco:
             Connection conectar = dao.conectar();
-
-            // preparar a query para execução.
             PreparedStatement pst = conectar.prepareStatement(create);
-            // Substituir os parâmetros (?) pelas variaveis
 
             pst.setString(1, user.getNome());
             pst.setString(2, user.getEmail());
             pst.setString(3, user.getSenha());
-
-            // executar a query:
             pst.executeUpdate();
+
             conectar.close();
+            System.out.println("fiz o insert");
+            return user;
         } catch (Exception e) {
-            System.out.println("parei no insert -> createUser");
+            System.out.println("parei no createUser");
             System.out.println(e);
+            return null;
         }
     }
-    public void createUserAux(User user){
+
+    public void createUserAux(User user) {
         String create = "insert into auxUser (data_nascimento, celular, cFacul, sexo, bio) values (?, ?, ?, ?, ?)";
 
         try {
@@ -65,8 +72,12 @@ public  class UserCreate  {
         }
     }
 
-    public boolean procureEmail(User user){
+    public boolean procureEmail(User user) {
         String emailExistente = "SELECT email FROM usuario WHERE email = (?) ";
+
+        boolean x = false;
+
+
         try {
             Connection conectar = dao.conectar();
             PreparedStatement pst = conectar.prepareStatement(emailExistente);
@@ -74,15 +85,17 @@ public  class UserCreate  {
             pst.setString(1, user.getEmail());
 
             ResultSet rs = pst.executeQuery();
-
+            x = rs.next();
             conectar.close();
-            return true;
+            return x;
+
         } catch (Exception e) {
-            System.out.println("parei no select -> procureEmail");
             System.out.println(e);
-            return false;
+            return x;
         }
+
     }
+
     public boolean procureCelular(User user){
         String emailExistente = "SELECT celular FROM auxUser WHERE celular = (?) ";
         try {
