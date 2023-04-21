@@ -13,6 +13,7 @@
 
     <h1>Community Senac</h1>
     <h2>Crie sua conta</h2>
+
     <form action="/user" name="frmContato" method="post">
         <svg></svg>
         <input type="text" name="nome" placeholder="Nome" />
@@ -20,10 +21,12 @@
         <input type="email" name="email" placeholder="E-mail"/>
         <svg></svg>
         <input type="password" name="senha" placeholder="Senha"/>
-        <button>Cadastrar</button>
+        <input type="number" name="count" placeholder="" hidden="hidden"/>
+        <button onclick="validarCadastro()" >Cadastrar</button>
     </form>
 
     <a href="/login">Voltar para login</a>
+    <script src="./scripts/validador.js"></script>
 </container>
 </body>
 </html>

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
-    @WebServlet( urlPatterns = {"/Controller", "/insert", "/login", "/sobre", "/index", "/autenticador", "/erroLogin"})
+    @WebServlet( urlPatterns = {"/Controller", "/login", "/sobre", "/index", "/autenticador", "/erroLogin"})
     public class RoutesControllers extends HttpServlet {
 
         DAO dao = new DAO();
@@ -28,11 +28,7 @@ import java.util.ArrayList;
             String action = req.getServletPath();
             System.out.println("1 - chamada na rota: " + action);
 
-            if(action.equals("/insert")){
-                System.out.println("2 - Redirecionei para a o metodo que faz o cadastro");
-                //handleCadastro(req,resp);
-            }
-            else if (action.equals("/autenticador")) {
+            if (action.equals("/autenticador")) {
                 HttpSession sessao = req.getSession(false);
                 if(sessao!=null){
                     sessao.invalidate();

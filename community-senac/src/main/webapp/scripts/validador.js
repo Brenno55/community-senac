@@ -2,6 +2,14 @@ function validarCadastro() {
     let nome = frmContato.nome.value;
     let email = frmContato.email.value;
     let senha = frmContato.senha.value;
+    let count = frmContato.count.value;
+
+    if (count != 0) {
+            alert("Email já existe.");
+            frmContato.email.focus();
+            count = 0;
+            return false;
+    }
 
     if (nome === "") {
         alert("Preencha o campo Nome");
@@ -20,7 +28,6 @@ function validarCadastro() {
             frmContato.fone.focus()
             return false;
     }
-
     document.forms["frmContato"].submit()
 }
 
