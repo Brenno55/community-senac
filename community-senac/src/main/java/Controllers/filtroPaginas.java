@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/*
 @WebFilter( urlPatterns = {"/insert", "/index", "/autenticador"})
 public class filtroPaginas implements Filter {
 
@@ -47,4 +48,7 @@ public class filtroPaginas implements Filter {
     }
 
 }
+
+
+ */
 
