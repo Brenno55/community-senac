@@ -25,11 +25,10 @@ public class UserController extends HttpServlet {
         User userCriado = service.createUser(user);
 
         if (userCriado == null) {
-            System.out.println("setei o parametro 1");
-            req.setAttribute("count", 1);
-            req.getRequestDispatcher("cadastro.html").forward(req, resp);
-            System.out.println("entrei no else");
-
+            req.setAttribute("countV", 1);
+            String count = req.getAttribute("countV").toString();
+            System.out.println(count + " ->>>>");
+            req.getRequestDispatcher("cadastro.jsp").forward(req, resp);
            // setAttribute
         } else {
             req.getRequestDispatcher("perfil.html").forward(req, resp);

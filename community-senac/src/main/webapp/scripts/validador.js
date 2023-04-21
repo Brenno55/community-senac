@@ -4,9 +4,10 @@ function validarCadastro() {
     let senha = frmContato.senha.value;
     let count = frmContato.count.value;
 
-    if (count != 0) {
+    if (count == 1) {
             alert("Email já existe.");
             frmContato.email.focus();
+
             count = 0;
             return false;
     }

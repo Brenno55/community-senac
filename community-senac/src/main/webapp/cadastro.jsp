@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page import="model.User"%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,6 +12,13 @@
 
 </head>
 <body>
+
+<%
+    //String count = req.getAttribute("countV").toString();
+   // User count =(User)request.getAttribute("countV");
+   // usar uma validação de sessão, se ele não estiver, ai lancar uma variavel qualquer
+   //int x = 0;
+%>
 <container class="container" >
 
     <h1>Community Senac</h1>
@@ -21,7 +31,8 @@
         <input type="email" name="email" placeholder="E-mail"/>
         <svg></svg>
         <input type="password" name="senha" placeholder="Senha"/>
-        <input type="number" name="count" placeholder="" hidden="hidden"/>
+
+        <input type="number" name="count" placeholder="" hidden="hidden" value={0}/>
         <button onclick="validarCadastro()" >Cadastrar</button>
     </form>
 
