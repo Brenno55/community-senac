@@ -3,22 +3,24 @@ package Controllers;
 import model.User;
 import services.UserService;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet( urlPatterns = {"/user"})
 public class UserController extends HttpServlet {
     UserService service = new UserService();
     User user = new User();
 
+    //login e cadastro.
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String action = req.getServletPath();
+        System.out.println(action);
 
         user.setNome(req.getParameter("nome"));
         user.setEmail(req.getParameter("email"));
@@ -37,7 +39,29 @@ public class UserController extends HttpServlet {
         }
     }
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String action = req.getServletPath();
+        System.out.println(action);
 
+        String semail = req.getParameter("email");
+        String ssenha = req.getParameter("senha");
 
+        User usu = new User();usu.setEmail(semail);usu.setSenha(ssenha);
 
+        UserService usuDAO = new UserService();
+        User usuAutenticado = usuDAO.autenticacao(usu);
+
+        if(usuAutenticado != null){
+            HttpSession sessao = req.getSession();
+            sessao.setAttribute("usuAutenticado", usuAutenticado);
+            //sessao.setMaxInactiveInterval(3000);
+            //request.getRequestDispatcher("index").forward(request, response);
+            System.out.println("usuario authenticado");
+            resp.sendRedirect("/home");
+        } else {
+            resp.sendRedirect("erroLogin.html");
+        }
+    }
 }
+

@@ -35,9 +35,6 @@ import java.util.ArrayList;
                 }
                 System.out.println("sessão falsa");
                 resp.sendRedirect("login.html");
-            } else if (action.equals("/login")) {
-                System.out.println("2 - Redirecionei para a o metodo que faz o login");
-                handleLogin(req, resp);
             } else if (action.equals("/sobre")) {
                 RequestDispatcher rd = req.getRequestDispatcher("/view/pages/sobre/sobre.html");
                 rd.forward(req, resp);
@@ -51,29 +48,6 @@ import java.util.ArrayList;
 
         }
 
-        @Override
-        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            String semail = request.getParameter("email");
-            String ssenha = request.getParameter("senha");
-
-            User usu = new User();
-            usu.setEmail(semail);
-            usu.setSenha(ssenha);
-
-            UserService usuDAO = new UserService();
-            User usuAutenticado = usuDAO.autenticacao(usu);
-
-            if(usuAutenticado != null){
-                HttpSession sessao = request.getSession();
-                sessao.setAttribute("usuAutenticado", usuAutenticado);
-                //sessao.setMaxInactiveInterval(3000);
-                //request.getRequestDispatcher("index").forward(request, response);
-                System.out.println("usuario authenticado");
-                response.sendRedirect("/home");
-            }else {
-                response.sendRedirect("erroLogin.html");
-            }
-        }
         protected void handlePerfil(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             System.out.println("3- Entrei na funcão handlePerfil");
 
@@ -99,29 +73,4 @@ import java.util.ArrayList;
             }
 
         }
-
-        protected void handleLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            System.out.println("3- Entrei na funcão handleLogin");
-            dao.testeConexao();
-
-            // setar as variaveis do usuario
-            user.setEmail(req.getParameter("email"));
-            user.setSenha(req.getParameter("senha"));
-            System.out.println("4- Setei as variaveis");
-
-            // VALIDAÇÕES:
-            if (!create.procureEmail(user)){
-                System.out .println("Usuario não encontrado!");
-                resp.sendRedirect("/login.html");
-
-            } else if (!create.procureSenha(user)) {
-                System.out.println("As senhas não conferem");
-                resp.sendRedirect("/login.html");
-            } else {
-                resp.sendRedirect("/home");
-            }
-
-        }
-
-
     }
