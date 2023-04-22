@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet( urlPatterns = {"/user", "/user-create"})
+@WebServlet( urlPatterns = {"/user"})
 public class UserController extends HttpServlet {
     UserService service = new UserService();
     User user = new User();
@@ -37,11 +37,7 @@ public class UserController extends HttpServlet {
         }
     }
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<User> lista = new UserService().listarContatos();
-        req.setAttribute("users", lista);
-        RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
-        rd.forward(req, resp);
-    }
+
+
+
 }

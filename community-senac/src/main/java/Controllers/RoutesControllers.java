@@ -41,10 +41,6 @@ import java.util.ArrayList;
             } else if (action.equals("/sobre")) {
                 RequestDispatcher rd = req.getRequestDispatcher("/view/pages/sobre/sobre.html");
                 rd.forward(req, resp);
-            } else if (action.equals("/index")) {
-                System.out.println("2 - Redirecionei para a o metodo que faz a listagem de usuarios");
-                listUsers(req,resp);
-
             } else if (action.equals("/erroLogin")) {
                 System.out.println("2 - Redirecionei para pagina de erro");
                 resp.sendRedirect("erroLogin.html");
@@ -73,7 +69,7 @@ import java.util.ArrayList;
                 //sessao.setMaxInactiveInterval(3000);
                 //request.getRequestDispatcher("index").forward(request, response);
                 System.out.println("usuario authenticado");
-                response.sendRedirect("/index");
+                response.sendRedirect("/home");
             }else {
                 response.sendRedirect("erroLogin.html");
             }
@@ -102,9 +98,6 @@ import java.util.ArrayList;
                 resp.sendRedirect("/home.jsp");
             }
 
-
-
-
         }
 
         protected void handleLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -116,8 +109,6 @@ import java.util.ArrayList;
             user.setSenha(req.getParameter("senha"));
             System.out.println("4- Setei as variaveis");
 
-
-
             // VALIDAÇÕES:
             if (!create.procureEmail(user)){
                 System.out .println("Usuario não encontrado!");
@@ -127,21 +118,10 @@ import java.util.ArrayList;
                 System.out.println("As senhas não conferem");
                 resp.sendRedirect("/login.html");
             } else {
-                resp.sendRedirect("index");
+                resp.sendRedirect("/home");
             }
 
-
-
-
         }
 
-        protected void listUsers(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-            ArrayList<User> lista = create.listarContatos();
-
-
-            req.setAttribute("users", lista);
-            RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
-            rd.forward(req, resp);
-        }
     }
