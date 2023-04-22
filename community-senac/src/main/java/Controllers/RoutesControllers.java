@@ -136,12 +136,9 @@ import java.util.ArrayList;
         }
 
         protected void listUsers(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            // Criando um obj que ira receber os dados da classe de auxUser:
-            // por enquanto como ela não se encontra pronta eu vou usar apenas a classe de user;
 
             ArrayList<User> lista = create.listarContatos();
 
-            //Encaminhar a lista ao documento home.jsp;
 
             req.setAttribute("users", lista);
             RequestDispatcher rd = req.getRequestDispatcher("home.jsp");

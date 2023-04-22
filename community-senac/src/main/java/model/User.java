@@ -1,6 +1,7 @@
 package model;
 
 public class User {
+    private Long id;
     private String nome;
     private String email;
     private String senha;
@@ -11,13 +12,25 @@ public class User {
     private String sexo;
     private String bio;
 
-
-
     public User() {
 
     }
-
-    public User(String nome, String email, String senha, String data_nascimento, String celular, String cFacul, String sexo, String bio) {
+    public User(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
+    }
+    public User(Long id, String nome, String email) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+    }
+    public User(String nome, String email, String senha) {
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+    }
+    public User(Long id, String nome, String email, String senha, String data_nascimento, String celular, String cFacul, String sexo, String bio) {
+       this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
@@ -27,18 +40,9 @@ public class User {
         this.sexo = sexo;
         this.bio = bio;
     }
-
-    public User(String nome, String email, String senha) {
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
+    public Long getId() {
+        return id;
     }
-
-    public User(String nome, String email) {
-        this.nome = nome;
-        this.email = email;
-    }
-
     public String getNome() {
         return nome;
     }

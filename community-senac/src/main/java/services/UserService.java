@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Collections;
 
 // Classe criada com o intuito de separar as funcionalidades da aplicação por serviços.
 public  class UserService {
@@ -136,9 +137,6 @@ public  class UserService {
 
 
     public ArrayList<User> listarContatos() {
-        // Criando um obj para acessar a classe User
-        ArrayList<User> users = new ArrayList<>();
-
         String read = "SELECT * FROM usuario ORDER BY nome";
 
         try {
@@ -146,24 +144,20 @@ public  class UserService {
             PreparedStatement pst = conectar.prepareStatement(read);
             ResultSet rs = pst.executeQuery();
 
-            // o laço vai ser executado enquanto tiver usuarios:
+            ArrayList<User> users = new ArrayList<>();
 
-            while (rs.next()){ // next é um método dentro do objt ResultSet usado para listar os dados;
-
-                // variaveis de apoio que recebem os dados do banco:
-
+            while (rs.next()){
+               // String id = String.valueOf(rs.getString(0));
                 String nome  = rs.getString(1);
                 String email = rs.getString(2);
 
-                // populando o array list
                 users.add(new User(nome, email));
-
             }
             conectar.close();
             return users;
         } catch (Exception e) {
-            System.out.println(e);
-            return  null;
+            System.out.println(e + "Falha na conexão com bd index.");
+            return null;
         }
     }
 

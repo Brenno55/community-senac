@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ page import="model.User"%>
-<%@ page import="java.util.ArrayList"%>
 
 <%
    //User usuAutenticado = (User)session.getAttribute("usuAutenticado");
-   ArrayList<User> lista = (ArrayList<User>)request.getAttribute("users");
 
    //String avatar;
    //String altText = "Imagem da pessoa";
@@ -15,6 +12,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
     <title>Community Senac</title>
@@ -43,10 +41,7 @@
         <img src= "/view/assents/avatar_placeholder.svg" alt="">
     </section>
 
-
-
 </header>
-
 
  <div class="container">
 
@@ -57,8 +52,7 @@
     </div>
 
     <main>
-        <% for (int i = 0; i < lista.size() ; i++) { %>
-
+     <c:forEach var="user" items="${users}">
                 <div class="card">
                     <img
                         src= "/view/assents/avatar_placeholder.svg"
@@ -66,15 +60,12 @@
                     >
                     <ul>
 
-                     <li> <%= lista.get(i).getNome() %> </li>
+                     <li> ${user.nome}</li>
                         <li>instagram</li>
                         <li><a href="/details">Ver mais</a></li>
                      </ul>
                 </div>
-        <% } %>
+        </c:forEach>
     </main>
  </div>
-
-
-
 </body>
