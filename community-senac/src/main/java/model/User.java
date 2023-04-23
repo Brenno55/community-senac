@@ -12,6 +12,8 @@ public class User {
     private String sexo;
     private String bio;
 
+    private String sobrenome;
+
     public User() {
 
     }
@@ -29,7 +31,7 @@ public class User {
         this.email = email;
         this.senha = senha;
     }
-    public User(Long id, String nome, String email, String senha, String data_nascimento, String celular, String cFacul, String sexo, String bio) {
+    public User(Long id, String nome, String email, String senha, String data_nascimento, String celular, String cFacul, String sexo, String bio, String sobrenome) {
        this.id = id;
         this.nome = nome;
         this.email = email;
@@ -39,13 +41,16 @@ public class User {
         this.cFacul = cFacul;
         this.sexo = sexo;
         this.bio = bio;
+        this.sobrenome = sobrenome;
     }
     public Long getId() {
         return id;
     }
     public String getNome() {
-        return nome;
-    }
+        String[] vet = this.nome.split(" ");
+         String firstName = vet[0];
+        return firstName;
+    } // tratamento no caso de ter mais do 1 nome;
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -86,4 +91,12 @@ public class User {
     public String getBio() {return bio;}
 
     public void setBio(String bio) {this.bio = bio;}
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
 }

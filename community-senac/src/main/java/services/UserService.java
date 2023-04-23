@@ -136,7 +136,7 @@ public  class UserService {
     }
 
 
-    public ArrayList<User> listarContatos() {
+    public ArrayList<User> listarUsuarios() {
         String read = "SELECT * FROM usuario ORDER BY nome";
 
         try {
@@ -147,11 +147,10 @@ public  class UserService {
             ArrayList<User> users = new ArrayList<>();
 
             while (rs.next()){
-               // String id = String.valueOf(rs.getString(0));
-                String nome  = rs.getString(1);
-                String email = rs.getString(2);
+                String id = rs.getString("id_user");
+                String nome  = rs.getString("nome");
 
-                users.add(new User(nome, email));
+                users.add(new User(id, nome));
             }
             conectar.close();
             return users;

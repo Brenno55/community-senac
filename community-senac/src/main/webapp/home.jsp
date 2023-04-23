@@ -1,18 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page import="model.User"%>
 
-<%
-   //User usuAutenticado = (User)session.getAttribute("usuAutenticado");
-
-   //String avatar;
-   //String altText = "Imagem da pessoa";
-
-    //tratamento nome do usuario
-    //String nomeUsuario= usuAutenticado.getNome();
-%>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
     <title>Community Senac</title>
@@ -21,6 +12,10 @@
 </head>
 
 <body>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%  User userAutenticado = (User)session.getAttribute("usuAutenticado");  %>
+
 
 <header>
 
@@ -35,7 +30,7 @@
     </form>
 
     <section>
-         <p> Nome de algum user </p>
+         <p> <%= userAutenticado.getNome() %> </p>
          <a href="autenticador">Sair</a>
 
         <img src= "/view/assents/avatar_placeholder.svg" alt="">
@@ -52,17 +47,16 @@
     </div>
 
     <main>
-     <c:forEach var="user" items="${users}">
+     <c:forEach var="user" items="${users}" >
                 <div class="card">
                     <img
                         src= "/view/assents/avatar_placeholder.svg"
-                         alt="foto do usuario"
+                         alt=${user.nome}
                     >
                     <ul>
-
-                     <li> ${user.nome}</li>
+                        <li>${user.nome}</li>
                         <li>instagram</li>
-                        <li><a href="/details">Ver mais</a></li>
+                        <li><a href="/details:${user.id}">Ver mais</a></li>
                      </ul>
                 </div>
         </c:forEach>

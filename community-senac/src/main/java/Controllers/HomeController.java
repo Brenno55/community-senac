@@ -14,11 +14,11 @@ import java.util.List;
 
 @WebServlet( urlPatterns = {"/home"})
 public class HomeController  extends HttpServlet {
+    public UserService service = new UserService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<User> lista = new UserService().listarContatos();
+        List<User> lista = service.listarUsuarios();
         req.setAttribute("users", lista);
-        RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
-        rd.forward(req, resp);
+        req.getRequestDispatcher("home.jsp").forward(req,resp);
     }
 }

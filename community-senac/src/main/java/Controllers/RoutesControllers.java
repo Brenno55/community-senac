@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
-    @WebServlet( urlPatterns = {"/Controller", "/login", "/sobre", "/index", "/autenticador", "/erroLogin"})
+    @WebServlet( urlPatterns = {"/Controller", "/sobre", "/autenticador", "/erroLogin"})
     public class RoutesControllers extends HttpServlet {
 
         DAO dao = new DAO();
@@ -44,32 +44,6 @@ import java.util.ArrayList;
             } else {
                 RequestDispatcher rd = req.getRequestDispatcher("index.html");
                 rd.forward(req, resp);
-            }
-
-        }
-
-        protected void handlePerfil(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            System.out.println("3- Entrei na funcão handlePerfil");
-
-            // setar as variaveis do Perfil
-            user.setData_nascimento(req.getParameter("data_nascimento"));
-            user.setCelular(req.getParameter("celular"));
-            user.setcFacul(req.getParameter("cFacul"));
-            user.setSexo(req.getParameter("sexo"));
-            user.setBio(req.getParameter("bio"));
-            System.out.println("4- Setei as variaveis");
-
-            // Invocar o método createUser passando o objt user:
-            UserService create = new UserService();
-
-            // VALIDAÇÕES:
-
-            if (!create.procureCelular(user)){
-                System.out.println("Celular ja existente");
-                resp.sendRedirect("/perfil.html");
-            } else {
-                create.createUserAux(user); // insert no banco.
-                resp.sendRedirect("/home.jsp");
             }
 
         }

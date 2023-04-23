@@ -47,18 +47,19 @@ public class UserController extends HttpServlet {
         String semail = req.getParameter("email");
         String ssenha = req.getParameter("senha");
 
-        User usu = new User();usu.setEmail(semail);usu.setSenha(ssenha);
+        User usu = new User();
+        usu.setEmail(semail);
+        usu.setSenha(ssenha);
 
-        UserService usuDAO = new UserService();
-        User usuAutenticado = usuDAO.autenticacao(usu);
+        User usuAutenticado = service.autenticacao(usu);
 
         if(usuAutenticado != null){
             HttpSession sessao = req.getSession();
             sessao.setAttribute("usuAutenticado", usuAutenticado);
-            //sessao.setMaxInactiveInterval(3000);
-            //request.getRequestDispatcher("index").forward(request, response);
+
             System.out.println("usuario authenticado");
             resp.sendRedirect("/home");
+            // Não mandar para tela de perfil pois
         } else {
             resp.sendRedirect("erroLogin.html");
         }
