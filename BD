@@ -1,19 +1,12 @@
-/*Primeiro Script*/
+/*Script criação da tabela usuario */
 create table usuario (
 	id_user int PRIMARY KEY auto_increment,
 	nome varchar(50) not null,
 	email varchar(40) not null,
-	senha varchar(50) not null
+	senha varchar(50) not null,
+       data_nascimento varchar(20),
+       celular varchar(20),
+       cFacul varchar(50),
+       sexo varchar (20),
+       bio varchar(50)
 );
-
-/*Segundo Script*/
-create table auxUser(
-fk_idAux int auto_increment,
-data_nascimento varchar(20),
-celular varchar(20),
-cFacul varchar(50),
-sexo varchar (20),
-bio varchar(50),  
-constraint fk_idAux FOREIGN KEY (fk_idAux) references usuario (id_user)
-);
-
