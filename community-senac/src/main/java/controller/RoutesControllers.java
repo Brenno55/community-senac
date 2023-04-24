@@ -1,8 +1,4 @@
-package Controllers;
-
-import model.DAO;
-import model.User;
-import services.UserService;
+package controller;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

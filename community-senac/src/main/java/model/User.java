@@ -1,52 +1,35 @@
 package model;
 
 public class User {
-    private String id;
     private String nome;
+    private String data_nascimento;
+    private String sexo;
+    private String bio;
+    private String celular;
+    private String curso;
     private String email;
     private String senha;
 
-    private String data_nascimento;
-    private String celular;
-    private String cFacul;
-    private String sexo;
-    private String bio;
-
-    private String sobrenome;
 
     public User() {
-
     }
-    public User(String id, String nome) {
-        this.id = id;
-        this.nome = nome;
-    }
-    public User(String id, String nome, String email) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email; //(id, nome, data_nascimento, getcFacul)
-    }
-    public User(String id, String nome, String data_nascimento, String cFacul) {
-        this.id = id;
-        this.nome = nome;
-        this.data_nascimento = data_nascimento;
-        this.cFacul = cFacul;
-    }
-    public User(String id, String nome, String email, String senha, String data_nascimento, String celular, String cFacul, String sexo, String bio, String sobrenome) {
-       this.id = id;
+    public User(String nome, String email, String senha) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+    }
+    public User(String nome, String data_nascimento, String sexo, String bio, String celular, String curso, String email, String senha) {
+        this.nome = nome;
         this.data_nascimento = data_nascimento;
-        this.celular = celular;
-        this.cFacul = cFacul;
         this.sexo = sexo;
         this.bio = bio;
-        this.sobrenome = sobrenome;
+        this.celular = celular;
+        this.curso = curso;
+        this.email = email;
+        this.senha = senha;
     }
-    public String getId() {
-        return id;
-    }
+
+
     public String getNome() {
         return nome.toLowerCase();
     }
@@ -79,9 +62,9 @@ public class User {
 
     public void setCelular(String celular) {this.celular = celular;}
 
-    public String getcFacul() {return cFacul;}
+    public String getCurso() {return curso;}
 
-    public void setcFacul(String cFacul) {this.cFacul = cFacul;}
+    public void setCurso(String cFacul) {this.curso = curso;}
 
     public String getSexo() {return sexo;}
 
@@ -90,12 +73,4 @@ public class User {
     public String getBio() {return bio;}
 
     public void setBio(String bio) {this.bio = bio;}
-
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
 }

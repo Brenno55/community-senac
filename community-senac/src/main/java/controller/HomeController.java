@@ -1,9 +1,8 @@
-package Controllers;
+package controller;
 
 import model.User;
 import services.UserService;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet( urlPatterns = {"/home", "/home-header", "/home-filter"})
-public class HomeController  extends HttpServlet {
+public class HomeController extends HttpServlet {
     public UserService service = new UserService();
 
     @Override
@@ -23,7 +22,7 @@ public class HomeController  extends HttpServlet {
 
         if (action.equals("/home")) {
 
-            List<User> lista = service.listarUsuarios();
+            List<User> lista = service.listarTodosUsuarios();
             req.setAttribute("users", lista);
             req.getRequestDispatcher("home.jsp").forward(req,resp);
 
