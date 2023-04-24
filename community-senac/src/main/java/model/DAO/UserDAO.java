@@ -71,6 +71,34 @@ public class UserDAO {
             return false;
         }
     }
+
+    public User buscarUsuarioLogado(String email){
+        String SQL = "SELECT * FROM usuario WHERE email = (?)";
+        User user = new User();
+        try {
+            Connection conectar = conectar();
+
+            PreparedStatement pst = conectar.prepareStatement(SQL);
+            pst.setString(1, email);
+
+            ResultSet rs = pst.executeQuery();
+            conectar.close();
+
+            user.setNome(rs.getString("nome"));
+            user.setData_nascimento(rs.getString("data_nascimento"));
+            user.setSexo(rs.getString("sexo"));
+            user.setBio(rs.getString("bio"));
+            user.setCelular(rs.getString("celular"));
+            user.setCurso(rs.getString("curso"));
+            user.setEmail(rs.getString("email"));
+            user.setSenha(rs.getString("senha"));
+            return user;
+
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     public boolean buscarPorEmailSenha(String email, String senha){
         String SQL = "SELECT * FROM usuario WHERE email = (?) AND senha = (?)";
 

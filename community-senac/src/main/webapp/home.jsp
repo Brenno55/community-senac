@@ -14,7 +14,7 @@
 <body>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<%  User userAutenticado = (User)session.getAttribute("usuAutenticado");  %>
+<%  User sessionUser = (User)session.getAttribute("sessionUser");  %>
 
 
 <header>
@@ -32,7 +32,7 @@
     </form>
 
     <section>
-         <p> <%= userAutenticado.getNome() %> </p>
+         <p> <%= sessionUser.getNome() %> </p>
          <a href="autenticador">Sair</a>
 
         <img src= "/view/assents/avatar_placeholder.svg" alt="">
@@ -63,7 +63,7 @@
                         <li>${user.getNome()}</li>
                         <li>${user.getData_nascimento()}</li>
                         <li>${user.getcFacul()}</li>
-                        <li><a href="/details:${user.id}">Ver mais</a></li>
+                        <li><a href="/details:${user.getEmail()}">Ver mais</a></li>
                      </ul>
                 </div>
         </c:forEach>

@@ -13,7 +13,7 @@ import java.util.List;
 
 @WebServlet( urlPatterns = {"/home", "/home-header", "/home-filter"})
 public class HomeController extends HttpServlet {
-    public UserService service = new UserService();
+    public UserService userService = new UserService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -22,20 +22,20 @@ public class HomeController extends HttpServlet {
 
         if (action.equals("/home")) {
 
-            List<User> lista = service.listarTodosUsuarios();
+            List<User> lista = userService.listarTodosUsuarios();
             req.setAttribute("users", lista);
             req.getRequestDispatcher("home.jsp").forward(req,resp);
 
         } else if (action.equals("/home-header")){
-            String pesquisa = req.getParameter("search-header");
+            String nome = req.getParameter("search-header");
 
-            List<User> lista = service.listarPesquisaPorNome(pesquisa);
+            List<User> lista = userService.listarUsuariosPorNome(nome);
             req.setAttribute("users", lista);
             req.getRequestDispatcher("home.jsp").forward(req,resp);
         } else if (action.equals("/home-filter")){
-            String pesquisa = req.getParameter("/home-filter");
+            String curso = req.getParameter("/home-filter");
 
-            List<User> lista = service.listarPesquisaPorNome(pesquisa);
+            List<User> lista = userService.listaUsuariosPorCurso(curso);
             req.setAttribute("users", lista);
             req.getRequestDispatcher("home.jsp").forward(req,resp);
         }else {

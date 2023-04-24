@@ -42,8 +42,9 @@ public class UserController extends HttpServlet {
         boolean usuarioAutenticado = userService.autenticarUsuario(email, senha);
 
         if(usuarioAutenticado){
+            User user = userService.buscarUsuarioLogado(email);
             HttpSession sessao = req.getSession();
-            sessao.setAttribute("usuarioAutenticado", usuarioAutenticado);
+            sessao.setAttribute("sessionUser", user);
 
             resp.sendRedirect("/home");
         } else {

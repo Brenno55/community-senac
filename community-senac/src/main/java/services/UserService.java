@@ -25,8 +25,12 @@ public  class UserService {
     public ArrayList<User> listarUsuariosPorNome(String nome){
         return userDAO.buscarPorNome(nome);
     }
-    public ArrayList<User> listarUsuariosPorCruso(String curso) {
+    public ArrayList<User> listaUsuariosPorCurso(String curso) {
         return userDAO.buscarPorCurso(curso);
+    }
+
+    public User buscarUsuarioLogado(String email){
+        return userDAO.buscarUsuarioLogado(email);
     }
 }
 
