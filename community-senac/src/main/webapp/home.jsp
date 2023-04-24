@@ -45,13 +45,10 @@
     <div class="block">
         <h1>Possiveis conexões</h1>
 
-        <div class="filtros" hide>
-                <input type="checkbox" class="estados" id="acre" name="estado" value="AC">
-                <label for="acre">Acre</label><br>
-
-                <input type="checkbox" class="estados" id="goias" name="estado" value="GO">
-                <label for="goias">Goiás</label><br>
-            <button><span>+</span>Adicionar Filtro</button>
+        <div class="filtros"  >
+                <input hidden type="checkbox" class="estados" id="acre" name="estado" value="AC">
+                <label hidden for="acre">Acre</label><br>
+            <button type="submit"><span>+</span>Adicionar Filtro</button>
         </div>
     </div>
 
