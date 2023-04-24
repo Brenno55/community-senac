@@ -14,12 +14,13 @@ public class PerfilController extends HttpServlet {
     // quando recebe o direcionamento da tela de  cadastro.
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        resp.sendRedirect("/perfil.html");
     }
 
     //qunado é clicado para fazer insert
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+
+
     }
 }

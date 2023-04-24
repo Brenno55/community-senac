@@ -12,16 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
-    @WebServlet( urlPatterns = {"/Controller", "/sobre", "/autenticador", "/erroLogin"})
+    @WebServlet( urlPatterns = {"/sobre", "/autenticador", "/erroLogin"})
     public class RoutesControllers extends HttpServlet {
-
-        DAO dao = new DAO();
-        User user = new User();
-        UserService create = new UserService();
-        public RoutesControllers(){
-            super();
-        }
 
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -38,13 +30,10 @@ import java.util.ArrayList;
             } else if (action.equals("/sobre")) {
                 RequestDispatcher rd = req.getRequestDispatcher("/view/pages/sobre/sobre.html");
                 rd.forward(req, resp);
-            } else if (action.equals("/erroLogin")) {
-                System.out.println("2 - Redirecionei para pagina de erro");
+            } else  if (action.equals("/erroLogin")) {
                 resp.sendRedirect("erroLogin.html");
-            } else {
-                RequestDispatcher rd = req.getRequestDispatcher("index.html");
-                rd.forward(req, resp);
+            } else   {
+                resp.sendRedirect("/erroResource.html.html");
             }
-
         }
     }
