@@ -167,9 +167,9 @@ public  class UserService {
     }
 
     public ArrayList<User> listarPesquisaPorNome(String pesquisa) {
-        String pesquisaAux = '%'  + pesquisa +'%';
+        String pesquisaAux = '%'  +pesquisa+ '%';
 
-        String read = "SELECT id_user, nome FROM USUARIO WHERE nome LIKE (?) ";
+        String read = "SELECT * FROM USUARIO WHERE nome LIKE (?) ";
 
         try {
             Connection conectar = dao.conectar();
@@ -183,8 +183,40 @@ public  class UserService {
             while (rs.next()){
                 String id = rs.getString("id_user");
                 String nome  = rs.getString("nome");
+                String data_nascimento  = rs.getString("data_nascimento");
+                String cFacul  = rs.getString("cFacul");
 
-                users.add(new User(id, nome));
+                users.add(new User(id, nome, data_nascimento, cFacul));
+            }
+            conectar.close();
+            return users;
+        } catch (Exception e) {
+            System.out.println(e + "Falha na conexão com bd index.");
+            return null;
+        }
+    }
+
+    public ArrayList<User> listarPorCfacul(String cfacul) {
+        String pesquisaAux = '%' +cfacul+ '%';
+
+        String read = "SELECT * FROM USUARIO WHERE nome LIKE (?) ";
+
+        try {
+            Connection conectar = dao.conectar();
+            PreparedStatement pst = conectar.prepareStatement(read);
+            pst.setString(1, pesquisaAux);
+
+            ResultSet rs = pst.executeQuery();
+
+            ArrayList<User> users = new ArrayList<>();
+
+            while (rs.next()){
+                String id = rs.getString("id_user");
+                String nome  = rs.getString("nome");
+                String data_nascimento  = rs.getString("data_nascimento");
+                String cFacul  = rs.getString("cFacul");
+
+                users.add(new User(id, nome, data_nascimento, cFacul));
             }
             conectar.close();
             return users;
