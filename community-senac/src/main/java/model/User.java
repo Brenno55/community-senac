@@ -24,13 +24,13 @@ public class User {
     public User(String id, String nome, String email) {
         this.id = id;
         this.nome = nome;
-        this.email = email;
+        this.email = email; //(id, nome, data_nascimento, getcFacul)
     }
-    public User(String id, String nome, String email, String senha) {
+    public User(String id, String nome, String data_nascimento, String cFacul) {
         this.id = id;
         this.nome = nome;
-        this.email = email;
-        this.senha = senha;
+        this.data_nascimento = data_nascimento;
+        this.cFacul = cFacul;
     }
     public User(String id, String nome, String email, String senha, String data_nascimento, String celular, String cFacul, String sexo, String bio, String sobrenome) {
        this.id = id;

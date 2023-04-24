@@ -153,8 +153,10 @@ public  class UserService {
             while (rs.next()){
                 String id = rs.getString("id_user");
                 String nome  = rs.getString("nome");
+                String data_nascimento  = rs.getString("data_nascimento");
+                String cFacul  = rs.getString("cFacul");
 
-                users.add(new User(id, nome));
+                users.add(new User(id, nome, data_nascimento, cFacul));
             }
             conectar.close();
             return users;
@@ -191,6 +193,7 @@ public  class UserService {
             return null;
         }
     }
+
 
 
     public User autenticacao(User user){

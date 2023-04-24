@@ -45,7 +45,14 @@
     <div class="block">
         <h1>Possiveis conexões</h1>
 
-        <button><span>+</span>Adicionar Filtro</button>
+        <div class="filtros" hide>
+                <input type="checkbox" class="estados" id="acre" name="estado" value="AC">
+                <label for="acre">Acre</label><br>
+
+                <input type="checkbox" class="estados" id="goias" name="estado" value="GO">
+                <label for="goias">Goiás</label><br>
+            <button><span>+</span>Adicionar Filtro</button>
+        </div>
     </div>
 
     <main>
@@ -56,8 +63,9 @@
                          alt=${user.nome}
                     >
                     <ul>
-                        <li>${user.getId()}</li>
                         <li>${user.getNome()}</li>
+                        <li>${user.getData_nascimento()}</li>
+                        <li>${user.getcFacul()}</li>
                         <li><a href="/details:${user.id}">Ver mais</a></li>
                      </ul>
                 </div>
