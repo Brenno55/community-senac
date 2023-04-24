@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet( urlPatterns = {"/home", "/home-header"})
+@WebServlet( urlPatterns = {"/home", "/home-header", "/home-filter"})
 public class HomeController  extends HttpServlet {
     public UserService service = new UserService();
 
@@ -33,7 +33,13 @@ public class HomeController  extends HttpServlet {
             List<User> lista = service.listarPesquisaPorNome(pesquisa);
             req.setAttribute("users", lista);
             req.getRequestDispatcher("home.jsp").forward(req,resp);
-        } else {
+        } else if (action.equals("/home-filter")){
+            String pesquisa = req.getParameter("/home-filter");
+
+            List<User> lista = service.listarPesquisaPorNome(pesquisa);
+            req.setAttribute("users", lista);
+            req.getRequestDispatcher("home.jsp").forward(req,resp);
+        }else {
             resp.sendRedirect("erroResource.html");
         }
     }
