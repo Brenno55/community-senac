@@ -1,7 +1,7 @@
 package model;
 
 public class User {
-    private Long id;
+    private String id;
     private String nome;
     private String email;
     private String senha;
@@ -17,21 +17,22 @@ public class User {
     public User() {
 
     }
-    public User(String nome, String email) {
+    public User(String id, String nome) {
+        this.id = id;
         this.nome = nome;
-        this.email = email;
     }
-    public User(Long id, String nome, String email) {
+    public User(String id, String nome, String email) {
         this.id = id;
         this.nome = nome;
         this.email = email;
     }
-    public User(String nome, String email, String senha) {
+    public User(String id, String nome, String email, String senha) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
     }
-    public User(Long id, String nome, String email, String senha, String data_nascimento, String celular, String cFacul, String sexo, String bio, String sobrenome) {
+    public User(String id, String nome, String email, String senha, String data_nascimento, String celular, String cFacul, String sexo, String bio, String sobrenome) {
        this.id = id;
         this.nome = nome;
         this.email = email;
@@ -43,14 +44,12 @@ public class User {
         this.bio = bio;
         this.sobrenome = sobrenome;
     }
-    public Long getId() {
+    public String getId() {
         return id;
     }
     public String getNome() {
-        String[] vet = this.nome.split(" ");
-         String firstName = vet[0];
-        return firstName;
-    } // tratamento no caso de ter mais do 1 nome;
+        return nome.toLowerCase();
+    }
 
     public void setNome(String nome) {
         this.nome = nome;

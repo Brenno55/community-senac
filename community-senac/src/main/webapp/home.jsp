@@ -21,10 +21,12 @@
 
     <h1>Community Senac</h1>
 
-    <form action="">
-        <input type="text"  placeholder="Pesquisar pelo nome da pessoa">
+    <form action="/home-header">
+        <input type="text" placeholder="Pesquisar pelo nome da pessoa"
+        name="search-header" id="search-header"
+        >
 
-        <button>
+        <button adicionar type="submit">
              Pesquisar
         </button>
     </form>
@@ -54,8 +56,8 @@
                          alt=${user.nome}
                     >
                     <ul>
-                        <li>${user.nome}</li>
-                        <li>instagram</li>
+                        <li>${user.getId()}</li>
+                        <li>${user.getNome()}</li>
                         <li><a href="/details:${user.id}">Ver mais</a></li>
                      </ul>
                 </div>
