@@ -9,6 +9,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static java.lang.Long.parseLong;
+
 // Classe criada com o intuito de separar as funcionalidades da aplicação por serviços.
 public  class UserService {
     DAO dao = new DAO(); //injeção da dependência da DAO.
@@ -25,6 +27,7 @@ public  class UserService {
             System.out.println("Entrei no if do email");
             return null;
         }
+
         System.out.println("passei pelo if");
         String create = "INSERT INTO usuario (nome, email, senha) values (?, ?, ?)";
 
@@ -137,6 +140,7 @@ public  class UserService {
 
 
     public ArrayList<User> listarUsuarios() {
+
         String read = "SELECT * FROM usuario ORDER BY nome";
 
         try {
@@ -159,6 +163,35 @@ public  class UserService {
             return null;
         }
     }
+
+    public ArrayList<User> listarPesquisaPorNome(String pesquisa) {
+        String pesquisaAux = '%'  + pesquisa +'%';
+
+        String read = "SELECT id_user, nome FROM USUARIO WHERE nome LIKE (?) ";
+
+        try {
+            Connection conectar = dao.conectar();
+            PreparedStatement pst = conectar.prepareStatement(read);
+            pst.setString(1, pesquisaAux);
+
+            ResultSet rs = pst.executeQuery();
+
+            ArrayList<User> users = new ArrayList<>();
+
+            while (rs.next()){
+                String id = rs.getString("id_user");
+                String nome  = rs.getString("nome");
+
+                users.add(new User(id, nome));
+            }
+            conectar.close();
+            return users;
+        } catch (Exception e) {
+            System.out.println(e + "Falha na conexão com bd index.");
+            return null;
+        }
+    }
+
 
     public User autenticacao(User user){
         User usuRetorno = null;

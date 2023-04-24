@@ -18,6 +18,7 @@ import javax.servlet.http.HttpSession;
 
 /*
 @WebFilter( urlPatterns = {"/insert", "/index", "/autenticador"})
+@WebFilter("home/*")
 public class filtroPaginas implements Filter {
 
     public filtroPaginas() {
