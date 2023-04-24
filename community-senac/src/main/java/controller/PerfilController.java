@@ -1,5 +1,8 @@
 package controller;
 
+import model.User;
+import services.UserService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,8 +13,8 @@ import java.io.IOException;
 @WebServlet( urlPatterns = {"/perfil"})
 
 public class PerfilController extends HttpServlet {
-
-    // quando recebe o direcionamento da tela de  cadastro.
+    private final UserService userService = new UserService();
+    private final User user = new User();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.sendRedirect("/perfil.html");

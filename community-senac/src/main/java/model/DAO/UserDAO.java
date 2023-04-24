@@ -33,6 +33,26 @@ public class UserDAO {
             return false;
         }
     }
+    public boolean inserirDetalhesDoUsuario(User user){
+        String SQL = "UPDATE INTO usuario WHERE email = ? (data_nascimento, celular, curso, sexo, biografia) VALUES (?, ?, ?, ?, ?)";
+        try {
+            Connection conectar = conectar();
+            PreparedStatement pst = conectar.prepareStatement(SQL);
+
+            pst.setString(1, user.getEmail());
+            pst.setString(2, user.getData_nascimento());
+            pst.setString(3, user.getCelular());
+            pst.setString(4, user.getCurso());
+            pst.setString(5, user.getSexo());
+            pst.setString(6, user.getBio());
+            pst.executeUpdate();
+
+            conectar.close();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
     public boolean buscarPorEmail(String email) {
         String SQL = "SELECT * FROM usuario WHERE email = (?) ";
 
