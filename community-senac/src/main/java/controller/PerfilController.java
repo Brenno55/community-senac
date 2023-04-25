@@ -24,6 +24,20 @@ public class PerfilController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        user.setData_nascimento(req.getParameter("data_nascimento"));
+        user.setSexo(req.getParameter("sexo"));
+        user.setBio(req.getParameter("bio"));
+        user.setCelular(req.getParameter("celular"));
+        user.setCurso(req.getParameter("curso"));
 
+
+
+        boolean atualizado = userService.atulizandoUsuario(user);
+
+        if (!atualizado) {
+            System.out.println("****Erro****");
+        } else {
+            System.out.println("Atualizado!!!!");
+        }
     }
 }

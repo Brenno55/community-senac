@@ -15,6 +15,10 @@ public  class UserService {
         return false;
 
     }
+
+    public boolean atulizandoUsuario(User user){
+        return userDAO.inserirDetalhesDoUsuario(user);
+    }
     public boolean autenticarUsuario(String email, String senha){
         return userDAO.buscarPorEmailSenha(email, senha);
     }

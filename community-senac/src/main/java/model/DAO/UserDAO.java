@@ -41,18 +41,25 @@ public class UserDAO {
         }
     }
     public boolean inserirDetalhesDoUsuario(User user){
-        String SQL = "UPDATE INTO usuario WHERE email = ? (data_nascimento, celular, curso, sexo, biografia) VALUES (?, ?, ?, ?, ?)";
+        System.out.println("etnrou na dao ");
+
+        String SQL = "UPDATE usuario SET data_nascimento = ?, celular = ?, curso = ?, sexo = ?, bio = ? WHERE email = ?";
+        System.out.println("Entrar no UPDATE do usuario");
+
         try {
             Connection conectar = conectar();
             PreparedStatement pst = conectar.prepareStatement(SQL);
+            System.out.println("conecta o prepare");
 
-            pst.setString(1, user.getEmail());
-            pst.setString(2, user.getData_nascimento());
-            pst.setString(3, user.getCelular());
-            pst.setString(4, user.getCurso());
-            pst.setString(5, user.getSexo());
-            pst.setString(6, user.getBio());
+            pst.setString(1, user.getData_nascimento());
+            pst.setString(2, user.getCelular());
+            pst.setString(3, user.getCurso());
+            pst.setString(4, user.getSexo());
+            pst.setString(5, user.getBio());
+            pst.setString(6, user.getEmail());
             pst.executeUpdate();
+
+            System.out.println("Atualizou!!");
 
             conectar.close();
             return true;
