@@ -7,15 +7,14 @@ import java.util.ArrayList;
 public  class UserService {
     private final UserDAO userDAO = new UserDAO();
 
-    //Verifica se o usuario ja existe pelo email, se não cria uma nova conta
     public boolean criarUsuario(User user) {
         boolean contaExiste = userDAO.buscarPorEmail(user.getEmail());
         if (contaExiste) {
-            return false;
+            return userDAO.inserirUsuario(user);
         }
-        return userDAO.inserirUsuario(user);
+        return false;
+
     }
-    //Verifica se a senha e o email estão certos, LOGIN
     public boolean autenticarUsuario(String email, String senha){
         return userDAO.buscarPorEmailSenha(email, senha);
     }
@@ -28,7 +27,6 @@ public  class UserService {
     public ArrayList<User> listaUsuariosPorCurso(String curso) {
         return userDAO.buscarPorCurso(curso);
     }
-
     public User buscarUsuarioLogado(String email){
         return userDAO.buscarUsuarioLogado(email);
     }

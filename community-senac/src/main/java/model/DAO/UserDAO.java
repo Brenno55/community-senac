@@ -18,18 +18,25 @@ public class UserDAO {
     //TODO CLASSE RESPONSÁVEL POR TODAS AS FUNÇÕES PARA MANIPULAR O BANCO DE DADOS (TABELA USUÁRIO)!
     public boolean inserirUsuario(User user){
         String SQL = "INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)";
+        System.out.println("entra no insert do usuario");
         try {
             Connection conectar = conectar();
             PreparedStatement pst = conectar.prepareStatement(SQL);
+            System.out.println("ele conecta o prepare");
 
             pst.setString(1, user.getNome());
+            System.out.println("ele seta  o nome");
             pst.setString(2, user.getEmail());
+            System.out.println(" ele seta o email");
             pst.setString(3, user.getSenha());
+            System.out.println("ele seta a senha");
             pst.executeUpdate();
 
             conectar.close();
+            System.out.println("ele insere o usuario");
             return true;
         } catch (Exception e) {
+            System.out.println("entra na exceção do insert");
             return false;
         }
     }
@@ -54,24 +61,20 @@ public class UserDAO {
         }
     }
     public boolean buscarPorEmail(String email) {
-        String SQL = "SELECT * FROM usuario WHERE email = (?) ";
-
+        String SQL = "SELECT * FROM usuario WHERE email = ?";
         try {
             Connection conectar = conectar();
-
             PreparedStatement pst = conectar.prepareStatement(SQL);
             pst.setString(1, email);
-
             ResultSet rs = pst.executeQuery();
             conectar.close();
 
             return rs != null;
 
         } catch (Exception e) {
-            return false;
+            return true;
         }
     }
-
     public User buscarUsuarioLogado(String email){
         String SQL = "SELECT * FROM usuario WHERE email = (?)";
         User user = new User();
@@ -98,7 +101,6 @@ public class UserDAO {
             return null;
         }
     }
-
     public boolean buscarPorEmailSenha(String email, String senha){
         String SQL = "SELECT * FROM usuario WHERE email = (?) AND senha = (?)";
 
@@ -220,17 +222,6 @@ public class UserDAO {
         }
     }
 
-    public void  testeConexao(){
-        try {
-            Connection con = this.conectar();
-            System.out.println(con);
-            con.close();
-
-            System.out.println("Teste de conexão Dao ok!");
-        } catch (Exception e){
-            System.out.println(e);
-        }
-    }
 
     public String getDRIVER() {
         return DRIVER;
