@@ -30,7 +30,9 @@ public class UserController extends HttpServlet {
             System.out.println(count + " ->>>>");
             req.getRequestDispatcher("cadastro.jsp").forward(req, resp);
         } else {
-            req.getRequestDispatcher("perfil.html").forward(req, resp);
+            HttpSession sessao = req.getSession();
+            sessao.setAttribute("sessionUser", user);
+            req.getRequestDispatcher("perfil.jsp").forward(req, resp);
         }
     }
 
