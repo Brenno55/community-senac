@@ -19,7 +19,7 @@
 
     <form action="/perfil" name="frmContato" method="post">
 
-
+        <input type="text" name="nome" placeholder="nome" value=<%=user.getNome()%>>
         <input type="date" name="data_nascimento" placeholder="">
         <input type="text" name="email" placeholder="Email" value=<%=user.getEmail()%>>
         <input type="int"  name="celular" placeholder="Celular">

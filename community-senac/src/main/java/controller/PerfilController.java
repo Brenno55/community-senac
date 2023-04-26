@@ -33,6 +33,7 @@ public class PerfilController extends HttpServlet {
         user.setCelular(req.getParameter("celular"));
         user.setCurso(req.getParameter("curso"));
         user.setEmail(req.getParameter("email"));
+        user.setNome(req.getParameter("nome"));
 
         boolean atualizado = userService.atulizandoUsuario(user);
 
