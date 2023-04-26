@@ -42,12 +42,15 @@ public class UserController extends HttpServlet {
         String senha = req.getParameter("senha");
 
         boolean usuarioAutenticado = userService.autenticarUsuario(email, senha);
+        User user = userService.buscarUsuarioLogado(email);
+
+        System.out.println("Informações do user logado -> ");
+        System.out.println(user.getNome());
+        System.out.println(user.getSenha());
 
         if(usuarioAutenticado){
-            User user = userService.buscarUsuarioLogado(email);
             HttpSession sessao = req.getSession();
             sessao.setAttribute("sessionUser", user);
-
             resp.sendRedirect("/home");
         } else {
             resp.sendRedirect("erroLogin.html");
