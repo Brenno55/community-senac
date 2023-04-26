@@ -13,10 +13,11 @@ public class User {
 
     public User() {
     }
-    public User(String nome, String email, String senha) {
+    //USANDO ESSE CONSTRUTOR NA HOME
+    public User(String nome, String data_nascimento, String curso ) {
         this.nome = nome;
-        this.email = email;
-        this.senha = senha;
+        this.data_nascimento = data_nascimento;
+        this.curso = curso;
     }
     public User(String nome, String data_nascimento, String sexo, String bio, String celular, String curso, String email, String senha) {
         this.nome = nome;

@@ -21,10 +21,9 @@ public class HomeController extends HttpServlet {
         System.out.println("1 - chamada na rota: " + action);
 
         if (action.equals("/home")) {
-
             List<User> lista = userService.listarTodosUsuarios();
             req.setAttribute("users", lista);
-            req.getRequestDispatcher("home.jsp").forward(req,resp);
+            resp.sendRedirect("home.jsp");
 
         } else if (action.equals("/home-header")){
             String nome = req.getParameter("search-header");

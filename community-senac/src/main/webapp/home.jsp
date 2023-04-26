@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ page import="model.User"%>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,8 +10,9 @@
 <body>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<%  User sessionUser = (User)session.getAttribute("sessionUser");  %>
-
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page import="model.User"%>
+<% User userS = (User)session.getAttribute("sessionUser"); %>
 
 <header>
 
@@ -32,7 +29,7 @@
     </form>
 
     <section>
-         <p> <%= sessionUser.getNome() %> </p>
+         <p> <%= userS.getNome() %> </p>
          <a href="autenticador">Sair</a>
 
         <img src= "/view/assents/avatar_placeholder.svg" alt="">
@@ -62,7 +59,7 @@
                     <ul>
                         <li>${user.getNome()}</li>
                         <li>${user.getData_nascimento()}</li>
-                        <li>${user.getcFacul()}</li>
+                        <li>${user.getCurso()}</li>
                         <li><a href="/details:${user.getEmail()}">Ver mais</a></li>
                      </ul>
                 </div>
