@@ -84,27 +84,28 @@ public class UserDAO {
     }
     public User buscarUsuarioLogado(String email){
         String SQL = "SELECT * FROM usuario WHERE email = (?)";
-        User user = new User();
+        User userSQL = new User();
         try {
             Connection conectar = conectar();
-
             PreparedStatement pst = conectar.prepareStatement(SQL);
             pst.setString(1, email);
-
             ResultSet rs = pst.executeQuery();
-            conectar.close();
 
-            user.setNome(rs.getString("nome"));
-            user.setData_nascimento(rs.getString("data_nascimento"));
-            user.setSexo(rs.getString("sexo"));
-            user.setBio(rs.getString("bio"));
-            user.setCelular(rs.getString("celular"));
-            user.setCurso(rs.getString("curso"));
-            user.setEmail(rs.getString("email"));
-            user.setSenha(rs.getString("senha"));
-            return user;
+            while (rs.next()){
+                userSQL.setNome(rs.getString("nome"));
+                userSQL.setEmail(rs.getString("email"));
+                userSQL.setSenha(rs.getString("senha"));
+                userSQL.setData_nascimento(rs.getString("data_nascimento"));
+                userSQL.setCelular(rs.getString("celular"));
+                userSQL.setCurso(rs.getString("curso"));
+                userSQL.setSexo(rs.getString("sexo"));
+                userSQL.setBio(rs.getString("bio"));
+            }
+            conectar.close();
+            return userSQL;
 
         } catch (Exception e) {
+            System.out.println("buscarUsuarioLogado não passou");
             return null;
         }
     }
@@ -128,60 +129,52 @@ public class UserDAO {
         }
     }
     public ArrayList<User> buscarPorNome(String nome){
-        String SQL = "SELECT * FROM usuario WHERE nome = (?) ORDER BY nome";
+        String read = "SELECT * FROM USUARIO WHERE nome LIKE (?) ";
+        String pesquisaAux = '%'  +nome+ '%';
         ArrayList<User> users = new ArrayList<>();
 
         try {
             Connection conectar = conectar();
-            PreparedStatement pst = conectar.prepareStatement(SQL);
-            pst.setString(1, nome);
-
+            PreparedStatement pst = conectar.prepareStatement(read);
+            pst.setString(1, pesquisaAux);
             ResultSet rs = pst.executeQuery();
-            while (rs.next()){
-                User user = new User();
-                user.setNome(rs.getString("nome"));
-                user.setData_nascimento(rs.getString("data_nascimento"));
-                user.setSexo(rs.getString("sexo"));
-                user.setBio(rs.getString("bio"));
-                user.setCelular(rs.getString("celular"));
-                user.setCurso(rs.getString("curso"));
-                user.setEmail(rs.getString("email"));
-                user.setSenha(rs.getString("senha"));
 
-                users.add(user);
+            while (rs.next()){
+                String nomeR = rs.getString("nome");
+                String data_nascimento  = rs.getString("data_nascimento");
+                String cursoR  = rs.getString("curso");
+
+                users.add(new User(nomeR, data_nascimento, cursoR));
             }
             conectar.close();
             return users;
         } catch (Exception e) {
+            System.out.println(e + "Falha na conexão com bd index.");
             return null;
         }
     }
     public ArrayList<User> buscarPorCurso(String curso){
-        String SQL = "SELECT * FROM usuario WHERE curso = (?) ORDER BY nome";
+        String read = "SELECT * FROM USUARIO WHERE nome LIKE (?) ";
+        String pesquisaAux = '%' +curso+ '%';
         ArrayList<User> users = new ArrayList<>();
 
         try {
             Connection conectar = conectar();
-            PreparedStatement pst = conectar.prepareStatement(SQL);
-            pst.setString(1, curso);
-
+            PreparedStatement pst = conectar.prepareStatement(read);
+            pst.setString(1, pesquisaAux);
             ResultSet rs = pst.executeQuery();
-            while (rs.next()){
-                User user = new User();
-                user.setNome(rs.getString("nome"));
-                user.setData_nascimento(rs.getString("data_nascimento"));
-                user.setSexo(rs.getString("sexo"));
-                user.setBio(rs.getString("bio"));
-                user.setCelular(rs.getString("celular"));
-                user.setCurso(rs.getString("curso"));
-                user.setEmail(rs.getString("email"));
-                user.setSenha(rs.getString("senha"));
 
-                users.add(user);
+            while (rs.next()){
+                String nome  = rs.getString("nome");
+                String data_nascimento  = rs.getString("data_nascimento");
+                String cursoR  = rs.getString("curso");
+
+                users.add(new User(nome, data_nascimento, cursoR));
             }
             conectar.close();
             return users;
         } catch (Exception e) {
+            System.out.println(e + "Falha na conexão com bd index.");
             return null;
         }
     }
@@ -192,24 +185,19 @@ public class UserDAO {
         try {
             Connection conectar = conectar();
             PreparedStatement pst = conectar.prepareStatement(SQL);
-
             ResultSet rs = pst.executeQuery();
-            while (rs.next()){
-                User user = new User();
-                user.setNome(rs.getString("nome"));
-                user.setData_nascimento(rs.getString("data_nascimento"));
-                user.setSexo(rs.getString("sexo"));
-                user.setBio(rs.getString("bio"));
-                user.setCelular(rs.getString("celular"));
-                user.setCurso(rs.getString("curso"));
-                user.setEmail(rs.getString("email"));
-                user.setSenha(rs.getString("senha"));
 
-                users.add(user);
+            while (rs.next()){
+                String nome  = rs.getString("nome");
+                String data_nascimento  = rs.getString("data_nascimento");
+                String curso  = rs.getString("curso");
+
+                users.add(new User(nome, data_nascimento, curso));
             }
             conectar.close();
             return users;
         } catch (Exception e) {
+            System.out.println("Cai no nullo, metodo buscarTodos");
             return null;
         }
     }
