@@ -18,6 +18,8 @@
 - Depois que estiver logado temos o redirecionamento para a tela home.
 - Na tela home temos um feed aonde mostra os usários cadastrados, podemos acessar o perfil dos usuários para saber sobre eles.
 
+Observação: pagina de detalhes e sobre ainda não está funcional. 
+
 ## Funcionalidades:
 
 ### - Tela Home (Funcionalidades) 
