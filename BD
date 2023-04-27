@@ -1,13 +1,14 @@
 /*Script criação da tabela usuario */
 CREATE TABLE usuario (
 	nome varchar(50) NOT NULL,
+	email VARCHAR(40) NOT NULL PRIMARY KEY,
+	senha VARCHAR(50) NOT NULL,
 	data_nascimento VARCHAR(20),
-	sexo VARCHAR (20),
-	bio VARCHAR(50),
 	celular VARCHAR(20),
 	curso VARCHAR(50),
-	email VARCHAR(40) NOT NULL PRIMARY KEY,
-	senha VARCHAR(50) NOT NULL
+	sexo VARCHAR (20),
+	bio VARCHAR(50)
+	
 );
 
 /*Inserts para população do BD*/
