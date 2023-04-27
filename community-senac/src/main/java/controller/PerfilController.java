@@ -41,6 +41,7 @@ public class PerfilController extends HttpServlet {
             System.out.println("****Erro****");
         } else {
             System.out.println("Atualizado!!!!");
+            resp.sendRedirect("/home");
         }
     }
 }
