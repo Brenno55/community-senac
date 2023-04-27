@@ -17,18 +17,14 @@ color:white;
 }
 
 button{
-    margin-top: 200px;
-    width: 340px;
-    height: 56px;
-    padding: 0 136px;
-    display:flex;
+
     justify-content: center;
     align-items:center;
     text-align: center;
-    margin: 0 auto;
+
 }
 
-input, select{
+input, select, button{
     padding-top: 0 auto;
     padding-left: 10px;
     border:none;
@@ -38,6 +34,7 @@ input, select{
     height: 56px;
     border-radius: 10px;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 .formContainer{
