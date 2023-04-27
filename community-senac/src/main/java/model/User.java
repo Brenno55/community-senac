@@ -32,7 +32,7 @@ public class User {
 
 
     public String getNome() {
-        return nome.toLowerCase();
+        return nome;
     }
 
     public void setNome(String nome) {

@@ -23,7 +23,7 @@ public class HomeController extends HttpServlet {
         if (action.equals("/home")) {
             List<User> lista = userService.listarTodosUsuarios();
             req.setAttribute("users", lista);
-            resp.sendRedirect("home.jsp");
+            req.getRequestDispatcher("home.jsp").forward(req,resp);
 
         } else if (action.equals("/home-header")){
             String nome = req.getParameter("search-header");
