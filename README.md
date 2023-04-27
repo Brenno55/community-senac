@@ -10,7 +10,13 @@
 - Executar o tomcat:run e depois <a href="http://localhost:8080/console" target="_blank">acessar aqui</a>
 - Entrar com login: sa e senha: sa
 - Executar script do BD (<a href="https://github.com/Brenno55/community-senac/blob/main/BD" target="_blank">Script</a>)
-- Após isso, só <a href="http://localhost:8080" target="_blank">clicar aqui</a> e ser feliz 😏
+- Após isso, só <a href="http://localhost:8080" target="_blank">clicar aqui</a>.
+
+## Jornada do usuário:
+- Primeiro é a tela index aonde podemos se cadastrar ou fazer login.
+- Após fazer o cadastro vamos para a tela de perfil para completar as informações.
+- Depois que estiver logado temos o redirecionamento para a tela home.
+- Na tela home temos um feed aonde mostra os usários cadastrados, podemos acessar o perfil dos usuários para saber sobre eles.
 
 ## Funcionalidades:
 
