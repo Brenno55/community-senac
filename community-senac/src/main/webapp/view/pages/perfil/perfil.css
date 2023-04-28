@@ -4,15 +4,32 @@
     box-sizing: border-box;
 }
 
-div{
 
-margin: 0 auto;
+h1{
+    padding-top: 30px;
+    text-align :center;
+    color:#FF7F00;
+}
+
+label{
+
+    font-size: 120%;
+    font-size: 20;
+
+}
+
+div{
+    padding-top: 80px;
+    margin : 0 auto;
+    text-align :center
+
 
 }
 
 input{
 
 color:white;
+
 
 }
 
@@ -21,6 +38,22 @@ button{
     justify-content: center;
     align-items:center;
     text-align: center;
+    margin-top: 50px;
+    position:relative
+
+}
+
+select:hover, img:hover, button:hover{
+
+filter: brightness(0.5);
+
+}
+
+
+img{
+
+width: 350px;
+position:relative
 
 }
 
@@ -38,6 +71,13 @@ input, select, button{
 }
 
 .formContainer{
+
     color:#FF7F00;
     display: flex;
+
+}
+
+.bio{
+
+
 }

@@ -18,6 +18,7 @@
     <h1>Edite seu perfil</h1>
 
     <form action="/perfil" name="frmContato" method="post">
+    <hr size="3" width="100%" color="black">
 
     <div class="formContainer">
        <div class="parte1">
@@ -31,6 +32,12 @@
         <label for="celular">Celular:</label>
         <input type="int"  name="celular" maxlength="11" minlength="11 placeholder="Celular">
         </div>
+
+     <div class="img">
+
+     <img src= "/view/assents/avatar_placeholder.svg" alt="">
+
+     </div>
 
 
      <div class="parte2">
@@ -56,8 +63,11 @@
 
             </div>
         </div>
+
+        <div class="button">
         <button onclick="validarPerfil()">Finalizar</button>
         <script src="./scripts/validador.js"></script>
+        </div>
     </form>
 
 
