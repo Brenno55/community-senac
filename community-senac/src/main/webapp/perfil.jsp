@@ -3,16 +3,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
     <title>Community Senac</title>
     <link rel="stylesheet"  href="./view/pages/index.css" media="screen" />
     <link rel="stylesheet" href="./view/pages/perfil/perfil.css" media="screen"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
 </head>
 <body>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ page import="model.User"%>
 <% User user = (User)session.getAttribute("sessionUser");%>
-
 
 <container class="container" >
     <h1>Edite seu perfil</h1>
@@ -29,16 +33,16 @@
         <input type="text" name="email" placeholder="Email" value=<%=user.getEmail()%>>
         <label for="senha">Data</label>
         <input type="password" name="senha" placeholder="Senha" value=<%=user.getSenha()%>>
-        <label for="celular">Celular:</label>
-        <input type="int"  name="celular" maxlength="11" minlength="11 placeholder="Celular">
+        <label for="telefone">Celular:</label>
+        <input type="tel" maxlength="15" onkeyup="handlePhone(event)" />
         </div>
 
-     <div class="img">
-
-     <img src= "/view/assents/avatar_placeholder.svg" alt="">
-
-     </div>
-
+        <div class="imagem">
+        <label for="imagemUsuario">
+        <img id="previaDaImagem" src="/view/assents/avatar_placeholder.svg" alt="Selecione uma foto" id="imagemSVG">
+        </label>
+        <input id="imagemUsuario" type="file" style="display: none;"  accept="image/*">
+        </div>
 
      <div class="parte2">
 
@@ -59,7 +63,7 @@
             <option value="feminino">Feminino</option>
         </select>
         <label for="bio">Biografia:</label>
-        <input type="text" name="bio" maxlength="10" minlength="10" placeholder="">
+        <input type="text" name="bio" maxlength="300" placeholder="">
 
             </div>
         </div>
@@ -68,6 +72,8 @@
         <button onclick="validarPerfil()">Finalizar</button>
         <script src="./scripts/validador.js"></script>
         </div>
+
+    <script src="./view/pages/perfil/script.js"></script>
     </form>
 
 

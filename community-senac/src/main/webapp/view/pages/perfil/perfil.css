@@ -33,6 +33,7 @@ color:white;
 
 }
 
+
 button{
 
     justify-content: center;
@@ -68,7 +69,15 @@ input, select, button{
     border-radius: 10px;
     flex-direction: column;
     margin: 0 auto;
+
 }
+
+select, button, .imagem{
+
+    cursor: pointer;
+
+}
+
 
 .formContainer{
 

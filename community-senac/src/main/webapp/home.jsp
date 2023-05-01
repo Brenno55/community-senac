@@ -5,6 +5,7 @@
     <title>Community Senac</title>
     <link  type="text/css" rel="stylesheet" href="/view/css/home.css">
     <link type="text/css" rel="stylesheet" href="/view/pages/index.css">
+
 </head>
 
 <body>
