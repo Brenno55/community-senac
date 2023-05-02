@@ -21,7 +21,7 @@
 <container class="container" >
     <h1>Edite seu perfil</h1>
 
-    <form action="/perfil" name="frmContato" method="post">
+    <form action="/perfil" name="frmPerfil" method="post">
     <hr size="3" width="100%" color="black">
 
     <div class="formContainer">
@@ -31,7 +31,7 @@
         <input type="text" name="nome" placeholder="nome" value=<%=user.getNome()%>>
         <label for="email">Email:</label>
         <input type="text" name="email" placeholder="Email" value=<%=user.getEmail()%>>
-        <label for="senha">Data</label>
+        <label for="senha">Senha</label>
         <input type="password" name="senha" placeholder="Senha" value=<%=user.getSenha()%>>
         <label for="telefone">Celular:</label>
         <input type="tel" maxlength="15" onkeyup="handlePhone(event)" />
@@ -73,7 +73,7 @@
         <script src="./scripts/validador.js"></script>
         </div>
 
-    <script src="./view/pages/perfil/script.js"></script>
+    <script src="./scripts/perfil.js"></script>
     </form>
 
 
