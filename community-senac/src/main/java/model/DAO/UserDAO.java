@@ -179,7 +179,7 @@ public class UserDAO {
         }
     }
     public ArrayList<User> buscarTodos(){
-        String SQL = "SELECT * FROM usuario ORDER BY nome";
+        String SQL = "select nome, timestampdiff(year, data_nascimento, now()) as idade, curso from usuario order by nome;";
         ArrayList<User> users = new ArrayList<>();
 
         try {
@@ -189,7 +189,7 @@ public class UserDAO {
 
             while (rs.next()){
                 String nome  = rs.getString("nome");
-                String data_nascimento  = rs.getString("data_nascimento");
+                String data_nascimento  = rs.getString("idade");
                 String curso  = rs.getString("curso");
 
                 users.add(new User(nome, data_nascimento, curso));

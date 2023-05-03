@@ -36,7 +36,7 @@
         <button onclick="validarCadastro()" >Cadastrar</button>
     </form>
 
-    <a href="/login">Voltar para login</a>
+    <a href="/login.html">Voltar para login</a>
     <script src="./scripts/validador.js"></script>
 </container>
 </body>

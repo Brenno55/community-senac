@@ -59,7 +59,7 @@
                     >
                     <ul>
                         <li>${user.getNome()}</li>
-                        <li>${user.getData_nascimento()}</li>
+                        <li>${user.getData_nascimento()} anos</li>
                         <li>${user.getCurso()}</li>
                         <li><a href="/details:${user.getEmail()}">Ver mais</a></li>
                      </ul>
