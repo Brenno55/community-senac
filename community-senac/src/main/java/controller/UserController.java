@@ -1,5 +1,6 @@
 package controller;
 
+import model.DAO.UserDAO;
 import model.User;
 import services.UserService;
 
@@ -13,7 +14,8 @@ import java.io.IOException;
 //TODO CLASSE RESPONSÁVEL POR TODAS AS FUNÇÕES DE REQUISIÇÕES WEB, QUE CHAMARÁ >>> A CLASSE SERVICE
 @WebServlet( urlPatterns = {"/user"})
 public class UserController extends HttpServlet {
-    private final UserService userService = new UserService();
+    public UserDAO repository = new UserDAO();
+    public UserService userService = new UserService(repository);
     private final User user = new User();
 
     @Override

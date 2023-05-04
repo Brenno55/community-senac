@@ -1,5 +1,6 @@
 package controller;
 
+import model.DAO.UserDAO;
 import model.User;
 import services.UserService;
 
@@ -14,7 +15,8 @@ import java.io.IOException;
 @WebServlet( urlPatterns = {"/perfil"})
 
 public class PerfilController extends HttpServlet {
-    private final UserService userService = new UserService();
+    public UserDAO repository = new UserDAO();
+    public UserService userService = new UserService(repository);
     private  User user = new User();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -1,5 +1,6 @@
 package controller;
 
+import model.DAO.UserDAO;
 import model.User;
 import services.UserService;
 
@@ -13,7 +14,9 @@ import java.util.List;
 
 @WebServlet( urlPatterns = {"/home", "/home-header", "/home-filter"})
 public class HomeController extends HttpServlet {
-    public UserService userService = new UserService();
+
+    public UserDAO repository = new UserDAO();
+    public UserService userService = new UserService(repository);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

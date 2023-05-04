@@ -1,6 +1,7 @@
 package model.DAO;
 
 import model.User;
+import model.repositories.RepositoryDao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,14 +9,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class UserDAO {
-
+public class UserDAO implements RepositoryDao {
     private final String DRIVER = "org.h2.Driver";
     private final String URL = "jdbc:h2:~/test";
     private final String USER = "sa";
     private final String PASSWORD = "sa";
 
     //TODO CLASSE RESPONSÁVEL POR TODAS AS FUNÇÕES PARA MANIPULAR O BANCO DE DADOS (TABELA USUÁRIO)!
+    @Override
     public boolean inserirUsuario(User user){
         String SQL = "INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)";
         System.out.println("entra no insert do usuario");
@@ -40,6 +41,7 @@ public class UserDAO {
             return false;
         }
     }
+    @Override
     public boolean inserirDetalhesDoUsuario(User user){
         System.out.println("etnrou na dao ");
 
@@ -67,6 +69,7 @@ public class UserDAO {
             return false;
         }
     }
+    @Override
     public boolean buscarPorEmail(String email) {
         String SQL = "SELECT * FROM usuario WHERE email = ?";
         try {
@@ -82,6 +85,7 @@ public class UserDAO {
             return true;
         }
     }
+    @Override
     public User buscarUsuarioLogado(String email){
         String SQL = "SELECT * FROM usuario WHERE email = (?)";
         User userSQL = new User();
@@ -128,6 +132,7 @@ public class UserDAO {
             return false;
         }
     }
+    @Override
     public ArrayList<User> buscarPorNome(String nome){
         String read = "SELECT * FROM USUARIO WHERE nome LIKE (?) ";
         String pesquisaAux = '%'  +nome+ '%';
@@ -153,6 +158,7 @@ public class UserDAO {
             return null;
         }
     }
+    @Override
     public ArrayList<User> buscarPorCurso(String curso){
         String read = "SELECT * FROM USUARIO WHERE nome LIKE (?) ";
         String pesquisaAux = '%' +curso+ '%';
@@ -178,6 +184,7 @@ public class UserDAO {
             return null;
         }
     }
+    @Override
     public ArrayList<User> buscarTodos(){
         String SQL = "select nome, timestampdiff(year, data_nascimento, now()) as idade, curso from usuario order by nome;";
         ArrayList<User> users = new ArrayList<>();
@@ -202,8 +209,6 @@ public class UserDAO {
         }
     }
 
-
-
     public Connection conectar(){
         Connection con;
         try {
@@ -216,7 +221,6 @@ public class UserDAO {
             return null;
         }
     }
-
 
     public String getDRIVER() {
         return DRIVER;

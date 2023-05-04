@@ -1,20 +1,21 @@
 package services;
 
-import buildermaster.BuilderMaster;
-import builders.UserBuilder;
+//import buildermaster.BuilderMaster;
+//import builders.UserBuilder;
+import model.DAO.UserDaoInMemory;
 import model.User;
 import org.junit.Before;
 import org.junit.Test;
 
 import static builders.UserBuilder.*;
-import static builders.UserBuilder.inicializarDadosPadroes;
+//import static builders.UserBuilder.inicializarDadosPadroes;
 
 public class UserServiceTeste {
     private UserService service;
-
+    private UserDaoInMemory repository;
     @Before
     public void setup(){
-        service = new UserService();
+        service = new UserService(repository);
     }
 
     @Test
@@ -28,7 +29,7 @@ public class UserServiceTeste {
     }
 
     public static void main(String[] args) {
-        new BuilderMaster().gerarCodigoClasse(User.class);
+       // new BuilderMaster().gerarCodigoClasse(User.class);
     }
 
 }
