@@ -33,7 +33,7 @@
          <p> <%= userS.getNome() %> </p>
          <a href="autenticador">Sair</a>
 
-        <img src= "/view/assents/avatar_placeholder.svg" alt="">
+        <a href="/detalhes.html"><img src= "/view/assents/avatar_placeholder.svg" alt=""></a>
     </section>
 
 </header>
@@ -53,10 +53,7 @@
     <main>
      <c:forEach var="user" items="${users}" >
                 <div class="card">
-                    <img
-                        src= "/view/assents/avatar_placeholder.svg"
-                         alt=${user.nome}
-                    >
+                    <a href="/detalhes.html"><img src= "/view/assents/avatar_placeholder.svg"alt=${user.nome}></a>
                     <ul>
                         <li>${user.getNome()}</li>
                         <li>${user.getData_nascimento()} anos</li>
