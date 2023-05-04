@@ -1,0 +1,33 @@
+
+
+main{
+    display: flex;
+    gap: 400px;
+
+
+}
+
+main .containerLeft {
+    display: flex;
+    flex-direction: colunm;
+    gap: 30px;
+}
+
+main .containerLeft h2{
+
+
+}
+
+main .containerLeft img{
+
+
+}
+
+
+main .containerRight{
+        display: flex;
+        flex-direction: colunm;
+        gap: 30px;
+}
+
+
