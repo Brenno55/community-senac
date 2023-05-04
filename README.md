@@ -65,4 +65,4 @@ Observação: pagina de detalhes e sobre ainda não está funcional.
 
 
 ## MER
-![MER](https://github.com/Brenno55/community-senac/blob/main/Imagens/Prototipo%20telas/MER.png?raw=true)
+![MER](https://github.com/Brenno55/community-senac/blob/main/community-senac/src/main/webapp/Imagens/Prototipo_telas/MER.png)
