@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Finalizando front tela de detalhes">
+    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Linkando tela home com a tela de detalhes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/cadastro/cadastro.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/cadastro/cadastro.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,13 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683228725009</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Linkando tela home com a tela de detalhes">
+      <created>1683230214518</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683230214518</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correção tela home" />
     <MESSAGE value="Tratamento get.Data_nascimento" />
     <MESSAGE value="Finalizando front tela de detalhes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalizando front tela de detalhes" />
+    <MESSAGE value="Linkando tela home com a tela de detalhes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Linkando tela home com a tela de detalhes" />
   </component>
 </project>

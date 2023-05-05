@@ -58,6 +58,9 @@ form, button, a{
 
 
 }
+form input {
+    color: white
+}
 
 form input, button {
       border-radius: 10px;
