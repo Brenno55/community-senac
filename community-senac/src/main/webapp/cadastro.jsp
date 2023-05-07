@@ -33,7 +33,7 @@
         <input type="password" name="senha" placeholder="Senha"/>
 
         <input type="number" name="count" placeholder="" hidden="hidden" value={0}/>
-        <button onclick="validarCadastro()" >Cadastrar</button>
+        <button onclick="return validarCadastro()" >Cadastrar</button>
     </form>
 
     <a href="/login.html">Voltar para login</a>

@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="community-senac" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="community-senac" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

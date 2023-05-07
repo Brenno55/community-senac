@@ -50,31 +50,20 @@ function validarLogin() {
     document.forms["frmContato"].submit()
 }
 function validarPerfil() {
-    let data_nascimento = frmContato.data_nascimento.value;
-    let celular = frmContato.celular.value;
-    let cFacul = frmContato.cFacul.value;
-    let sexo = frmContato.sexo.value;
 
-    if (data_nascimento === "") {
-        alert("Preencha o campo data");
-        frmContato.fone.focus()
-        return false;
+  var inputs = document.getElementsByTagName("input");
+  var selects = document.getElementsByTagName("select");
+  for (var i = 1; i < inputs.length; i++) {
+    if (inputs[i].value === "") {
+      alert("Por favor, preencha todos os campos.");
+      return false;
     }
-    if (celular === "") {
-            alert("Preencha o campo celular");
-            frmContato.fone.focus()
-            return false;
+  }
+  for (var j = 0; j < selects.length; j++) {
+    if (selects[j].value === "null") {
+      alert("Por favor, selecione uma opção em todos os campos.");
+      return false;
     }
-    if (cFacul === "") {
-            alert("Preencha o campo curso");
-            frmContato.fone.focus()
-            return false;
-    }
-    if (sexo === "") {
-            alert("Preencha o campo sexo");
-            frmContato.fone.focus()
-            return false;
-    }
-
-    document.forms["frmContato"].submit()
+  }
+  return true;
 }
