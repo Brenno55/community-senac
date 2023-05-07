@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Ajuste de cor no insert dos inputs na tela de cadastro">
-      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/assents/camera.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/cadastro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/cadastro.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683298692198</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajustes na valições do cadastro e perfil e css do perfil">
+      <created>1683501809414</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683501809414</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -141,6 +141,7 @@
     <MESSAGE value="Finalizando front tela de detalhes" />
     <MESSAGE value="Linkando tela home com a tela de detalhes" />
     <MESSAGE value="Ajuste de cor no insert dos inputs na tela de cadastro" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajuste de cor no insert dos inputs na tela de cadastro" />
+    <MESSAGE value="Ajustes na valições do cadastro e perfil e css do perfil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustes na valições do cadastro e perfil e css do perfil" />
   </component>
 </project>
