@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 header {
     display: flex;
     align-items: center;
@@ -82,8 +83,8 @@ button {
 }
 
 select:hover,
-img:hover,
-button:hover {
+  img:hover,
+  button:hover {
   filter: brightness(0.5);
 }
 
@@ -114,10 +115,7 @@ select, button, .imagem {
   display: flex;
 }
 
-input.bio {
-  min-width: 300px;
-  box-sizing: border-box;
-}
+
 
 #previaDaImagem {
   width: 350px;

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,17 +48,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Augusto Brito/IdeaProjects/community-senac/community-senac/src/main/webapp/view/assents",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Augusto Brito/IdeaProjects/community-senac/community-senac/src/main/webapp/view/assents&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Augusto Brito\IdeaProjects\community-senac\community-senac\src\main\webapp\view\assents" />
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683501809414</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ajustes css do perfil">
+      <created>1683502703627</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683502703627</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -142,6 +150,7 @@
     <MESSAGE value="Linkando tela home com a tela de detalhes" />
     <MESSAGE value="Ajuste de cor no insert dos inputs na tela de cadastro" />
     <MESSAGE value="Ajustes na valições do cadastro e perfil e css do perfil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustes na valições do cadastro e perfil e css do perfil" />
+    <MESSAGE value="Ajustes css do perfil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustes css do perfil" />
   </component>
 </project>

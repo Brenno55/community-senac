@@ -24,6 +24,7 @@
 
     <h1>Community Senac</h1>
 
+
     <section>
         <p> <%= user.getNome() %> </p>
         <a href="autenticador">Sair</a>
