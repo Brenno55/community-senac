@@ -33,20 +33,16 @@ function validarCadastro() {
 }
 
 function validarLogin() {
-    let email = frmContato.email.value;
-    let senha = frmContato.senha.value;
+  var inputs = document.getElementsByTagName("input");
 
-    if (email === "") {
-        alert("Preencha o campo email");
-        frmContato.fone.focus()
-        return false;
+  for (var i = 1; i < inputs.length; i++) {
+    if (inputs[i].value === "") {
+      alert("Por favor, preencha todos os campos.");
+      return false;
     }
 
-    if (senha === "") {
-            alert("Preencha o campo senha");
-            frmContato.fone.focus()
-            return false;
     }
+
     document.forms["frmContato"].submit()
 }
 function validarPerfil() {
@@ -60,7 +56,7 @@ function validarPerfil() {
     }
   }
   for (var j = 0; j < selects.length; j++) {
-    if (selects[j].value === "null") {
+    if (selects[j].value === "") {
       alert("Por favor, selecione uma opção em todos os campos.");
       return false;
     }
