@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
-a{
-    color: #FF7F00;
-    padding: 10px;
+.barraDeCima{
     text-align: right;
+    margin-right: 30px;
+    font-size: 18px;
+}
+
+a{
+    padding-right: 30px;
+    color: #FF7F00;
 }
 
 .container h1{
@@ -36,8 +41,3 @@ a{
     height: 500px;
     weight: 500px;
 }
-/*
-body{
-    background-color: #000000;
-}
-*/
