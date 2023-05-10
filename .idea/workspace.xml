@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

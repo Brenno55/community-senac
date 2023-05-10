@@ -4,6 +4,11 @@ function validarCadastro() {
     let senha = frmContato.senha.value;
     let count = frmContato.count.value;
 
+    if (!email.endsWith("@senacsp.edu.br")) {
+        alert("O email deve pertencer ao domínio @senacsp.edu.br");
+        return false;
+    }
+
     if (count == 1) {
             alert("Email já existe.");
             frmContato.email.focus();
@@ -35,21 +40,21 @@ function validarCadastro() {
 function validarLogin() {
   var inputs = document.getElementsByTagName("input");
 
-  for (var i = 1; i < inputs.length; i++) {
+  for (var i = 0; i < inputs.length; i++) {
     if (inputs[i].value === "") {
       alert("Por favor, preencha todos os campos.");
       return false;
-    }
-
+        }
     }
 
     document.forms["frmContato"].submit()
 }
+
 function validarPerfil() {
 
   var inputs = document.getElementsByTagName("input");
   var selects = document.getElementsByTagName("select");
-  for (var i = 1; i < inputs.length; i++) {
+  for (var i = 0; i < inputs.length; i++) {
     if (inputs[i].value === "") {
       alert("Por favor, preencha todos os campos.");
       return false;

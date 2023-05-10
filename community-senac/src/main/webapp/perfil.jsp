@@ -43,7 +43,7 @@
         <label for="nome">Nome:</label>
         <input type="text" name="nome" placeholder="nome" value=<%=user.getNome()%>>
         <label for="email">Email:</label>
-        <input type="text" name="email" placeholder="Email" value=<%=user.getEmail()%>>
+        <input type="text" name="email" placeholder="Email" disabled="" value=<%=user.getEmail()%>>
         <label for="senha">Senha</label>
         <input type="password" name="senha" placeholder="Senha" value=<%=user.getSenha()%>>
         <label for="telefone">Celular:</label>
