@@ -29,11 +29,12 @@ public class PerfilController extends HttpServlet {
     //qunado é clicado para fazer insert
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         user.setData_nascimento(req.getParameter("data_nascimento"));
+        user.setCurso(req.getParameter("curso"));
         user.setSexo(req.getParameter("sexo"));
         user.setBio(req.getParameter("bio"));
         user.setCelular(req.getParameter("celular"));
-        user.setCurso(req.getParameter("curso"));
         user.setEmail(req.getParameter("email"));
         user.setNome(req.getParameter("nome"));
 
@@ -44,6 +45,8 @@ public class PerfilController extends HttpServlet {
         } else {
             System.out.println("Atualizado!!!!");
             resp.sendRedirect("/home");
+            System.out.println(user.getCelular());
+            System.out.println(user.getCurso());
         }
     }
 }

@@ -65,7 +65,7 @@ public class User {
 
     public String getCurso() {return curso;}
 
-    public void setCurso(String cFacul) {this.curso = curso;}
+    public void setCurso(String curso) {this.curso = curso;}
 
     public String getSexo() {return sexo;}
 

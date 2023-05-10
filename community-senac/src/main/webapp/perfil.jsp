@@ -47,7 +47,7 @@
         <label for="senha">Senha</label>
         <input type="password" name="senha" placeholder="Senha" value=<%=user.getSenha()%>>
         <label for="telefone">Celular:</label>
-        <input type="tel" maxlength="15" onkeyup="handlePhone(event)" />
+        <input type="tel" name="celular" maxlength="15" onkeyup="handlePhone(event)" />
         </div>
 
         <div class="imagem">
@@ -64,6 +64,7 @@
 
         <label for="data_nascimento">Data:</label>
         <input type="date" max="9999-12-31" name="data_nascimento" placeholder="">
+
         <label for="curso">Curso:</label>
         <select name="curso">
             <option value="null"></option>
