@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="">
+    <list default="true" id="f585eed3-5321-4af5-b935-cd82f5c90e55" name="Changes" comment="Fazendo o css da página Index">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/home/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,21 +67,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\brenno.lfsilva\IdeaProjects\community-senac\community-senac\src\main\webapp\view\css" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="community" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="community" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -143,6 +128,17 @@
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correção tela home" />
