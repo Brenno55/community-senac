@@ -79,22 +79,28 @@
             <option value="masculino">Masculino</option>
             <option value="feminino">Feminino</option>
         </select>
-        <label for="bio">Biografia:</label>
-        <input type="text" name="bio" class="bio" maxlength="300" placeholder="">
 
+        <label for="bio">Biografia:</label>
+        <input type="text" name="bio" class="biografia" maxlength="300" placeholder="" >
             </div>
+
         </div>
 
         <div class="button">
+
         <button onclick="return validarPerfil()">Finalizar</button>
 
         </div>
 
-    <script src="./scripts/perfil.js"></script>
+
+
     </form>
 
 
 
 </container>
+
+    <script src="./scripts/perfil.js"></script>
+
 </body>
 </html>

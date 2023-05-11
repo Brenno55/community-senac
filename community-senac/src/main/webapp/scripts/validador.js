@@ -54,12 +54,14 @@ function validarPerfil() {
 
   var inputs = document.getElementsByTagName("input");
   var selects = document.getElementsByTagName("select");
+
   for (var i = 0; i < inputs.length; i++) {
     if (inputs[i].value === "") {
       alert("Por favor, preencha todos os campos.");
       return false;
     }
   }
+
   for (var j = 0; j < selects.length; j++) {
     if (selects[j].value === "") {
       alert("Por favor, selecione uma opção em todos os campos.");
