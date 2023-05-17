@@ -6,6 +6,49 @@ import model.repositories.RepositoryDao;
 import java.util.ArrayList;
 
 public class UserDaoInMemory implements RepositoryDao {
+    public ArrayList<User> list = new ArrayList<>();
+    @Override
+    public boolean inserirUsuario(User user) {
+        try {
+            list.add(user);
+            return true;
+        } catch (Exception e){
+            System.out.println(e);
+            return false;
+        }
+    }
+    @Override
+    public boolean inserirDetalhesDoUsuario(User user) {
+        boolean encontrou = false;
+        for (User u : list) {
+            if (u.getEmail() == user.getEmail()) {
+                // mesmo identificador, então atualiza os valores
+                u.setNome(user.getNome());
+                u.setEmail(user.getEmail());
+                u.setSenha(user.getSenha());
+                u.setCurso(user.getCurso());
+                u.setCelular(user.getCelular());
+                u.setData_nascimento(user.getData_nascimento());
+                u.setSexo(user.getSexo());
+                u.setBio(user.getBio());
+
+                encontrou = true;
+                break;
+            }
+        }
+        return encontrou;
+    }
+    @Override
+    public boolean buscarPorEmail(String email) {
+        boolean filtroEmail = (email.trim().isEmpty());
+        for (User u: list){
+            if (u.getEmail().contains(email.trim()) || filtroEmail){
+                return true;
+            }
+
+        }
+        return false;
+    }
     @Override
     public ArrayList<User> buscarTodos() {
         return null;
@@ -29,20 +72,5 @@ public class UserDaoInMemory implements RepositoryDao {
     @Override
     public User buscarUsuarioLogado(String email) {
         return null;
-    }
-
-    @Override
-    public boolean buscarPorEmail(String email) {
-        return false;
-    }
-
-    @Override
-    public boolean inserirDetalhesDoUsuario(User user) {
-        return false;
-    }
-
-    @Override
-    public boolean inserirUsuario(User user) {
-        return false;
     }
 }
