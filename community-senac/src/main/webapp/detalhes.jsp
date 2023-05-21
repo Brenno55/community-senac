@@ -9,6 +9,11 @@
 
 </head>
 <body>
+
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page import="model.User"%>
+<% User userS = (User)session.getAttribute("sessionUser"); %>
+
 <header>
 
     <h1>Community Senac</h1>
@@ -44,12 +49,8 @@
                 <li>Sexo: </li>
                 <li>Curso: </li>
                 <li>Celular: </li>
-
             </ul>
-
         </section>
-
-
     </div>
 
     <div class="containerRight">
@@ -63,8 +64,6 @@
             ondas enormes. Uma onda atinge a tripulação enquanto Amelia tenta recuperar os dados de Miller, matando Doyle
             e atrasando a partida. Ao voltarem para a Endurance, Cooper e Amelia descobrem que 23 anos se passaram.
         </p>
-
-
     </div>
 
 
