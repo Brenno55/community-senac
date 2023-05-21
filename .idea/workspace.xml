@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/perfil/perfil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/controller/PerfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/controller/PerfilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDaoInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDaoInMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/repositories/RepositoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/repositories/RepositoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,17 +57,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Augusto Brito/IdeaProjects/community-senac/community-senac/src/main/webapp/view/assents&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Projetos/community-senac",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Augusto Brito\IdeaProjects\community-senac\community-senac\src\main\webapp\view\assents" />

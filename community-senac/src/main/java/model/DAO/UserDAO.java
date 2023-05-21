@@ -53,7 +53,7 @@ public class UserDAO implements RepositoryDao {
             PreparedStatement pst = conectar.prepareStatement(SQL);
             System.out.println("conecta o prepare");
 
-            pst.setString(1, user.getData_nascimento());
+            pst.setString(1, user.getDataNascimento());
             pst.setString(2, user.getCelular());
             pst.setString(3, user.getCurso());
             pst.setString(4, user.getSexo());
@@ -86,9 +86,9 @@ public class UserDAO implements RepositoryDao {
         }
     }
     @Override
-    public User buscarUsuarioLogado(String email){
+    public User buscarUsuarioPorEmail(String email){
         String SQL = "SELECT * FROM usuario WHERE email = (?)";
-        User userSQL = new User();
+        User user = new User();
         try {
             Connection conectar = conectar();
             PreparedStatement pst = conectar.prepareStatement(SQL);
@@ -96,17 +96,17 @@ public class UserDAO implements RepositoryDao {
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()){
-                userSQL.setNome(rs.getString("nome"));
-                userSQL.setEmail(rs.getString("email"));
-                userSQL.setSenha(rs.getString("senha"));
-                userSQL.setData_nascimento(rs.getString("data_nascimento"));
-                userSQL.setCelular(rs.getString("celular"));
-                userSQL.setCurso(rs.getString("curso"));
-                userSQL.setSexo(rs.getString("sexo"));
-                userSQL.setBio(rs.getString("bio"));
+                user.setNome(rs.getString("nome"));
+                user.setEmail(rs.getString("email"));
+                user.setSenha(rs.getString("senha"));
+                user.setDataNascimento(rs.getString("data_nascimento"));
+                user.setCelular(rs.getString("celular"));
+                user.setCurso(rs.getString("curso"));
+                user.setSexo(rs.getString("sexo"));
+                user.setBio(rs.getString("bio"));
             }
             conectar.close();
-            return userSQL;
+            return user;
 
         } catch (Exception e) {
             System.out.println("buscarUsuarioLogado não passou");

@@ -40,6 +40,11 @@ public class HomeController extends HttpServlet {
             List<User> lista = userService.listaUsuariosPorCurso(curso);
             req.setAttribute("users", lista);
             req.getRequestDispatcher("home.jsp").forward(req,resp);
+        }else if(action.equals("/detalhes")){
+            String email = req.getParameter("email");
+            User user = userService.buscarUsuarioPorEmail(email);
+            req.setAttribute("user", user);
+            req.getRequestDispatcher("detalhes.jsp").forward(req,resp);
         }else {
             resp.sendRedirect("erroResource.html");
         }

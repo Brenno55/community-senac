@@ -8,7 +8,7 @@ public interface RepositoryDao {
     public ArrayList<User> buscarPorCurso(String curso);
     public ArrayList<User> buscarPorNome(String nome);
     public boolean buscarPorEmailSenha(String email, String senha);
-    public User buscarUsuarioLogado(String email);
+    public User buscarUsuarioPorEmail(String email);
     public boolean buscarPorEmail(String email);
     public boolean inserirDetalhesDoUsuario(User user);
     public boolean inserirUsuario(User user);
