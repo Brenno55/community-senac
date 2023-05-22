@@ -1,5 +1,4 @@
 package services;
-import model.DAO.UserDAO;
 import model.User;
 import model.repositories.RepositoryDao;
 
@@ -35,8 +34,8 @@ public  class UserService {
     public ArrayList<User> listaUsuariosPorCurso(String curso) {
         return repository.buscarPorCurso(curso);
     }
-    public User buscarUsuarioLogado(String email){
-        return repository.buscarUsuarioLogado(email);
+    public User buscarUsuarioPorEmail(String email){
+        return repository.buscarUsuarioPorEmail(email);
     }
 }
 

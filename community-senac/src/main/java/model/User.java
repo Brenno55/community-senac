@@ -2,7 +2,7 @@ package model;
 
 public class User {
     private String nome;
-    private String data_nascimento;
+    private String dataNascimento;
     private String sexo;
     private String bio;
     private String celular;
@@ -14,14 +14,14 @@ public class User {
     public User() {
     }
     //USANDO ESSE CONSTRUTOR NA HOME
-    public User(String nome, String data_nascimento, String curso ) {
+    public User(String nome, String dataNascimento, String curso ) {
         this.nome = nome;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
         this.curso = curso;
     }
-    public User(String nome, String data_nascimento, String sexo, String bio, String celular, String curso, String email, String senha) {
+    public User(String nome, String dataNascimento, String sexo, String bio, String celular, String curso, String email, String senha) {
         this.nome = nome;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
         this.sexo = sexo;
         this.bio = bio;
         this.celular = celular;
@@ -55,9 +55,9 @@ public class User {
         this.senha = senha;
     }
 
-    public String getData_nascimento() {return data_nascimento;}
+    public String getDataNascimento() {return dataNascimento;}
 
-    public void setData_nascimento(String data_nascimento) {this.data_nascimento = data_nascimento;}
+    public void setDataNascimento(String dataNascimento) {this.dataNascimento = dataNascimento;}
 
     public String getCelular() {return celular;}
 

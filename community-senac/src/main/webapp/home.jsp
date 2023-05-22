@@ -53,12 +53,12 @@
     <main>
      <c:forEach var="user" items="${users}" >
                 <div class="card">
-                    <a href="/detalhes.html"><img src= "/view/assents/avatar_placeholder.svg"alt=${user.nome}></a>
+                    <a href="/detalhes.jsp"><img src= "/view/assents/avatar_placeholder.svg"alt=${user.nome}></a>
                     <ul>
                         <li>${user.getNome()}</li>
-                        <li>${user.getData_nascimento()} anos</li>
+                        <li>${user.getDataNascimento()} anos</li>
                         <li>${user.getCurso()}</li>
-                        <li><a href="/details:${user.getEmail()}">Ver mais</a></li>
+                        <li><a href="/detalhes.jsp">Ver mais</a></li>
                      </ul>
                 </div>
         </c:forEach>

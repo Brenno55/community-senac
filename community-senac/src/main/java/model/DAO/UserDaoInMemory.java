@@ -70,7 +70,7 @@ public class UserDaoInMemory implements RepositoryDao {
     }
 
     @Override
-    public User buscarUsuarioLogado(String email) {
+    public User buscarUsuarioPorEmail(String email) {
         return null;
     }
 }
