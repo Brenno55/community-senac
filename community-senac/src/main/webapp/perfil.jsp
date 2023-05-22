@@ -14,7 +14,6 @@
 
 </head>
 <body>
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ page import="model.User"%>
 <% User user = (User)session.getAttribute("sessionUser");%>
 
@@ -35,7 +34,8 @@
     </header>
     <script src="./scripts/validador.js"></script>
 
-    <form action="/perfil" name="frmPerfil" method="post">
+    <form action="/perfil" name="frmPerfil" method="post" enctype="multipart/form-data">
+
 
     <div class="formContainer">
        <div class="parte1">
@@ -52,43 +52,47 @@
 
         <div class="imagem">
         <label for="imagemUsuario">
-        <img id="previaDaImagem" src="/view/assents/avatar_placeholder.svg" alt="Selecione uma foto">
+
+        <img id="previaDaImagem" src="/view/assents/avatar_placeholder.svg"
+        value="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${user.image}"
+        alt="Selecione uma foto">
+
         <div class="camera-wrapper">
         <img id="camera" src="/view/assents/camera.svg" alt="Camera Icon">
         </div>
         </label>
-        <input id="imagemUsuario" type="file" style="display: none;" accept="image/*">
+        <input id="imagemUsuario" type="file" name="file" style="display: none;" accept="image/*">
         </div>
 
      <div class="parte2">
 
-        <label for="data_nascimento">Data:</label>
-        <input type="date" max="9999-12-31" name="data_nascimento" placeholder="">
+        <label for="dataNascimento">Data:</label>
+        <input type="date" max="9999-12-31" name="dataNascimento" placeholder="">
 
         <label for="curso">Curso:</label>
         <select name="curso">
             <option value="null"></option>
             <option value="analise">ADS</option>
-            <option value="Administração">Administração</option>
+            <option value="Administração">ADM</option>
             <option value="Redes de computadores">Redes de computadores</option>
             <option value="Nutrição">Nutrição</option>
         </select>
         <label for="sexo">Sexo:</label>
-        <select name="sexo">
+        <select name="sexo" id="sexo">
             <option value="null"></option>
             <option value="masculino">Masculino</option>
             <option value="feminino">Feminino</option>
         </select>
 
         <label for="bio">Biografia:</label>
-        <input type="text" name="bio" class="biografia" maxlength="300" placeholder="" >
+        <input type="text" name="bio" id="bio" class="biografia" maxlength="300" placeholder="" >
             </div>
 
         </div>
 
         <div class="button">
 
-        <button onclick="return validarPerfil()">Finalizar</button>
+        <button type="submit" onclick="return validarPerfil()">Finalizar</button>
 
         </div>
 

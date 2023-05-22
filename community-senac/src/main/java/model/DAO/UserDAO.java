@@ -45,7 +45,7 @@ public class UserDAO implements RepositoryDao {
     public boolean inserirDetalhesDoUsuario(User user){
         System.out.println("etnrou na dao ");
 
-        String SQL = "UPDATE usuario SET data_nascimento = ?, celular = ?, curso = ?, sexo = ?, bio = ? WHERE email = ?";
+        String SQL = "UPDATE usuario SET data_nascimento = ?, celular = ?, curso = ?, sexo = ?, bio = ?, image = ? WHERE email = ?";
         System.out.println("Entrar no UPDATE do usuario");
 
         try {
@@ -58,7 +58,8 @@ public class UserDAO implements RepositoryDao {
             pst.setString(3, user.getCurso());
             pst.setString(4, user.getSexo());
             pst.setString(5, user.getBio());
-            pst.setString(6, user.getEmail());
+            pst.setString(6, user.getImage());
+            pst.setString(7, user.getEmail());
             pst.executeUpdate();
 
             System.out.println("Atualizou!!");

@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/controller/PerfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/controller/PerfilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDaoInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDaoInMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/validador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/test/java/builders/UserBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/test/java/builders/UserBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +49,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2Oz5XN7w3xvgJZgoJEECHtMXrXE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -82,6 +86,31 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="community-senac [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/community-senac" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -144,6 +173,17 @@
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correção tela home" />

@@ -20,7 +20,7 @@ public class UserBuilder {
 
 
         elemento.setNome("Teste");
-        elemento.setData_nascimento("31/20/2003");
+        elemento.setDataNascimento("31/20/2003");
         elemento.setSexo("Masculino");
         elemento.setBio("Oi eu sou um usuário de teste");
         elemento.setCelular("11963486641");
@@ -35,7 +35,7 @@ public class UserBuilder {
     }
 
     public UserBuilder comData_nascimento(String param) {
-        elemento.setData_nascimento(param);
+        elemento.setDataNascimento(param);
         return this;
     }
 

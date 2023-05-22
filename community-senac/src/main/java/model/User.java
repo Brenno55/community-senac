@@ -10,6 +10,8 @@ public class User {
     private String email;
     private String senha;
 
+    private String image;
+
 
     public User() {
     }
@@ -19,7 +21,7 @@ public class User {
         this.dataNascimento = dataNascimento;
         this.curso = curso;
     }
-    public User(String nome, String dataNascimento, String sexo, String bio, String celular, String curso, String email, String senha) {
+    public User(String nome, String dataNascimento, String sexo, String bio, String celular, String curso, String email, String senha, String image) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.sexo = sexo;
@@ -28,6 +30,7 @@ public class User {
         this.curso = curso;
         this.email = email;
         this.senha = senha;
+        this.image = image;
     }
 
 
@@ -74,4 +77,12 @@ public class User {
     public String getBio() {return bio;}
 
     public void setBio(String bio) {this.bio = bio;}
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }

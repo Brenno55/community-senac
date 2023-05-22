@@ -28,7 +28,7 @@ public class UserDaoInMemory implements RepositoryDao {
                 u.setSenha(user.getSenha());
                 u.setCurso(user.getCurso());
                 u.setCelular(user.getCelular());
-                u.setData_nascimento(user.getData_nascimento());
+                u.setDataNascimento(user.getDataNascimento());
                 u.setSexo(user.getSexo());
                 u.setBio(user.getBio());
 
