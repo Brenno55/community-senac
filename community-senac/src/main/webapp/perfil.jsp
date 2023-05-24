@@ -72,10 +72,10 @@
         <label for="curso">Curso:</label>
         <select name="curso">
             <option value="null"></option>
-            <option value="analise">ADS</option>
-            <option value="Administração">ADM</option>
+            <option value="ADS">ADS</option>
+            <option value="Banco de daods">Banco de dados</option>
             <option value="Redes de computadores">Redes de computadores</option>
-            <option value="Nutrição">Nutrição</option>
+            <option value="Moda">Moda</option>
         </select>
         <label for="sexo">Sexo:</label>
         <select name="sexo" id="sexo">
