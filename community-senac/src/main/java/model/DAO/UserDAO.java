@@ -43,7 +43,7 @@ public class UserDAO implements RepositoryDao {
     }
     @Override
     public boolean inserirDetalhesDoUsuario(User user){
-        System.out.println("etnrou na dao ");
+        System.out.println("entrou na dao ");
 
         String SQL = "UPDATE usuario SET data_nascimento = ?, celular = ?, curso = ?, sexo = ?, bio = ?, image = ? WHERE email = ?";
         System.out.println("Entrar no UPDATE do usuario");

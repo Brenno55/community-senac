@@ -16,7 +16,7 @@
 
 <header>
 
-    <h1>Community Senac</h1>
+    <a href="/home.jsp"><h1>Community Senac</h1></a>
 
     <form action="/home-header">
         <input type="text" placeholder="Pesquisar pelo nome da pessoa"

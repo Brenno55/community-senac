@@ -46,10 +46,8 @@ public class PerfilController extends HttpServlet {
         user.setSexo(parameters.get("sexo"));
         user.setBio(parameters.get("bio"));
         user.setCelular(parameters.get("celular"));
-        //user.setEmail(parameters.get("email"));
-       // user.setNome(parameters.get("nome"));
-        user.setEmail("deive@senacsp.edu.br");
-        user.setNome("Deive");
+        user.setEmail(parameters.get("email"));
+        user.setNome(parameters.get("nome"));
         user.setImage(ImagePath);
 
 
