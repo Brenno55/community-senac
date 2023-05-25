@@ -13,9 +13,9 @@ CREATE TABLE usuario (
 );
 
 /*Inserts para população do BD*/
-insert into usuario values ('Brenno', 'brenno@senac.com', '1234','2002-09-16','(11) 969402383','Administração', 'Masculino', 'Gosto de mulher carece','');
-insert into usuario values ('Deive', 'deive@senac.com', '4525','1998-05-05','(31) 977472828','Nutrição', 'Masculino', 'Faço academia e jogo bola e como batata doce','');
-insert into usuario values ('Richard', 'richar@devao.com', '5555','2000-01-13','(12) 940028922','Analise e Desenvolvimento de Sistemas', 'Masculino', 'Sou fullstack a procura de emprego','');
+insert into usuario values ('Brenno', 'brenno@senac.com', '1234','2002-09-16','(11) 969402383','ADS', 'Masculino', 'Gosto de mulher carece','');
+insert into usuario values ('Deive', 'deive@senac.com', '4525','1998-05-05','(31) 977472828','Banco de dados', 'Masculino', 'Faço academia e jogo bola e como batata doce','');
+insert into usuario values ('Richard', 'richar@devao.com', '5555','2000-01-13','(12) 940028922','Redes de computadores', 'Masculino', 'Sou fullstack a procura de emprego','');
 insert into usuario values ('Alesandra', 'ale@gmail.com', '6969','2005-04-25','(11) 956567878','Redes de computadores', 'Feminino', 'Gosto de programar e tomar cha','');
-insert into usuario values ('Augusta', 'meninadograu@outlook.com', '157','1997-07-15','(13) 950501212','Administração', 'Feminino', 'Menina do correh','');
-insert into usuario values ('Erika', 'erikasilva@outlook.com', '1818','2005-12-31','(11) 984126565','Nutrição', 'Feminino', 'Blogueira, tiktoker, influencer e merecedorah','');
+insert into usuario values ('Augusta', 'meninadograu@outlook.com', '157','1997-07-15','(13) 950501212','Moda', 'Feminino', 'Menina do correh','');
+insert into usuario values ('Erika', 'erikasilva@outlook.com', '1818','2005-12-31','(11) 984126565','Moda', 'Feminino', 'Blogueira, tiktoker, influencer e merecedorah','');
