@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="">
+    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Criação da página sobre">
+      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/img/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/sobre.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/sobre/sobre.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/controller/PerfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/controller/PerfilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/home/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/sobre/sobre.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683502703627</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Criação da página sobre">
+      <created>1684971585194</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684971585194</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +199,7 @@
     <MESSAGE value="Ajuste de cor no insert dos inputs na tela de cadastro" />
     <MESSAGE value="Ajustes na valições do cadastro e perfil e css do perfil" />
     <MESSAGE value="Ajustes css do perfil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustes css do perfil" />
+    <MESSAGE value="Criação da página sobre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação da página sobre" />
   </component>
 </project>
