@@ -9,7 +9,6 @@ public class User {
     private String curso;
     private String email;
     private String senha;
-
     private String image;
 
 
@@ -85,4 +84,5 @@ public class User {
     public void setImage(String image) {
         this.image = image;
     }
+
 }

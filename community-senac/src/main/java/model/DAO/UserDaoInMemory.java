@@ -73,4 +73,9 @@ public class UserDaoInMemory implements RepositoryDao {
     public User buscarUsuarioPorEmail(String email) {
         return null;
     }
+
+    @Override
+    public boolean ExcluindoUsuario(String email) {
+        return false;
+    }
 }

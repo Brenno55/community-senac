@@ -50,15 +50,12 @@ public class PerfilController extends HttpServlet {
         user.setNome(parameters.get("nome"));
         user.setImage(ImagePath);
 
-
         boolean atualizado = userService.atulizandoUsuario(user);
 
         if (!atualizado) {
             System.out.println("****Erro****");
         } else {
-            System.out.println("Atualizado!!!!");
             resp.sendRedirect("/home");
-            System.out.println(user.getImage());
         }
     }
     private Map<String, String> uploadImage(HttpServletRequest httpServletRequest) {

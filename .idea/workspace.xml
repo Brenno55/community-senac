@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Criação da página sobre">
-      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/img/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/sobre.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/sobre/sobre.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2023_20_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2023_20_35__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2023_20_38__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/home/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/sobre/sobre.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/controller/PerfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/controller/PerfilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDaoInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDaoInMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/repositories/RepositoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/repositories/RepositoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1684768142207-Foto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +72,8 @@
       <recent name="C:\Users\Augusto Brito\IdeaProjects\community-senac\community-senac\src\main\webapp\view\assents" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\deive\IdeaProjects\community-senac\community-senac\src\main\webapp\Imagens" />
+      <recent name="C:\Users\deive\IdeaProjects\community-senac\community-senac\src\main\webapp\Imagens\Prototipo_telas" />
       <recent name="C:\Users\brenno.lfsilva\IdeaProjects\community-senac\community-senac\src\main\webapp\view\css" />
     </key>
   </component>

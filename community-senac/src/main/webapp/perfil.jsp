@@ -48,11 +48,11 @@
         <label for="nome">Nome:</label>
         <input type="text" name="nome" placeholder="nome" value=<%=user.getNome()%>>
         <label for="email">Email:</label>
-        <input type="text" name="email" placeholder="Email" disabled="" value=<%=user.getEmail()%>>
+        <input type="text" name="email" placeholder="Email" value=<%=user.getEmail()%>>
         <label for="senha">Senha</label>
         <input type="password" name="senha" placeholder="Senha" value=<%=user.getSenha()%>>
         <label for="telefone">Celular:</label>
-        <input type="tel" name="celular" maxlength="15" onkeyup="handlePhone(event)" />
+        <input type="tel" name="celular" maxlength="15" onkeyup="handlePhone(event)"/ value=<%=user.getCelular()%>>
         </div>
 
         <div class="imagem">
@@ -66,17 +66,16 @@
         <img id="camera" src="/view/assents/camera.svg" alt="Camera Icon">
         </div>
         </label>
-        <input id="imagemUsuario" type="file" name="file" style="display: none;" accept="image/*">
-        </div>
+        <input id="imagemUsuario" type="file" name="file" style="display: none;" accept="image/*" </div>
 
      <div class="parte2">
 
         <label for="dataNascimento">Data:</label>
-        <input type="date" max="9999-12-31" name="dataNascimento" placeholder="">
+        <input type="date" max="9999-12-31" name="dataNascimento" placeholder="" value=<%=user.getDataNascimento()%>>
 
         <label for="curso">Curso:</label>
-        <select name="curso">
-            <option value="null"></option>
+        <select name="curso" value=<%=user.getCurso()%>>
+            <option value="valorDoBD"><%=user.getCurso()%></option>
             <option value="ADS">ADS</option>
             <option value="Banco de daods">Banco de dados</option>
             <option value="Redes de computadores">Redes de computadores</option>
@@ -84,13 +83,13 @@
         </select>
         <label for="sexo">Sexo:</label>
         <select name="sexo" id="sexo">
-            <option value="null"></option>
+            <option value="salvo"><%=user.getSexo()%></option>
             <option value="masculino">Masculino</option>
             <option value="feminino">Feminino</option>
         </select>
 
         <label for="bio">Biografia:</label>
-        <input type="text" name="bio" id="bio" class="biografia" maxlength="300" placeholder="" >
+        <input type="text" name="bio" id="bio" class="biografia" maxlength="300" placeholder="" value=<%=user.getBio()%>>
             </div>
 
         </div>

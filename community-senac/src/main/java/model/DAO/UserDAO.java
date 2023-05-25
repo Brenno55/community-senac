@@ -43,8 +43,6 @@ public class UserDAO implements RepositoryDao {
     }
     @Override
     public boolean inserirDetalhesDoUsuario(User user){
-        System.out.println("entrou na dao ");
-
         String SQL = "UPDATE usuario SET data_nascimento = ?, celular = ?, curso = ?, sexo = ?, bio = ?, image = ? WHERE email = ?";
         System.out.println("Entrar no UPDATE do usuario");
 
@@ -70,6 +68,29 @@ public class UserDAO implements RepositoryDao {
             return false;
         }
     }
+
+    @Override
+    public boolean ExcluindoUsuario(String email) {
+
+        String SQL = "DELETE USUARIO WHERE email = ?";
+        System.out.println("Entrar no Delete do usuario");
+
+        try {
+            Connection conectar = conectar();
+            PreparedStatement pst = conectar.prepareStatement(SQL);
+            System.out.println("conecta o prepare");
+
+            pst.setString(1, email);
+
+            System.out.println("excluido!!");
+
+            conectar.close();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     @Override
     public boolean buscarPorEmail(String email) {
         String SQL = "SELECT * FROM usuario WHERE email = ?";
