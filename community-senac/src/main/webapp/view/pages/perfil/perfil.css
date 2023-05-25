@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+
 }
 
 
@@ -31,7 +33,7 @@ header h1{
 
 header h1, a{
 
-    color: #FF7F00;
+    color: #FFAE11;
 
 }
 
@@ -50,7 +52,7 @@ header section p {
     font-weight: 700;
     line-height: 18px;
 
-    color: #F4EDE8;
+    color: #FFAE11;
 }
 
 header  img {
@@ -60,17 +62,25 @@ header  img {
     border-radius: 35px;
 }
 
+.texto{
+
+    margin-top: 70px;
+    color: white;
+    font-size: 35px;
+
+}
+
 label {
   font-size: 20px;
 }
 
 div {
-  padding-top: 80px;
+  padding-top: 60px;
   margin: 0 auto;
   text-align: center;
 }
 
-input {
+input, select    {
   color: white;
 }
 
@@ -111,8 +121,10 @@ select, button, .imagem {
 }
 
 .formContainer {
-  color: #FF7F00;
-  display: flex;
+
+    color: #FF7F00;
+    display: flex;
+
 }
 
 

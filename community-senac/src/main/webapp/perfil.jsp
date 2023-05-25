@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,7 +17,7 @@
 
 
 <container class="container" >
-    <header>
+    <header style="background-color: #000000; position: fixed; top: 0; left: 0; width: 100%; ">
 
     <h1>Community Senac</h1>
 
@@ -37,7 +35,14 @@
     <form action="/perfil" name="frmPerfil" method="post" enctype="multipart/form-data">
 
 
+     <div class="texto">
+        <p>Edite seu perfil</p>
+     </div>
+
     <div class="formContainer">
+
+
+
        <div class="parte1">
 
         <label for="nome">Nome:</label>
