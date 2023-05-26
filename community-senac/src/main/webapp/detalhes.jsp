@@ -39,23 +39,23 @@
 <main>
 
     <div class="containerLeft">
-        <h2>Nome da pessoa</h2>
+        <h2> <%out.print(request.getAttribute("nome"));%> </h2>
 
         <img src="/view/assents/avatar_placeholder.svg" alt="">
 
         <section>
             <ul>
-                <li>Data de nascimento: ${user.getDataNascimento()}</li>
-                <li>Sexo: ${user.getSexo()}</li>
-                <li>Curso: ${user.getCurso()}</li>
-                <li>Celular: ${user.getCelular()}</li>
+                <li>Data de Nascimento: <%out.print(request.getAttribute("dataNascimento"));%> </li>
+                <li>Sexo: <%out.print(request.getAttribute("sexo"));%> </li>
+                <li>Curso: <%out.print(request.getAttribute("curso"));%> </li>
+                <li>Celular: <%out.print(request.getAttribute("celular"));%> </li>
             </ul>
         </section>
     </div>
 
     <div class="containerRight">
         <h2>Biografia</h2>
-        <p>${user.getBio()}</p>
+        <p>  <%out.print(request.getAttribute("bio"));%> </p>
     </div>
 
 

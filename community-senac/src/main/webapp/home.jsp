@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page import="model.User"%>
+<%@ page import="java.util.ArrayList"%>
+<% ArrayList<User> lista = (ArrayList<User>)request.getAttribute("users");
+ User userS = (User)session.getAttribute("sessionUser");
+%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,14 +14,7 @@
     <link type="text/css" rel="stylesheet" href="/view/pages/index.css">
 
 </head>
-
 <body>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ page import="model.User"%>
-<% User userS = (User)session.getAttribute("sessionUser"); %>
-
 <header>
 
     <h1>Community Senac</h1>
@@ -43,25 +43,24 @@
     <div class="block">
         <h1>Possiveis conexões</h1>
 
-        <div class="filtros"  >
-                <input hidden type="checkbox" class="estados" id="acre" name="estado" value="AC">
-                <label hidden for="acre">Acre</label><br>
-            <button type="submit"><span>+</span>Adicionar Filtro</button>
-        </div>
+
     </div>
 
     <main>
-     <c:forEach var="user" items="${users}" >
+           <% for (int i = 0; i < lista.size() ; i++) {  %>
                 <div class="card">
-                    <a href="/detalhes.jsp"><img src= "/view/assents/avatar_placeholder.svg"alt=${user.nome}></a>
+                    <a href="detalhes?email=<%=lista.get(i).getEmail()%>">
+					    <img
+                        src= "/view/assents/avatar_placeholder.svg"
+                        alt="foto do usuario">
+					</a>
                     <ul>
-                        <li>${user.getNome()}</li>
-                        <li>${user.getDataNascimento()} anos</li>
-                        <li>${user.getCurso()}</li>
-                        <li><a href="/detalhes.jsp">Ver mais</a></li>
-                     </ul>
-                </div>
-        </c:forEach>
+                        <li><%= lista.get(i).getNome() %> </li>
+                        <li><%= lista.get(i).getCurso() %> </li>
+                        <li><%= lista.get(i).getDataNascimento() %></li>
+                    </ul>
+                    </div>
+                <% } %>
     </main>
  </div>
 </body>

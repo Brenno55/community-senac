@@ -170,8 +170,9 @@ public class UserDAO implements RepositoryDao {
                 String nomeR = rs.getString("nome");
                 String data_nascimento  = rs.getString("data_nascimento");
                 String cursoR  = rs.getString("curso");
+                String emailR  = rs.getString("email");
 
-                users.add(new User(nomeR, data_nascimento, cursoR));
+                users.add(new User(nomeR, data_nascimento, cursoR, emailR));
             }
             conectar.close();
             return users;
@@ -196,8 +197,9 @@ public class UserDAO implements RepositoryDao {
                 String nome  = rs.getString("nome");
                 String data_nascimento  = rs.getString("data_nascimento");
                 String cursoR  = rs.getString("curso");
+                String emailR  = rs.getString("email");
 
-                users.add(new User(nome, data_nascimento, cursoR));
+                users.add(new User(nome, data_nascimento, cursoR, emailR));
             }
             conectar.close();
             return users;
@@ -208,7 +210,7 @@ public class UserDAO implements RepositoryDao {
     }
     @Override
     public ArrayList<User> buscarTodos(){
-        String SQL = "select nome, timestampdiff(year, data_nascimento, now()) as idade, curso from usuario order by nome;";
+        String SQL = "select nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email from usuario order by nome;";
         ArrayList<User> users = new ArrayList<>();
 
         try {
@@ -220,8 +222,9 @@ public class UserDAO implements RepositoryDao {
                 String nome  = rs.getString("nome");
                 String data_nascimento  = rs.getString("idade");
                 String curso  = rs.getString("curso");
+                String email  = rs.getString("email");
 
-                users.add(new User(nome, data_nascimento, curso));
+                users.add(new User(nome, data_nascimento, curso, email));
             }
             conectar.close();
             return users;

@@ -44,6 +44,7 @@ public class UserController extends HttpServlet {
         String senha = req.getParameter("senha");
 
         boolean usuarioAutenticado = userService.autenticarUsuario(email, senha);
+
         User user = userService.buscarUsuarioPorEmail(email);
 
         System.out.println("Informações do user logado -> ");
