@@ -81,6 +81,7 @@ public class UserDAO implements RepositoryDao {
             System.out.println("conecta o prepare");
 
             pst.setString(1, email);
+            pst.execute();
 
             System.out.println("excluido!!");
 

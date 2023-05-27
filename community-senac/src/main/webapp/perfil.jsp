@@ -93,16 +93,19 @@
             </div>
 
         </div>
-
         <div class="button">
-
         <button type="submit" onclick="return validarPerfil()">Finalizar</button>
-
         </div>
 
+            </form>
+            <form action="/delete-user" method="post">
+            <input type="hidden" id="excluirPorEmail" name="excluirPorEmail" value=<%=user.getEmail()%>>
+            <button class="button" type="submit">Delete</button>
+            </form>
 
 
-    </form>
+
+
 
 
 

@@ -22,6 +22,10 @@ public  class UserService {
     public boolean atulizandoUsuario(User user){
         return repository.inserirDetalhesDoUsuario(user);
     }
+    public boolean excluindoUsuario(String usuarioExcluido){
+        return repository.ExcluindoUsuario(usuarioExcluido);
+    }
+
     public boolean autenticarUsuario(String email, String senha){
         return repository.buscarPorEmailSenha(email, senha);
     }
