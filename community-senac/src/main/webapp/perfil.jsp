@@ -67,7 +67,7 @@
         </div>
         </label>
         <input id="imagemUsuario" type="file" name="file" style="display: none;" accept="image/*" </div>
-
+</div>
      <div class="parte2">
 
         <label for="dataNascimento">Data:</label>
@@ -97,11 +97,13 @@
         <button type="submit" onclick="return validarPerfil()">Finalizar</button>
         </div>
 
+    <div class ="botaoExcluir">
             </form>
             <form action="/delete-user" method="post">
             <input type="hidden" id="excluirPorEmail" name="excluirPorEmail" value=<%=user.getEmail()%>>
             <button class="button" type="submit">Delete</button>
             </form>
+            </div>
 
 
 

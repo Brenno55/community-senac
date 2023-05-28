@@ -19,6 +19,20 @@
    // usar uma validação de sessão, se ele não estiver, ai lancar uma variavel qualquer
    //int x = 0;
 %>
+
+<header style="background-color: #000000; position: fixed; top: 0; left: 0; width: 100%; ">
+
+        <h1> <a href="/index.html">Community Senac</a></h1>
+
+        <section>
+            <a href="/login.html">Login</a>
+            <a href="/sobre.html">Sobre</a>
+
+
+        </section>
+
+    </header>
+
 <container class="container" >
 
     <h1>Community Senac</h1>
@@ -36,7 +50,6 @@
         <button onclick="return validarCadastro()" >Cadastrar</button>
     </form>
 
-    <a href="/login.html">Voltar para login</a>
     <script src="./scripts/validador.js"></script>
 </container>
 </body>
