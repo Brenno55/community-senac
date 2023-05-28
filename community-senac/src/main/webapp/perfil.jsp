@@ -105,12 +105,6 @@
             </form>
             </div>
 
-
-
-
-
-
-
 </container>
 
     <script src="./scripts/perfil.js"></script>

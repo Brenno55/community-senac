@@ -14,7 +14,7 @@
 <%@ page import="model.User"%>
 <% User user = (User)session.getAttribute("sessionUser"); %>
 
-<header>
+<header style="background-color: #000000;">
 
     <a href="/home.jsp"><h1>Community Senac</h1></a>
 

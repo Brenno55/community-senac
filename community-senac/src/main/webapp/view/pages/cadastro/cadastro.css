@@ -56,11 +56,23 @@ header section p {
     color: #FFAE11;
 }
 
+p{
+
+    text-align: center;
+
+}
+
+.container a{
+
+padding-top: 50px;
+
+}
+
 a {
     padding-right: 30px;
     color: #FF7F00;
     transition: background-color 0.3s ease;
-     white-space:nowrap;
+    white-space:nowrap;
 }
 
 a:hover {

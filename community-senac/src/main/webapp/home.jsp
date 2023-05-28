@@ -15,7 +15,7 @@
 
 </head>
 <body>
-<header>
+<header style="background-color: #000000">
 
     <h1>Community Senac</h1>
 
@@ -33,7 +33,7 @@
          <p> <%= userS.getNome() %> </p>
          <a href="autenticador">Sair</a>
 
-        <a href="/detalhes.html"><img src= "/view/assents/avatar_placeholder.svg" alt=""></a>
+        <a href="/detalhes.jsp"><img src= "/view/assents/avatar_placeholder.svg" alt=""></a>
     </section>
 
 </header>
