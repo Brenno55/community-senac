@@ -16,7 +16,7 @@
 
 <header style="background-color: #000000;">
 
-    <a href="/home.jsp"><h1>Community Senac</h1></a>
+    <a href="/home"><h1>Community Senac</h1></a>
 
     <form action="/home-header">
         <input type="text" placeholder="Pesquisar pelo nome da pessoa"
