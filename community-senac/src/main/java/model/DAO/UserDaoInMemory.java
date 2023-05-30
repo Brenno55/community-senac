@@ -50,17 +50,17 @@ public class UserDaoInMemory implements RepositoryDao {
         return false;
     }
     @Override
-    public ArrayList<User> buscarTodos() {
+    public ArrayList<User> buscarTodos(String meuEmail) {
         return null;
     }
 
     @Override
-    public ArrayList<User> buscarPorCurso(String curso) {
+    public ArrayList<User> buscarPorCurso(String meuEmail, String curso) {
         return null;
     }
 
     @Override
-    public ArrayList<User> buscarPorNome(String nome) {
+    public ArrayList<User> buscarPorNome(String meuEmail, String nome) {
         return null;
     }
 

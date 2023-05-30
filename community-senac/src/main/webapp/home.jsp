@@ -20,7 +20,7 @@
     <a href="/home"><h1>Community Senac</h1></a>
 
     <form action="/home-header">
-        <input type="text" placeholder="Pesquisar pelo nome da pessoa"
+        <input type="text" placeholder="Pesquisar por nome ou curso"
         name="search-header" id="search-header"
         >
 

@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -24,14 +25,18 @@ public class HomeController extends HttpServlet {
         System.out.println("1 - chamada na rota: " + action);
 
         if (action.equals("/home")) {
-            List<User> lista = userService.listarTodosUsuarios();
+            HttpSession sessao = req.getSession();
+            User user = (User)sessao.getAttribute("sessionUser");
+            List<User> lista = userService.listarTodosUsuarios(user.getEmail());
             req.setAttribute("users", lista);
             req.getRequestDispatcher("home.jsp").forward(req,resp);
 
         } else if (action.equals("/home-header")){
             String filtro = req.getParameter("search-header");
+            HttpSession sessao = req.getSession();
+            User user = (User)sessao.getAttribute("sessionUser");
 
-            List<User> lista = userService.listarUsuariosComFiltro(filtro);
+            List<User> lista = userService.listarUsuariosComFiltro(user.getEmail(), filtro);
             req.setAttribute("users", lista);
             req.getRequestDispatcher("home.jsp").forward(req,resp);
         }else if(action.equals("/detalhes")){

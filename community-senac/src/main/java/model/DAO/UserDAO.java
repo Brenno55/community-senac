@@ -158,7 +158,7 @@ public class UserDAO implements RepositoryDao {
         }
     }
     @Override
-    public ArrayList<User> buscarPorNome(String nome){
+    public ArrayList<User> buscarPorNome(String meuEmail, String nome){
         String read = "SELECT nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email FROM USUARIO WHERE nome LIKE (?) ORDER BY nome";
         String pesquisaAux = '%'  +nome+ '%';
         ArrayList<User> users = new ArrayList<>();
@@ -170,12 +170,14 @@ public class UserDAO implements RepositoryDao {
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()){
-                String nomeR = rs.getString("nome");
-                String data_nascimento = rs.getString("idade");
-                String cursoR = rs.getString("curso");
-                String emailR = rs.getString("email");
+                if(!rs.getString("email").equals(meuEmail)){
+                    String nomeR = rs.getString("nome");
+                    String data_nascimento = rs.getString("idade");
+                    String cursoR = rs.getString("curso");
+                    String emailR = rs.getString("email");
 
-                users.add(new User(nomeR, data_nascimento, cursoR, emailR));
+                    users.add(new User(nomeR, data_nascimento, cursoR, emailR));
+                }
             }
             conectar.close();
 
@@ -186,7 +188,7 @@ public class UserDAO implements RepositoryDao {
         }
     }
     @Override
-    public ArrayList<User> buscarPorCurso(String curso){
+    public ArrayList<User> buscarPorCurso(String meuEmail, String curso){
         String SQL = "SELECT nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email FROM USUARIO WHERE curso LIKE (?) ";
         String pesquisaAux = '%' +curso+ '%';
         ArrayList<User> users = new ArrayList<>();
@@ -198,12 +200,14 @@ public class UserDAO implements RepositoryDao {
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()){
-                String nome = rs.getString("nome");
-                String data_nascimento = rs.getString("idade");
-                String cursoR = rs.getString("curso");
-                String emailR = rs.getString("email");
+                if(!rs.getString("email").equals(meuEmail)){
+                    String nome = rs.getString("nome");
+                    String data_nascimento = rs.getString("idade");
+                    String cursoR = rs.getString("curso");
+                    String emailR = rs.getString("email");
 
-                users.add(new User(nome, data_nascimento, cursoR, emailR));
+                    users.add(new User(nome, data_nascimento, cursoR, emailR));
+                }
             }
             conectar.close();
             return users;
@@ -213,7 +217,7 @@ public class UserDAO implements RepositoryDao {
         }
     }
     @Override
-    public ArrayList<User> buscarTodos(){
+    public ArrayList<User> buscarTodos(String meuEmail){
         String SQL = "select nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email from usuario order by nome;";
         ArrayList<User> users = new ArrayList<>();
 
@@ -223,12 +227,14 @@ public class UserDAO implements RepositoryDao {
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()){
-                String nome  = rs.getString("nome");
-                String data_nascimento  = rs.getString("idade");
-                String curso  = rs.getString("curso");
-                String email  = rs.getString("email");
+                if(!rs.getString("email").equals(meuEmail)){
+                    String nome = rs.getString("nome");
+                    String data_nascimento = rs.getString("idade");
+                    String curso = rs.getString("curso");
+                    String email = rs.getString("email");
 
-                users.add(new User(nome, data_nascimento, curso, email));
+                    users.add(new User(nome, data_nascimento, curso, email));
+                }
             }
             conectar.close();
             return users;

@@ -4,9 +4,9 @@ import model.User;
 import java.util.ArrayList;
 
 public interface RepositoryDao {
-    public ArrayList<User> buscarTodos();
-    public ArrayList<User> buscarPorCurso(String curso);
-    public ArrayList<User> buscarPorNome(String nome);
+    public ArrayList<User> buscarTodos(String meuEmail);
+    public ArrayList<User> buscarPorCurso(String meuEmail, String curso);
+    public ArrayList<User> buscarPorNome(String meuEmail, String nome);
     public boolean buscarPorEmailSenha(String email, String senha);
     public User buscarUsuarioPorEmail(String email);
 
