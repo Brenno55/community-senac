@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Adicionando o editar perfil">
+    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Adicionando anos e redirecionamento na tela home">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/java/model/DAO/UserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685458771338</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Adicionando anos e redirecionamento na tela home">
+      <created>1685459888996</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685459888996</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,6 +235,7 @@
     <MESSAGE value="Ajuste de rota na tela de detalhes" />
     <MESSAGE value="Alterando rota da tela de login" />
     <MESSAGE value="Adicionando o editar perfil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando o editar perfil" />
+    <MESSAGE value="Adicionando anos e redirecionamento na tela home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando anos e redirecionamento na tela home" />
   </component>
 </project>

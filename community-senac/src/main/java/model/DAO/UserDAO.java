@@ -159,7 +159,7 @@ public class UserDAO implements RepositoryDao {
     }
     @Override
     public ArrayList<User> buscarPorNome(String meuEmail, String nome){
-        String read = "SELECT nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email FROM USUARIO WHERE nome LIKE (?) ORDER BY nome";
+        String read = "SELECT nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email FROM USUARIO WHERE LOWER(nome) LIKE LOWER (?) ORDER BY nome";
         String pesquisaAux = '%'  +nome+ '%';
         ArrayList<User> users = new ArrayList<>();
 
@@ -189,7 +189,7 @@ public class UserDAO implements RepositoryDao {
     }
     @Override
     public ArrayList<User> buscarPorCurso(String meuEmail, String curso){
-        String SQL = "SELECT nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email FROM USUARIO WHERE curso LIKE (?) ";
+        String SQL = "SELECT nome, TIMESTAMPDIFF(YEAR, data_nascimento, CURRENT_TIMESTAMP) AS idade, curso, email FROM usuario WHERE LOWER(curso) LIKE LOWER (?) ";
         String pesquisaAux = '%' +curso+ '%';
         ArrayList<User> users = new ArrayList<>();
 
