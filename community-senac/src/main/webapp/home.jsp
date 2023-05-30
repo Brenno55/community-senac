@@ -17,7 +17,7 @@
 <body>
 <header style="background-color: #000000">
 
-    <h1>Community Senac</h1>
+    <a href="/home"><h1>Community Senac</h1></a>
 
     <form action="/home-header">
         <input type="text" placeholder="Pesquisar pelo nome da pessoa"
@@ -57,7 +57,7 @@
                     <ul>
                         <li><%= lista.get(i).getNome() %> </li>
                         <li><%= lista.get(i).getCurso() %> </li>
-                        <li><%= lista.get(i).getDataNascimento() %></li>
+                        <li><%= lista.get(i).getDataNascimento() %> anos</li>
                     </ul>
                     </div>
                 <% } %>

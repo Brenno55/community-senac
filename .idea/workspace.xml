@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Alterando rota da tela de login">
+    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Adicionando o editar perfil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" afterDir="false" />
     </list>
@@ -195,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685456322564</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adicionando o editar perfil">
+      <created>1685458771338</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685458771338</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +227,7 @@
     <MESSAGE value="Criação da página sobre" />
     <MESSAGE value="Ajuste de rota na tela de detalhes" />
     <MESSAGE value="Alterando rota da tela de login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alterando rota da tela de login" />
+    <MESSAGE value="Adicionando o editar perfil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando o editar perfil" />
   </component>
 </project>
