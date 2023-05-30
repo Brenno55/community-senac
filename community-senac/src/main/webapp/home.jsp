@@ -30,7 +30,7 @@
     </form>
 
     <section>
-         <p> <%= userS.getNome() %> </p>
+         <a href="/perfil.jsp"><p><%= userS.getNome() %></p></a>
          <a href="autenticador">Sair</a>
 
         <a href="/detalhes.jsp"><img src= "/view/assents/avatar_placeholder.svg" alt=""></a>
