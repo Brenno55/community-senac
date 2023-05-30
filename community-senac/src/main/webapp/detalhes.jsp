@@ -1,3 +1,4 @@
+<%@ page import="model.User"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

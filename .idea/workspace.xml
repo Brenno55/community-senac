@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Criação da página sobre">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2023_20_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2023_20_35__Changes_.xml" afterDir="false" />
+    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Ajuste de rota na tela de detalhes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.jsp" afterDir="false" />
     </list>
@@ -35,7 +34,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="dc638f1e-13ca-412d-b227-1e232048e5bd" />
+        <option name="accountId" value="3ee7610b-dc01-4414-983a-cf46b4059e77" />
         <option name="url" value="https://github.com/Brenno55/community-senac.git" />
       </UrlAndAccount>
     </option>
@@ -182,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684971585194</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Ajuste de rota na tela de detalhes">
+      <created>1685364036635</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685364036635</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +211,7 @@
     <MESSAGE value="Ajustes na valições do cadastro e perfil e css do perfil" />
     <MESSAGE value="Ajustes css do perfil" />
     <MESSAGE value="Criação da página sobre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação da página sobre" />
+    <MESSAGE value="Ajuste de rota na tela de detalhes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste de rota na tela de detalhes" />
   </component>
 </project>
