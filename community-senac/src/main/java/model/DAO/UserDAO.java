@@ -147,10 +147,12 @@ public class UserDAO implements RepositoryDao {
             pst.setString(2, senha);
 
             ResultSet rs = pst.executeQuery();
-            conectar.close();
 
-            return rs != null;
-
+            if(rs.next()){
+                return rs.getString("email").equals(email)
+                    && rs.getString("senha").equals(senha);
+            }
+            return false;
         } catch (Exception e) {
             return false;
         }

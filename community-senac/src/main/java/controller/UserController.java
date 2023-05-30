@@ -47,10 +47,6 @@ public class UserController extends HttpServlet {
 
         User user = userService.buscarUsuarioPorEmail(email);
 
-        System.out.println("Informações do user logado -> ");
-        System.out.println(user.getNome());
-        System.out.println(user.getSenha());
-
         if(usuarioAutenticado){
             HttpSession sessao = req.getSession();
             sessao.setAttribute("sessionUser", user);
