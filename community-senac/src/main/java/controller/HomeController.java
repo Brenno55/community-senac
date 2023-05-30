@@ -29,15 +29,9 @@ public class HomeController extends HttpServlet {
             req.getRequestDispatcher("home.jsp").forward(req,resp);
 
         } else if (action.equals("/home-header")){
-            String nome = req.getParameter("search-header");
+            String filtro = req.getParameter("search-header");
 
-            List<User> lista = userService.listarUsuariosPorNome(nome);
-            req.setAttribute("users", lista);
-            req.getRequestDispatcher("home.jsp").forward(req,resp);
-        } else if (action.equals("/home-filter")){
-            String curso = req.getParameter("/home-filter");
-
-            List<User> lista = userService.listaUsuariosPorCurso(curso);
+            List<User> lista = userService.listarUsuariosComFiltro(filtro);
             req.setAttribute("users", lista);
             req.getRequestDispatcher("home.jsp").forward(req,resp);
         }else if(action.equals("/detalhes")){

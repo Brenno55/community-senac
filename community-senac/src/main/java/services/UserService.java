@@ -32,11 +32,15 @@ public  class UserService {
     public ArrayList<User> listarTodosUsuarios(){
         return repository.buscarTodos();
     }
-    public ArrayList<User> listarUsuariosPorNome(String nome){
-        return repository.buscarPorNome(nome);
-    }
-    public ArrayList<User> listaUsuariosPorCurso(String curso) {
-        return repository.buscarPorCurso(curso);
+    public ArrayList<User> listarUsuariosComFiltro(String filtro){
+        ArrayList<User> users = repository.buscarPorNome(filtro);
+        if(users.size() == 0){
+            System.out.println("retorna a busca por curso");
+            return repository.buscarPorCurso(filtro);
+        }else{
+            System.out.println("retorna nada, porq ele so busca por nomes");
+            return users;
+        }
     }
     public User buscarUsuarioPorEmail(String email){
         return repository.buscarUsuarioPorEmail(email);

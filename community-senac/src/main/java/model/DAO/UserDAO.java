@@ -171,13 +171,14 @@ public class UserDAO implements RepositoryDao {
 
             while (rs.next()){
                 String nomeR = rs.getString("nome");
-                String data_nascimento  = rs.getString("idade");
-                String cursoR  = rs.getString("curso");
-                String emailR  = rs.getString("email");
+                String data_nascimento = rs.getString("idade");
+                String cursoR = rs.getString("curso");
+                String emailR = rs.getString("email");
 
                 users.add(new User(nomeR, data_nascimento, cursoR, emailR));
             }
             conectar.close();
+
             return users;
         } catch (Exception e) {
             System.out.println(e + "Falha na conexão com bd index.");
@@ -186,28 +187,28 @@ public class UserDAO implements RepositoryDao {
     }
     @Override
     public ArrayList<User> buscarPorCurso(String curso){
-        String read = "SELECT * FROM USUARIO WHERE nome LIKE (?) ";
+        String SQL = "SELECT nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email FROM USUARIO WHERE curso LIKE (?) ";
         String pesquisaAux = '%' +curso+ '%';
         ArrayList<User> users = new ArrayList<>();
 
         try {
             Connection conectar = conectar();
-            PreparedStatement pst = conectar.prepareStatement(read);
+            PreparedStatement pst = conectar.prepareStatement(SQL);
             pst.setString(1, pesquisaAux);
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()){
-                String nome  = rs.getString("nome");
-                String data_nascimento  = rs.getString("data_nascimento");
-                String cursoR  = rs.getString("curso");
-                String emailR  = rs.getString("email");
+                String nome = rs.getString("nome");
+                String data_nascimento = rs.getString("idade");
+                String cursoR = rs.getString("curso");
+                String emailR = rs.getString("email");
 
                 users.add(new User(nome, data_nascimento, cursoR, emailR));
             }
             conectar.close();
             return users;
         } catch (Exception e) {
-            System.out.println(e + "Falha na conexão com bd index.");
+            System.out.println(e + "Falha na conexão com bd index do curso.");
             return null;
         }
     }
@@ -232,7 +233,6 @@ public class UserDAO implements RepositoryDao {
             conectar.close();
             return users;
         } catch (Exception e) {
-            System.out.println("Cai no nullo, metodo buscarTodos");
             return null;
         }
     }
