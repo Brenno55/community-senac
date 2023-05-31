@@ -15,6 +15,7 @@ main .containerLeft h2{
     left: 65px;
     top: 185px;
     color: #F4EDE8;
+    font-size: 30px;
 }
 
 main .containerLeft img{
@@ -43,7 +44,7 @@ main .containerLeft section ul li{
 
     color: #F4EDE8;
     border-radius: 8px;
-
+    font-size: 30px;
 }
 
 
@@ -62,7 +63,7 @@ main .containerRight p{
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 30px;
     line-height: 21px;
     display: flex;
     align-items: center;

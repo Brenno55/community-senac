@@ -74,10 +74,12 @@
         <label for="curso">Curso:</label>
         <select name="curso">
             <option value="valorDoBD"><%=user.getCurso()%></option>
-            <option value="ADS">ADS</option>
-            <option value="Banco de daods">Banco de dados</option>
-            <option value="Redes de computadores">Redes de computadores</option>
+            <option value="Analise e Desenvolvimento de Sistemas">Analise e Desenvolvimento de Sistemas</option>
+            <option value="Redes de Computadores">Redes de Computadores</option>
             <option value="Moda">Moda</option>
+            <option value="Gastronomia">Gastronomia</option>
+            <option value="Recursos Humanos">Recursos Humanos</option>
+            <option value="Contabilidade">Contabilidade</option>
         </select>
         <label for="sexo">Sexo:</label>
         <select name="sexo" id="sexo">
