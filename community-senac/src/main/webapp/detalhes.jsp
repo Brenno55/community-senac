@@ -46,7 +46,7 @@
         <h2> <%out.print(request.getAttribute("nome"));%> </h2>
 
         <section>
-        <img src= alt="">
+        <img src=<%out.print(request.getAttribute("image"));%>  alt="">
             <ul>
                 <li>Data de Nascimento: <%out.print(request.getAttribute("dataNascimento"));%> </li>
                 <li>Sexo: <%out.print(request.getAttribute("sexo"));%> </li>
