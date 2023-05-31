@@ -30,10 +30,13 @@
     </form>
 
     <section>
-         <a href="/perfil.jsp"><p><%= userS.getNome() %></p></a>
-         <a href="autenticador">Sair</a>
-
-        <a href="/detalhes.jsp"><img src= "/view/assents/avatar_placeholder.svg" alt=""></a>
+         <p style="margin-right: 10px;"><%= userS.getNome() %></p>
+         <img name="avatar" id="avatar" src="/view/assents/avatar_placeholder.svg" alt="">
+         <ul id="menu" class="menu">
+           <li><a href="detalhes.jsp">Visualizar Perfil</a></li>
+           <li><a href="perfil.jsp">Editar Perfil</a></li>
+           <li><a href="autenticador">Sair</a></li>
+         </ul>
     </section>
 
 </header>
@@ -51,8 +54,11 @@
                 <div class="card">
                     <a href="detalhes?email=<%=lista.get(i).getEmail()%>">
 					    <img
-                        src= "/view/assents/avatar_placeholder.svg"
-                        alt="foto do usuario">
+                                <img name="avatar" id="avatar" src= "/view/assents/avatar_placeholder.svg" alt="">
+                                    <ul id="menu" class="menu" style="display: none;">
+                                    <li><a type="submit" href="detalhes.jsp" onclick="return validarPerfilParaDetalhes(event)">Visualizar Perfil</a></li>
+                                    <li><a href="autenticador">Sair</a></li>
+                                    </ul>
 					</a>
                     <ul>
                         <li><%= lista.get(i).getNome() %> </li>
@@ -62,5 +68,6 @@
                     </div>
                 <% } %>
     </main>
+    <script src="./scripts/index.js"></script>
  </div>
 </body>

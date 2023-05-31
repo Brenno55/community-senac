@@ -1,10 +1,6 @@
-
-
 main{
     display: flex;
     gap: 400px;
-
-
 }
 
 main .containerLeft {
@@ -108,7 +104,6 @@ header {
 }
 
 header h1{
-    font-weight: 700;
     font-size: 24px;
     line-height: 32px;
 
@@ -123,6 +118,7 @@ header form input {
 
     background: #262529;
     border-radius: 10px;
+    border:none;
 
     color: white;
 }
@@ -131,15 +127,13 @@ header form button{
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
+    border:none;
+    height: 56px;
+    color: black;
+    background: #FF7F00;
+    padding: 19px 24px;
 
-    color: #948F99;
-    background-color: none;
-    background: none;
 
-    width: 10px;
-    height: 10px;
-
-    border: none;
 }
 
 header section {
@@ -172,4 +166,36 @@ header  img {
 }
 
 
+img:hover, button:hover {
 
+    filter: brightness(0.5);
+    cursor:pointer;
+}
+#menu {
+  background-color: white;
+  padding: 10px;
+  white-space: nowrap;
+  margin-left:10px;
+  display:none;
+}
+#menu.visible {
+  display: block;
+}
+
+#menu li {
+  display: block;
+  margin-right: 10px;
+  position: relative;
+}
+
+#menu li a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+
+#menu li a:hover {
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
+}

@@ -30,10 +30,14 @@
     </form>
 
     <section>
-        <p> fulano </p>
-        <a href="autenticador">Sair</a>
+        <p style="margin-right: 10px;"> fulano </p>
 
-        <img src="/view/assents/avatar_placeholder.svg" alt="">
+        <img name="avatar" id="avatar" src="/view/assents/avatar_placeholder.svg" alt="">
+        <ul id="menu" class="menu">
+        <li><a href="detalhes.jsp">Visualizar Perfil</a></li>
+        <li><a href="perfil.jsp">Editar Perfil</a></li>
+        <li><a href="autenticador">Sair</a></li>
+        </ul>
     </section>
 
 </header>
@@ -45,6 +49,7 @@
         <img src="/view/assents/avatar_placeholder.svg" alt="">
 
         <section>
+        <img src="/view/assents/avatar_placeholder.svg" alt="">
             <ul>
                 <li>Data de Nascimento: <%out.print(request.getAttribute("dataNascimento"));%> </li>
                 <li>Sexo: <%out.print(request.getAttribute("sexo"));%> </li>
@@ -61,6 +66,6 @@
 
 
 </main>
-
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

@@ -25,7 +25,6 @@
     <section>
         <p> <%= user.getNome() %> </p>
         <a href="autenticador">Sair</a>
-
         <img src= "/view/assents/avatar_placeholder.svg" alt="">
     </section>
 
@@ -48,11 +47,11 @@
         <label for="nome">Nome:</label>
         <input type="text" name="nome" placeholder="nome" value=<%=user.getNome()%>>
         <label for="email">Email:</label>
-        <input type="text" name="email" placeholder="Email" value=<%=user.getEmail()%>>
+        <input type="text" name="email" placeholder="Email" value=<%=user.getEmail()%> readonly>
         <label for="senha">Senha</label>
         <input type="password" name="senha" placeholder="Senha" value=<%=user.getSenha()%>>
         <label for="telefone">Celular:</label>
-        <input type="tel" name="celular" maxlength="15" onkeyup="handlePhone(event)"/ value=<%=user.getCelular()%>>
+        <input type="tel" name="celular" maxlength="11" value=<%=user.getCelular()%>>
         </div>
 
         <div class="imagem">
@@ -71,7 +70,7 @@
      <div class="parte2">
 
         <label for="dataNascimento">Data:</label>
-        <input type="date" max="9999-12-31" name="dataNascimento" placeholder="" value=<%=user.getDataNascimento()%>>
+        <input type="date" max="2004-12-31" min="1900-12-31" name="dataNascimento" placeholder="" value=<%=user.getDataNascimento()%>>
 
         <label for="curso">Curso:</label>
         <select name="curso" value=<%=user.getCurso()%>>
