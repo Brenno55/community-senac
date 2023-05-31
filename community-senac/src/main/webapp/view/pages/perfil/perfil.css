@@ -37,7 +37,10 @@ header h1{
 
 header h1, a{
 
+    font-size: 18px;
+    line-height: 24px;
     color: #FFAE11;
+    margin-top:10px;
 
 }
 

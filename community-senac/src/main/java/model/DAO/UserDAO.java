@@ -159,7 +159,7 @@ public class UserDAO implements RepositoryDao {
     }
     @Override
     public ArrayList<User> buscarPorNome(String meuEmail, String nome){
-        String read = "SELECT nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email FROM USUARIO WHERE LOWER(nome) LIKE LOWER (?) ORDER BY nome";
+        String read = "SELECT nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email, image FROM USUARIO WHERE LOWER(nome) LIKE LOWER (?) ORDER BY nome";
         String pesquisaAux = '%'  +nome+ '%';
         ArrayList<User> users = new ArrayList<>();
 
@@ -175,8 +175,8 @@ public class UserDAO implements RepositoryDao {
                     String data_nascimento = rs.getString("idade");
                     String cursoR = rs.getString("curso");
                     String emailR = rs.getString("email");
-
-                    users.add(new User(nomeR, data_nascimento, cursoR, emailR));
+                    String image = rs.getString("image");
+                    users.add(new User(nomeR, data_nascimento, cursoR, emailR, image));
                 }
             }
             conectar.close();
@@ -189,7 +189,7 @@ public class UserDAO implements RepositoryDao {
     }
     @Override
     public ArrayList<User> buscarPorCurso(String meuEmail, String curso){
-        String SQL = "SELECT nome, TIMESTAMPDIFF(YEAR, data_nascimento, CURRENT_TIMESTAMP) AS idade, curso, email FROM usuario WHERE LOWER(curso) LIKE LOWER (?) ";
+        String SQL = "SELECT nome, TIMESTAMPDIFF(YEAR, data_nascimento, CURRENT_TIMESTAMP) AS idade, curso, email, image FROM usuario WHERE LOWER(curso) LIKE LOWER (?) ";
         String pesquisaAux = '%' +curso+ '%';
         ArrayList<User> users = new ArrayList<>();
 
@@ -205,8 +205,9 @@ public class UserDAO implements RepositoryDao {
                     String data_nascimento = rs.getString("idade");
                     String cursoR = rs.getString("curso");
                     String emailR = rs.getString("email");
+                    String image = rs.getString("image");
 
-                    users.add(new User(nome, data_nascimento, cursoR, emailR));
+                    users.add(new User(nome, data_nascimento, cursoR, emailR, image));
                 }
             }
             conectar.close();
@@ -218,7 +219,7 @@ public class UserDAO implements RepositoryDao {
     }
     @Override
     public ArrayList<User> buscarTodos(String meuEmail){
-        String SQL = "select nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email from usuario order by nome;";
+        String SQL = "select nome, timestampdiff(year, data_nascimento, now()) as idade, curso, email, image from usuario order by nome;";
         ArrayList<User> users = new ArrayList<>();
 
         try {
@@ -232,8 +233,9 @@ public class UserDAO implements RepositoryDao {
                     String data_nascimento = rs.getString("idade");
                     String curso = rs.getString("curso");
                     String email = rs.getString("email");
+                    String image = rs.getString("image");
 
-                    users.add(new User(nome, data_nascimento, curso, email));
+                    users.add(new User(nome, data_nascimento, curso, email, image));
                 }
             }
             conectar.close();

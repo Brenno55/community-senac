@@ -7,6 +7,8 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <head>
     <meta charset="UTF-8">
     <title>Community Senac</title>
@@ -30,8 +32,8 @@
     </form>
 
     <section>
-         <p style="margin-right: 10px;"><%= userS.getNome() %></p>
-         <img name="avatar" id="avatar" src="/view/assents/avatar_placeholder.svg" alt="">
+         <p style="margin-right: 10px;"><%= userS.getNome() %> </p>
+         <img name="avatar" id="avatar" src=<%=userS.getImage()%> alt="">
          <ul id="menu" class="menu">
            <li><a href="perfil.jsp">Editar Perfil</a></li>
            <li><a href="autenticador">Sair</a></li>
@@ -52,12 +54,11 @@
            <% for (int i = 0; i < lista.size() ; i++) {  %>
                 <div class="card">
                     <a href="detalhes?email=<%=lista.get(i).getEmail()%>">
-					    <img
-                                <img name="avatar" id="avatar" src= "/view/assents/avatar_placeholder.svg" alt="">
-                                    <ul id="menu" class="menu" style="display: none;">
-                                    <li><a type="submit" href="detalhes.jsp" onclick="return validarPerfilParaDetalhes(event)">Visualizar Perfil</a></li>
-                                    <li><a href="autenticador">Sair</a></li>
-                                    </ul>
+                     <img style="width: 100px" src=<%= lista.get(i).getImage()%> alt="...">
+                          <ul id="menu" class="menu" style="display: none;">
+                          <li><a type="submit" href="detalhes.jsp" onclick="return validarPerfilParaDetalhes(event)">Visualizar Perfil</a></li>
+                          <li><a href="autenticador">Sair</a></li>
+                          </ul>
 					</a>
                     <ul>
                         <li><%= lista.get(i).getNome() %> </li>

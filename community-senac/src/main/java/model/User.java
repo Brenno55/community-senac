@@ -16,11 +16,12 @@ public class User {
     }
     //USANDO ESSE CONSTRUTOR NA HOME
 
-    public User(String nome, String dataNascimento, String curso, String email) {
+    public User(String nome, String dataNascimento, String curso, String email, String image) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.curso = curso;
         this.email = email;
+        this.image = image;
     }
     public User(String nome, String dataNascimento, String sexo, String bio, String celular, String curso, String email, String senha, String image) {
         this.nome = nome;

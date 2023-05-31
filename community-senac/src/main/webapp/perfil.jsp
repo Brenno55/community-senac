@@ -21,11 +21,12 @@
 
     <h1>Community Senac</h1>
 
+    <a  href="/home">Home</a>
 
     <section>
         <p> <%= user.getNome() %> </p>
         <a href="autenticador">Sair</a>
-        <img src= "/view/assents/avatar_placeholder.svg" alt="">
+        <img src=<%=user.getImage()%> alt="">
     </section>
 
     </header>
@@ -57,8 +58,8 @@
         <div class="imagem">
         <label for="imagemUsuario">
 
-        <img id="previaDaImagem" src="/view/assents/avatar_placeholder.svg"
-        value="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${user.image}"
+        <img id="previaDaImagem" src=<%=user.getImage()%>
+        value=<%=user.getImage()%>
         alt="Selecione uma foto">
 
         <div class="camera-wrapper">
