@@ -29,6 +29,7 @@ public class DetalhesController extends HttpServlet {
         req.setAttribute("sexo", user.getSexo());
         req.setAttribute("curso", user.getCurso());
         req.setAttribute("celular", user.getCelular());
+        req.setAttribute("image", user.getImage());
 
         RequestDispatcher rd = req.getRequestDispatcher("detalhes.jsp");
         rd.forward(req, resp);

@@ -32,15 +32,16 @@ header h1{
     line-height: 32px;
 
     color: #FF7F00;
-    margin-top: 20px
+    margin-top: 10px
+
 }
 
-header h1, a{
+a{
 
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
-    color: #FFAE11;
-    margin-top:10px;
+    color: #FF7F00;
+    margin-top:5px;
 
 }
 

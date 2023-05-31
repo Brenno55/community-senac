@@ -32,7 +32,7 @@
     <section>
         <p style="margin-right: 10px;"> <%=user.getNome()%> </p>
 
-        <img name="avatar" id="avatar" src="/view/assents/avatar_placeholder.svg" alt="">
+        <img name="avatar" id="avatar" src=<%=user.getImage()%> alt="">
         <ul id="menu" class="menu">
         <li><a href="perfil.jsp">Editar Perfil</a></li>
         <li><a href="autenticador">Sair</a></li>
@@ -45,10 +45,8 @@
     <div class="containerLeft">
         <h2> <%out.print(request.getAttribute("nome"));%> </h2>
 
-        <img src="/view/assents/avatar_placeholder.svg" alt="">
-
         <section>
-        <img src="/view/assents/avatar_placeholder.svg" alt="">
+        <img src= alt="">
             <ul>
                 <li>Data de Nascimento: <%out.print(request.getAttribute("dataNascimento"));%> </li>
                 <li>Sexo: <%out.print(request.getAttribute("sexo"));%> </li>

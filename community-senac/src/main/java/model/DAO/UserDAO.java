@@ -127,6 +127,7 @@ public class UserDAO implements RepositoryDao {
                 user.setCurso(rs.getString("curso"));
                 user.setSexo(rs.getString("sexo"));
                 user.setBio(rs.getString("bio"));
+                user.setImage(rs.getString("image"));
             }
             conectar.close();
             return user;

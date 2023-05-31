@@ -19,9 +19,7 @@
 <container class="container" >
     <header style="background-color: #000000; position: fixed; top: 0; left: 0; width: 100%; ">
 
-    <h1>Community Senac</h1>
-
-    <a  href="/home">Home</a>
+    <a href="/home"><h1>Community Senac</h1></a>
 
     <section>
         <p> <%= user.getNome() %> </p>
@@ -59,7 +57,7 @@
         <label for="imagemUsuario">
 
         <img id="previaDaImagem" src=<%=user.getImage()%>
-        value=<%=user.getImage()%>
+        value="${pageContext.request.scheme}://${pageContext.request.serverName}:${pageContext.request.serverPort}/${user.image}"
         alt="Selecione uma foto">
 
         <div class="camera-wrapper">
@@ -74,7 +72,7 @@
         <input type="date" max="2004-12-31" min="1900-12-31" name="dataNascimento" placeholder="" value=<%=user.getDataNascimento()%>>
 
         <label for="curso">Curso:</label>
-        <select name="curso" value=<%=user.getCurso()%>>
+        <select name="curso">
             <option value="valorDoBD"><%=user.getCurso()%></option>
             <option value="ADS">ADS</option>
             <option value="Banco de daods">Banco de dados</option>
