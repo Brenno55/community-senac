@@ -54,7 +54,7 @@
            <% for (int i = 0; i < lista.size() ; i++) {  %>
                 <div class="card">
                     <a href="detalhes?email=<%=lista.get(i).getEmail()%>">
-                     <img style="width: 100px" src=<%= lista.get(i).getImage()%> alt="...">
+                     <img style="width: 140px; margin-top:10px; border-radius: 140px;" src=<%= lista.get(i).getImage()%> alt="...">
                           <ul id="menu" class="menu" style="display: none;">
                           <li><a type="submit" href="detalhes.jsp" onclick="return validarPerfilParaDetalhes(event)">Visualizar Perfil</a></li>
                           <li><a href="autenticador">Sair</a></li>
