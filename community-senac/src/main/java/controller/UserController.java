@@ -4,6 +4,7 @@ import model.DAO.UserDAO;
 import model.User;
 import services.UserService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 //TODO CLASSE RESPONSÁVEL POR TODAS AS FUNÇÕES DE REQUISIÇÕES WEB, QUE CHAMARÁ >>> A CLASSE SERVICE
 @WebServlet( urlPatterns = {"/user"})
 public class UserController extends HttpServlet {
@@ -30,7 +33,11 @@ public class UserController extends HttpServlet {
             req.setAttribute("countV", 1);
             String count = req.getAttribute("countV").toString();
             System.out.println(count + " ->>>>");
-            req.getRequestDispatcher("cadastro.jsp").forward(req, resp);
+            resp.setContentType("text/html");
+            PrintWriter out = resp.getWriter();
+            out.println("<script>alert('E-mail ja cadastrado já cadastrado!');</script>");
+            RequestDispatcher rd = req.getRequestDispatcher("/cadastro.jsp");
+            rd.include(req, resp);
         } else {
             HttpSession sessao = req.getSession();
             sessao.setAttribute("sessionUser", user);
@@ -52,7 +59,11 @@ public class UserController extends HttpServlet {
             sessao.setAttribute("sessionUser", user);
             resp.sendRedirect("/home");
         } else {
-            resp.sendRedirect("erroLogin.html");
+            resp.setContentType("text/html");
+            PrintWriter out = resp.getWriter();
+            out.println("<script>alert('Erro de login!');</script>");
+            RequestDispatcher rd = req.getRequestDispatcher("/login.html");
+            rd.include(req, resp);
         }
     }
 }
