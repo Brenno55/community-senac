@@ -172,7 +172,7 @@ img:hover, button:hover {
     cursor:pointer;
 }
 #menu {
-  background-color: white;
+  background-color: black;
   padding: 10px;
   white-space: nowrap;
   margin-left:10px;
@@ -189,7 +189,7 @@ img:hover, button:hover {
 }
 
 #menu li a {
-  color: black;
+  color:  #FF7F00;
   text-decoration: none;
   position: relative;
 }

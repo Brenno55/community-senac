@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Atualizando filtro com LOWER">
+    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Removendo tela de detalhes do usuario">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/css/detalhes.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/css/detalhes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/css/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685479676364</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Removendo tela de detalhes do usuario">
+      <created>1685536414504</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685536414504</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +254,7 @@
     <MESSAGE value="Adicionando o editar perfil" />
     <MESSAGE value="Adicionando anos e redirecionamento na tela home" />
     <MESSAGE value="Atualizando filtro com LOWER" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizando filtro com LOWER" />
+    <MESSAGE value="Removendo tela de detalhes do usuario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removendo tela de detalhes do usuario" />
   </component>
 </project>

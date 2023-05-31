@@ -176,7 +176,7 @@ main {
 
 #menu {
   display: none;
-  background-color: white;
+  background-color: black;
   padding: 10px;
   white-space: nowrap;
   margin-left:10px;
@@ -193,7 +193,7 @@ main {
 }
 
 #menu li a {
-  color: black;
+  color: #FF7F00;
   text-decoration: none;
   position: relative;
 }

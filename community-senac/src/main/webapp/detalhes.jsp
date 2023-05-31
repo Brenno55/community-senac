@@ -30,11 +30,10 @@
     </form>
 
     <section>
-        <p style="margin-right: 10px;"> fulano </p>
+        <p style="margin-right: 10px;"> <%=user.getNome()%> </p>
 
         <img name="avatar" id="avatar" src="/view/assents/avatar_placeholder.svg" alt="">
         <ul id="menu" class="menu">
-        <li><a href="detalhes.jsp">Visualizar Perfil</a></li>
         <li><a href="perfil.jsp">Editar Perfil</a></li>
         <li><a href="autenticador">Sair</a></li>
         </ul>
