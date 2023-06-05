@@ -12,6 +12,16 @@ CREATE TABLE usuario (
 	
 );
 
+ CREATE TABLE friendship (
+  id iNT PRIMARY KEY,
+  user_email VARCHAR(40),
+  amigo_email VARCHAR(40),
+  status VARCHAR(50),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (  user_emaiL ) REFERENCES usuario(email),
+  FOREIGN KEY ( amigo_email ) REFERENCES usuario(email)
+);
+
 /*Inserts para população do BD*/
 insert into usuario values ('Brenno', 'brenno@senacsp.edu.br', '1234','2002-09-16','(11) 969402383','Analise e Desenvolvimento de Sistemas', 'Masculino', 'Gosto de mulher carece','');
 insert into usuario values ('Deive', 'deive@senacsp.edu.br', '4525','1998-05-05','(31) 977472828','Redes de computadores', 'Masculino', 'Faço academia e jogo bola e como batata doce','');
