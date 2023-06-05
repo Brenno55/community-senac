@@ -12,7 +12,7 @@ CREATE TABLE usuario (
 	
 );
 
- CREATE TABLE friendship (
+ CREATE TABLE amizade (
   id iNT PRIMARY KEY,
   user_email VARCHAR(40),
   amigo_email VARCHAR(40),
