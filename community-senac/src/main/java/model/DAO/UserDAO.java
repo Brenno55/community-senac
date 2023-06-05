@@ -1,5 +1,6 @@
 package model.DAO;
 
+import model.Friendship;
 import model.User;
 import model.repositories.RepositoryDao;
 
@@ -17,7 +18,7 @@ public class UserDAO implements RepositoryDao {
 
     //TODO CLASSE RESPONSÁVEL POR TODAS AS FUNÇÕES PARA MANIPULAR O BANCO DE DADOS (TABELA USUÁRIO)!
     @Override
-    public boolean inserirUsuario(User user){
+    public boolean inserirUsuario(User user) {
         String SQL = "INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)";
         System.out.println("entra no insert do usuario");
         try {
@@ -41,6 +42,90 @@ public class UserDAO implements RepositoryDao {
             return false;
         }
     }
+
+    @Override
+    public void criarAmizade(String userEmail, String amigoEmail, String status) {
+        String SQL = "INSERT INTO amizade (user_email, amigo_email, status) VALUES (?, ?, ?)";
+        try {
+            Connection conectar = conectar();
+            PreparedStatement pst = conectar.prepareStatement(SQL);
+            pst.setString(1, userEmail);
+            pst.setString(2, amigoEmail);
+            pst.setString(3, status);
+            pst.executeUpdate();
+            conectar.close();
+            System.out.println("ele cria a amizade");
+        } catch (Exception e) {
+            System.out.println("erro da amizade");
+        }
+    }
+
+    @Override
+    public void removerAmizade(String userEmail, String amigoEmail) {
+        String SQL = "DELETE FROM amizade WHERE (user_email = ? AND amigo_email = ?) OR (user_email = ? AND amigo_email = ?)";
+
+        try {
+            Connection conectar = conectar();
+            PreparedStatement pst = conectar.prepareStatement(SQL);
+            pst.setString(1, userEmail);
+            pst.setString(2, amigoEmail);
+            pst.executeUpdate();
+            conectar.close();
+            System.out.println("ele remove a amizade");
+        } catch (Exception e) {
+            System.out.println("erro remoção da amizade");
+        }
+    }
+
+    @Override
+    public void atualizarStatusAmizade(String userEmail, String amigoEmail, String status) {
+        String SQL = "UPDATE amizade SET status = ? WHERE (user_email = ? AND amigo_email = ?) OR (amigo_email = ? AND user_email = ?)";
+
+        try {
+            Connection conectar = conectar();
+            PreparedStatement pst = conectar.prepareStatement(SQL);
+            pst.setString(1, status);
+            pst.setString(2, userEmail);
+            pst.setString(3, amigoEmail);
+            pst.setString(4, amigoEmail);
+            pst.setString(5, userEmail);
+            pst.executeUpdate();
+            conectar.close();
+            System.out.println("ele atualiza a amizade");
+        } catch (Exception e) {
+            System.out.println("erro atualização a amizade");
+        }
+    }
+
+    @Override
+    public ArrayList<User> buscarAmizadesAceitas(String email) {
+        String SQL = "SELECT  usuario.* FROM amizades RIGHT JOIN usuario ON amizades.amigo_email = usuario.email WHERE amizades.user_email = ?  AND amizades.status = 'ACEITO'";
+        ArrayList<User> users = new ArrayList<>();
+
+        try {
+            Connection conectar = conectar();
+            PreparedStatement pst = conectar.prepareStatement(SQL);
+            pst.setString(1, email);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()){
+                    String nomeR = rs.getString("nome");
+                    String data_nascimento = rs.getString("idade");
+                    String cursoR = rs.getString("curso");
+                    String emailR = rs.getString("email");
+                    String image = rs.getString("image");
+                    users.add(new User(nomeR, data_nascimento, cursoR, emailR, image));
+            }
+            conectar.close();
+
+            return users;
+        } catch (Exception e) {
+            System.out.println(e + "Falha na conexão com bd index.");
+            return null;
+        }
+
+    }
+
     @Override
     public boolean inserirDetalhesDoUsuario(User user){
         String SQL = "UPDATE usuario SET data_nascimento = ?, celular = ?, curso = ?, sexo = ?, bio = ?, image = ? WHERE email = ?";

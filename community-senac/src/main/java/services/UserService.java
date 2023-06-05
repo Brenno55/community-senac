@@ -45,6 +45,9 @@ public  class UserService {
     public User buscarUsuarioPorEmail(String email){
         return repository.buscarUsuarioPorEmail(email);
     }
+
+
+
 }
 
 

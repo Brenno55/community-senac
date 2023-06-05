@@ -17,6 +17,27 @@ public class UserDaoInMemory implements RepositoryDao {
             return false;
         }
     }
+
+    @Override
+    public void criarAmizade(String userEmail, String amigoEmail, String status) {
+
+    }
+
+    @Override
+    public void removerAmizade(String userEmail, String amigoEmail) {
+
+    }
+
+    @Override
+    public void atualizarStatusAmizade(String userEmail, String amigoEmail, String status) {
+
+    }
+
+    @Override
+    public ArrayList<User> buscarAmizadesAceitas(String email) {
+        return null;
+    }
+
     @Override
     public boolean inserirDetalhesDoUsuario(User user) {
         boolean encontrou = false;
