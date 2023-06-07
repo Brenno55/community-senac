@@ -54,7 +54,7 @@
 
      <div class="side-bar">
             <form action="/amizades" method="get">
-                <input type="submit" id="buttonAmizade" value="Minha Amizades">
+                <input type="submit" id="buttonAmizade" value="Minha Amizades" >
            </form>
         </div>
 
@@ -63,11 +63,14 @@
                 <div class="card">
                     <a href="detalhes?email=<%=lista.get(i).getEmail()%>">
                      <img  src=<%= lista.get(i).getImage()%> alt="...">
+
                           <ul id="menu" class="menu" style="display: none;">
                           <li><a type="submit" href="detalhes.jsp" onclick="return validarPerfilParaDetalhes(event)">Visualizar Perfil</a></li>
                           <li><a href="autenticador">Sair</a></li>
                           </ul>
 					</a>
+
+
                     <ul>
                         <li><%= lista.get(i).getNome() %> </li>
                         <li><%= lista.get(i).getCurso() %> </li>
@@ -75,9 +78,10 @@
                          <li>
                             <form action="/solicitar-amizade" method="post">
                               <input type="hidden" id="emailAmigo" name="amigo" value=<%=lista.get(i).getEmail()%> >
-                                <input type="submit" id="buttonAmizade" value="Criar Amizade">
+                                <input type="submit" class="buttonAmizade" value="Criar Amizade" >
                             </form>
                          </li>
+
 
                     </ul>
                     </div>

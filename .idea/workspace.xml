@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Populando o bando de dados para a apresentação">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2023_09_34__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2023_09_34__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2023_15_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_06_2023_15_29__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/detalhes.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/css/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +55,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Oz5XN7w3xvgJZgoJEECHtMXrXE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

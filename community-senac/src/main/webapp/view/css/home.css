@@ -1,3 +1,8 @@
+
+
+
+
+
 header {
     display: flex;
     align-items: center;
@@ -118,8 +123,8 @@ main {
 }
 
 .card {
-    width: 400px;
-    height: 310px;
+    width: 300px;
+    height: 400px;
     position: relative;
     align-items: center;
     background-color: #1C1C1C;
@@ -172,7 +177,21 @@ main {
     color: #FF7F00;
 }
 
-  img:hover, button:hover{
+.buttonAmizade{
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 18px;
+   border:none;
+   height: 56px;
+   color: black;
+   background: #FF7F00;
+   padding: 19px 24px;
+   width: 190px
+}
+
+
+
+img:hover, button:hover{
 
     filter: brightness(0.5);
     cursor:pointer;

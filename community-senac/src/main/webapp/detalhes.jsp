@@ -50,7 +50,7 @@
             <ul>
                 <li>Data de Nascimento: <%out.print(request.getAttribute("dataNascimento"));%> </li>
                 <li>Sexo: <%out.print(request.getAttribute("sexo"));%> </li>
-                <li>Curso: <%out.print(request.getAttribute("curso"));%> </li>
+                <li>Curso: <%out.print(request.getAttribute("curso"));%> </li><br>
                 <li>Celular: <%out.print(request.getAttribute("celular"));%> </li>
             </ul>
         </section>
