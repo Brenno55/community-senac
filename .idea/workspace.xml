@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Ajustando imagens">
+    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Populando o bando de dados para a apresentação">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD" beforeDir="false" afterPath="$PROJECT_DIR$/BD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685561074775-Hoje-e-NeyDay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685561540513-Hoje-e-NeyDay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685561585197-Jogo-20230514-192(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685979917778-JScalculadora.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685981311603-vinho5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685981377022-ft-perfil2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685983737326-ft-perfil2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685983806943-ft-perfil2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/Hoje-e-NeyDay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/WhatsApp Image 2023-05-31 at 12.44.29.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685536414504</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Populando o bando de dados para a apresentação">
+      <created>1686162634214</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1686162634215</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +259,7 @@
     <MESSAGE value="Adicionando anos e redirecionamento na tela home" />
     <MESSAGE value="Atualizando filtro com LOWER" />
     <MESSAGE value="Removendo tela de detalhes do usuario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removendo tela de detalhes do usuario" />
+    <MESSAGE value="Populando o bando de dados para a apresentação" />
+    <option name="LAST_COMMIT_MESSAGE" value="Populando o bando de dados para a apresentação" />
   </component>
 </project>
