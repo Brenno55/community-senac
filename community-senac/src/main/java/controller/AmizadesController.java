@@ -5,6 +5,7 @@ import model.Friendship;
 import model.User;
 import services.AmizadeService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 @WebServlet( urlPatterns = {"/amizades", "/solicitar-amizade", "/atualizar-amizade", "/amizade-remover"})
@@ -47,12 +49,25 @@ public class AmizadesController  extends HttpServlet {
         String action = req.getServletPath();
         HttpSession sessao = req.getSession();
         User user = (User)sessao.getAttribute("sessionUser");
-
-
         String emailUser = user.getEmail();
         String emailAmigo = req.getParameter("amigo");
-        repository.criarAmizade(emailUser, emailAmigo, "PENDENTE");
-        resp.sendRedirect("/home");
+        boolean validarAmizade = repository.buscarPorEmailAmizade(user.getEmail());
+        System.out.println(validarAmizade + " validar amizade");
+
+        if(validarAmizade) {
+            System.out.println("entrou no if");
+            resp.setContentType("text/html");
+            PrintWriter out = resp.getWriter();
+            out.println("<script>alert('Amizade já existe!');</script>");
+            RequestDispatcher rd = req.getRequestDispatcher("/home");
+            rd.include(req, resp);
+        }else{
+            System.out.println("entrou no else");
+            repository.criarAmizade(emailUser, emailAmigo, "PENDENTE");
+            resp.sendRedirect("/home");
+
+        }
+
     }
 
     @Override

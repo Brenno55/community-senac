@@ -24,6 +24,8 @@ public interface RepositoryDao {
 
     public ArrayList<Friendship> relatorioAmizades(String email);
 
+    public boolean buscarPorEmailAmizade(String email);
+
 
 
 

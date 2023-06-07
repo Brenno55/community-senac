@@ -154,6 +154,23 @@ public class UserDAO implements RepositoryDao {
     }
 
     @Override
+    public boolean buscarPorEmailAmizade(String email) {
+        String SQL = "SELECT * FROM amizade WHERE amigoEmail = ?";
+        try {
+            Connection conectar = conectar();
+            PreparedStatement pst = conectar.prepareStatement(SQL);
+            pst.setString(1, email);
+            ResultSet rs = pst.executeQuery();
+            conectar.close();
+
+            return rs != null;
+
+        } catch (Exception e) {
+            return true;
+        }
+    }
+
+    @Override
     public boolean inserirDetalhesDoUsuario(User user){
         String SQL = "UPDATE usuario SET data_nascimento = ?, celular = ?, curso = ?, sexo = ?, bio = ?, image = ? WHERE email = ?";
         System.out.println("Entrar no UPDATE do usuario");

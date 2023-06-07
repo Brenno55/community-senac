@@ -45,6 +45,11 @@ public class UserDaoInMemory implements RepositoryDao {
     }
 
     @Override
+    public boolean buscarPorEmailAmizade(String email) {
+        return false;
+    }
+
+    @Override
     public boolean inserirDetalhesDoUsuario(User user) {
         boolean encontrou = false;
         for (User u : list) {
