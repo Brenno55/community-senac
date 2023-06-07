@@ -64,7 +64,7 @@ main .containerRight p{
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
-    line-height: 21px;
+    line-height: 50px;
     display: flex;
     align-items: center;
     text-align: justify;
