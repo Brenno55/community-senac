@@ -7,9 +7,9 @@ CREATE TABLE usuario (
 	celular VARCHAR(20),
 	curso VARCHAR(50),
 	sexo VARCHAR (20),
-	bio VARCHAR(50),
+	bio VARCHAR(200),
 	image VARCHAR(100)
-	
+
 );
 
 CREATE TABLE amizades (
@@ -23,9 +23,24 @@ CREATE TABLE amizades (
 );
 
 /*Inserts para população do BD*/
-insert into usuario values ('Brenno', 'brenno@senacsp.edu.br', '1234','2002-09-16','(11) 969402383','Analise e Desenvolvimento de Sistemas', 'Masculino', 'Gosto de mulher carece','');
-insert into usuario values ('Deive', 'deive@senacsp.edu.br', '4525','1998-05-05','(31) 977472828','Redes de computadores', 'Masculino', 'Faço academia e jogo bola e como batata doce','');
-insert into usuario values ('Richard', 'richar@senacsp.edu.br', '5555','2000-01-13','(12) 940028922','Moda', 'Masculino', 'Sou fullstack a procura de emprego','');
-insert into usuario values ('Alesandra', 'ale@senacsp.edu.br', '6969','2005-04-25','(11) 956567878','Gastronomia', 'Feminino', 'Gosto de programar e tomar cha','');
-insert into usuario values ('Augusta', 'meninadograu@senacsp.edu.br', '157','1997-07-15','(13) 950501212','Recursos humanos', 'Feminino', 'Menina do correh','');
-insert into usuario values ('Erika', 'erikasilva@senacsp.edu.br', '1818','2005-12-31','(11) 984126565','Contabilidade', 'Feminino', 'Blogueira, tiktoker, influencer e merecedorah','');
+insert into usuario values ('Deive Oliveira', 'deive@senacsp.edu.br', '123','1999-12-01','11949495959','Analise e Desenvolvimento de Sistemas', 'masculino', 'Estudante de TADS, autodidata e esforçado . gosto de praticar esportes.','img/1686153101153-Foto.jpg');
+insert into usuario values ('Brenno Lima', 'brenno@senacsp.edu.br', '123','2002-12-01','11999595656','Analise e Desenvolvimento de Sistemas', 'masculino', 'Jogador caro não olha pra foto','img/1686154377112-Brenno.jpeg');
+insert into usuario values ('Augusto', 'augusto@senacsp.edu.br', '123','2002-01-05','11944788202','Analise e Desenvolvimento de Sistemas', 'masculino', 'Defendo o movimento black','img/1686154902658-augusto.jpg');
+insert into usuario values ('Alesandro', 'alesandro@senacsp.edu.br', '123','1999-12-01','11944550505','Analise e Desenvolvimento de Sistemas', 'masculino', 'Sou jogador caro da Capiva','img/1686155124190-Ale.jpg');
+insert into usuario values ('Cristiano Ronaldo', 'cris@senacsp.edu.br', '123','1999-12-01','85498098959','Gastronomia', 'masculino', 'Sou o melhor do mundo','img/1686155258620-Ronaldo.jpg');
+insert into usuario values ('Pipokinha', 'pipokinha@senacsp.edu.br', '123','1990-08-02','11944485050','Moda', 'feminino', 'Estou em transição de carreira, abandonei o meio artístico para viver da moda ','img/1686155746806-pipokinha.png');
+insert into usuario values ('Marina', 'Marina@senacsp.edu.br', '123','1970-02-02','75944101840','Contabilidade', 'feminino', 'Cansei de defender o meio ambiente','img/1686155889348-Marina.jpg');
+insert into usuario values ('Dilma', 'Dilma@senacsp.edu.br', '123','1978-07-08','75987848020','Recursos Humanos', 'feminino', 'Não estou procurando ninguém, mas caso encontre estou procurando, mas isso não quer dizer que eu encontrei, porquê não estava procuradno','img/1686156080985-Dilma.jpeg');
+insert into usuario values ('Cremosinho', 'cremoso@senacsp.edu.br', '123','1998-10-01','66944020220','Contabilidade', 'masculino', 'Em busca da minha Cremosa ','img/1686156545157-Cremosinho.jpg');
+insert into usuario values ('Ruivinha de Marte', 'Ruivinha@senacsp.edu.br', '123','1998-01-01','11944404040','Gastronomia', 'feminino', 'Em busca de um cremoso	','img/1686156621910-ruivinha-de-marte1.png');
+insert into usuario values ('Lula', 'lula@senacsp.edu.br', '123','1980-05-05','11944404040','Recursos Humanos', 'masculino', 'Olá companheiro','img/1686159620808-Lula_1.png');
+insert into usuario values ('Bolsonaro', 'bolsonaro@senacsp.edu.br', '123','1985-05-05','11944040450','Redes de Computadores', 'masculino', 'Tá ok?','img/1686159672299-jair-bolsonaro-1.png');
+insert into usuario values ('Gaga', 'gaga@senacsp.edu.br', '123','1984-12-01','11997785005','Moda', 'feminino', 'Estou em busca de conexões','img/1686160041615-gaga.png');
+insert into usuario values ('Richard', 'orlandino@senacsp.edu.br', '123','2000-05-01','11947785220','Analise e Desenvolvimento de Sistemas', 'masculino', 'Com meu parceiro beiço','img/1686160488751-Richard.jpg');
+insert into usuario values ('Roberta', 'RobertaJoao@senacsp.edu.br', '123','1990-12-01','11975250400','Recursos Humanos', 'feminino', 'Eu sou rebelde','img/1686160761492-Roberta.jpg');
+insert into usuario values ('Marta', 'Marta@senacsp.edu.br', '123','1983-09-01','11944450556','Moda', 'feminino', 'Jogadora cara também não olha para a foto','img/1686160834560-marta.png');
+insert into usuario values ('Bruna', 'Bruna@senacsp.edu.br', '123','1984-12-01','11944520225','Gastronomia', 'feminino', 'Só dando uma olhada ','img/1686161630780-bruna.jpg');
+insert into usuario values ('Ronadinho', 'ronaldinho@senacsp.edu.br', '123','1975-11-05','11952668876','Moda', 'masculino', 'Em busca de uns role aleatório','img/1686161714596-ronaldinho.png');
+insert into usuario values ('Neymar Jr', 'ney@senacsp.edu.br', '123','1983-10-02','11978852025','Redes de Computadores', 'masculino', 'Bora fazer um grupo do futebol','img/1686161804449-Ney.jpg');
+insert into usuario values ('Ana Maria', 'Ana@senacsp.edu.br', '123','1970-10-22','11499595650','Contabilidade', 'feminino', 'Queria ter feito mesmo era gastronomia ','img/1686162275569-Ana.jpg');
+insert into usuario values ('Camila', 'Camila@senacsp.edu.br', '123','1990-03-01','11447850202','Analise e Desenvolvimento de Sistemas', 'feminino', 'Não sou fake','img/1686162343274-camila.jpg');

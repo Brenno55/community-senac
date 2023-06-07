@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Removendo tela de detalhes do usuario">
-      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685561074775-Hoje-e-NeyDay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685561540513-Hoje-e-NeyDay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685561585197-Jogo-20230514-192(1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/img/Hoje-e-NeyDay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/img/WhatsApp Image 2023-05-31 at 12.44.29.jpeg" afterDir="false" />
+    <list default="true" id="7bb20ac2-8146-4e68-a8c1-1f1a3399d636" name="Changes" comment="Ajustando imagens">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/perfil.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/css/detalhes.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/css/detalhes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/community-senac/src/main/webapp/view/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD" beforeDir="false" afterPath="$PROJECT_DIR$/BD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685561074775-Hoje-e-NeyDay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685561540513-Hoje-e-NeyDay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685561585197-Jogo-20230514-192(1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685979917778-JScalculadora.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685981311603-vinho5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685981377022-ft-perfil2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685983737326-ft-perfil2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/1685983806943-ft-perfil2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/Hoje-e-NeyDay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community-senac/src/main/webapp/img/WhatsApp Image 2023-05-31 at 12.44.29.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,32 +60,27 @@
     </option>
   </component>
   <component name="ProjectId" id="2Oz5XN7w3xvgJZgoJEECHtMXrXE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/brenno.lima/IdeaProjects/community-senac/community-senac/src/main/webapp/img",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Augusto Brito/IdeaProjects/community-senac/community-senac/src/main/webapp/view/assents&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\brenno.lima\IdeaProjects\community-senac\community-senac\src\main\webapp\img" />
       <recent name="C:\Users\Augusto Brito\IdeaProjects\community-senac\community-senac\src\main\webapp\view\assents" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\brenno.lima\IdeaProjects\community-senac\community-senac\src\main\webapp\img" />
       <recent name="C:\Users\deive\IdeaProjects\community-senac\community-senac\src\main\webapp\Imagens" />
       <recent name="C:\Users\deive\IdeaProjects\community-senac\community-senac\src\main\webapp\Imagens\Prototipo_telas" />
       <recent name="C:\Users\brenno.lfsilva\IdeaProjects\community-senac\community-senac\src\main\webapp\view\css" />
@@ -250,7 +248,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Correção tela home" />
     <MESSAGE value="Tratamento get.Data_nascimento" />
     <MESSAGE value="Finalizando front tela de detalhes" />
