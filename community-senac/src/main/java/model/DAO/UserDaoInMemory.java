@@ -1,5 +1,6 @@
 package model.DAO;
 
+import model.Friendship;
 import model.User;
 import model.repositories.RepositoryDao;
 
@@ -35,6 +36,11 @@ public class UserDaoInMemory implements RepositoryDao {
 
     @Override
     public ArrayList<User> buscarAmizadesAceitas(String email) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Friendship> relatorioAmizades(String email) {
         return null;
     }
 

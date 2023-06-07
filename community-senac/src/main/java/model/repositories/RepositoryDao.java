@@ -22,6 +22,8 @@ public interface RepositoryDao {
     public void atualizarStatusAmizade(String userEmail, String amigoEmail, String status );
     public ArrayList<User> buscarAmizadesAceitas(String email);
 
+    public ArrayList<Friendship> relatorioAmizades(String email);
+
 
 
 

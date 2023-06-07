@@ -45,7 +45,7 @@ public class UserDAO implements RepositoryDao {
 
     @Override
     public void criarAmizade(String userEmail, String amigoEmail, String status) {
-        String SQL = "INSERT INTO amizade (user_email, amigo_email, status) VALUES (?, ?, ?)";
+        String SQL = "INSERT INTO amizades (user_email, amigo_email, status) VALUES (?, ?, ?)";
         try {
             Connection conectar = conectar();
             PreparedStatement pst = conectar.prepareStatement(SQL);
@@ -56,13 +56,13 @@ public class UserDAO implements RepositoryDao {
             conectar.close();
             System.out.println("ele cria a amizade");
         } catch (Exception e) {
-            System.out.println("erro da amizade");
+            System.out.println(e + "erro criação da amizade da amizade");
         }
     }
 
     @Override
     public void removerAmizade(String userEmail, String amigoEmail) {
-        String SQL = "DELETE FROM amizade WHERE (user_email = ? AND amigo_email = ?) OR (user_email = ? AND amigo_email = ?)";
+        String SQL = "DELETE FROM amizades WHERE (user_email = ? AND amigo_email = ?) OR (user_email = ? AND amigo_email = ?)";
 
         try {
             Connection conectar = conectar();
@@ -79,7 +79,7 @@ public class UserDAO implements RepositoryDao {
 
     @Override
     public void atualizarStatusAmizade(String userEmail, String amigoEmail, String status) {
-        String SQL = "UPDATE amizade SET status = ? WHERE (user_email = ? AND amigo_email = ?) OR (amigo_email = ? AND user_email = ?)";
+        String SQL = "UPDATE amizades SET status = ? WHERE (user_email = ? AND amigo_email = ?) OR (amigo_email = ? AND user_email = ?)";
 
         try {
             Connection conectar = conectar();
@@ -110,20 +110,47 @@ public class UserDAO implements RepositoryDao {
 
             while (rs.next()){
                     String nomeR = rs.getString("nome");
-                    String data_nascimento = rs.getString("idade");
+                    String data_nascimento = rs.getString("data_nascimento");
                     String cursoR = rs.getString("curso");
                     String emailR = rs.getString("email");
                     String image = rs.getString("image");
                     users.add(new User(nomeR, data_nascimento, cursoR, emailR, image));
             }
             conectar.close();
-
+            System.out.println("Setou a lista");
             return users;
         } catch (Exception e) {
             System.out.println(e + "Falha na conexão com bd index.");
             return null;
         }
 
+    }
+
+    @Override
+    public ArrayList<Friendship> relatorioAmizades(String email) {
+        String SQL = "SELECT * FROM amizades";
+        ArrayList<Friendship> amizades = new ArrayList<>();
+
+        try {
+            Connection conectar = conectar();
+            PreparedStatement pst = conectar.prepareStatement(SQL);
+            ResultSet rs = pst.executeQuery();
+
+            while (rs.next()){
+                    int id = rs.getInt("id");
+                    String user_email = rs.getString("user_email");
+                    String amigo_email = rs.getString("amigo_email");
+                    String status = rs.getString("status");
+
+                    amizades.add(new Friendship(id, user_email, amigo_email, status));
+            }
+            conectar.close();
+            System.out.println("sucesso relatorio amizade");
+            return amizades;
+        } catch (Exception e) {
+            System.out.println(e + "erro relatorio amizade");
+            return null;
+        }
     }
 
     @Override

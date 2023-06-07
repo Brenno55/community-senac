@@ -1,5 +1,6 @@
 package services;
 
+import model.Friendship;
 import model.User;
 import model.repositories.RepositoryDao;
 
@@ -25,4 +26,9 @@ public class AmizadeService {
     public ArrayList<User> buscarAmizadesAceitas(String email){
         return repository.buscarAmizadesAceitas(email);
     }
+
+    public ArrayList<Friendship> relatorioAmizades(String email){
+        return repository.relatorioAmizades(email);
+    }
+
 }

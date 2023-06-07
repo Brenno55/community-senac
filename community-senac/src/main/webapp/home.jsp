@@ -53,7 +53,9 @@
     </div>
 
      <div class="side-bar">
-            <a href="amizades?email=<%=userS.getEmail()%>">Amizades</a>
+            <form action="/amizades" method="get">
+                <input type="submit" id="buttonAmizade" value="Minha Amizades">
+           </form>
         </div>
 
     <main>
@@ -70,6 +72,13 @@
                         <li><%= lista.get(i).getNome() %> </li>
                         <li><%= lista.get(i).getCurso() %> </li>
                         <li><%= lista.get(i).getDataNascimento() %> anos</li>
+                         <li>
+                            <form action="/solicitar-amizade" method="post">
+                              <input type="hidden" id="emailAmigo" name="amigo" value=<%=lista.get(i).getEmail()%> >
+                                <input type="submit" id="buttonAmizade" value="Criar Amizade">
+                            </form>
+                         </li>
+
                     </ul>
                     </div>
                 <% } %>
